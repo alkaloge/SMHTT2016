@@ -1,6 +1,3 @@
-// Original setup from:
-//https://raw.githubusercontent.com/lovedeepkaursaini/aHVV_HTT/master/anaHTT.C
-// 28 June 2017
 //
 
 #include <iostream>
@@ -30,12 +27,14 @@
 using namespace RooFit;
 using namespace std;
 
-void anaHTT(TString InFile, TString OutFile)
+//void anaHTT(TString InFile, TString OutFile)
+void anaHTT()
 {
 	int erg_tev=13;
 	float mPOLE=125.6;
 	float wPOLE=4.07e-3;
-
+	TString InFile="/afs/cern.ch/user/a/alkaloge/work/CP/CMSSW_8_0_25/src/SMHTT2016/Tools/FILEIN";
+	TString OutFile="/afs/cern.ch/user/a/alkaloge/work/CP/CMSSW_8_0_25/src/SMHTT2016/Tools/FILEOUT";
 	TVar::VerbosityLevel verbosity = TVar::ERROR;
 	Mela mela(erg_tev, mPOLE, verbosity);
 	std::cout << "Starting!!!" << std::endl;
@@ -44,7 +43,7 @@ void anaHTT(TString InFile, TString OutFile)
 
 	TFile *finput = new TFile(InFile);//"TauTau_13_SKMD-skmd_mrgd_VBFHIGGS0M.root");//
 	//  TFile *finput = new TFile("all1234tmpOut2.root");
-	TTree *tree = (TTree*) finput->Get("mutau_tree");
+	TTree *tree = (TTree*) finput->Get("CHANNEL_tree");
 	TH1F *nevents = (TH1F*) finput->Get("nevents");
 
 	//save SumOfWeights ?
@@ -124,7 +123,7 @@ void anaHTT(TString InFile, TString OutFile)
 
 	TTree* newtree = new TTree("TestTree", "");
 	newtree = tree->CloneTree(0);
-	newtree->Branch("melaD0minus", &melaD0minus);
+	newtree->Branch("melaD0minus", &melaD0minus); //
 	newtree->Branch("melaDCP", &melaDCP);
 	newtree->Branch("melaD0hplus", &melaD0hplus);
 	newtree->Branch("melaDint", &melaDint);
@@ -132,6 +131,7 @@ void anaHTT(TString InFile, TString OutFile)
 	newtree->Branch("melaDL1int", &melaDL1int);
 	newtree->Branch("melaDL1Zg", &melaDL1Zg);
 	newtree->Branch("melaDL1Zgint", &melaDL1Zgint);
+
 	newtree->Branch("melaD0minusggH", &melaD0minusggH);
 	newtree->Branch("melaDCPggH", &melaDCPggH);
 	newtree->Branch("melaDPhijj", &dPhi_jj);
@@ -140,6 +140,7 @@ void anaHTT(TString InFile, TString OutFile)
 	newtree->Branch("melacosthetastar", &costhetastar);
 	newtree->Branch("melacostheta1", &costheta1);
 	newtree->Branch("melacostheta2", &costheta2);
+
 	newtree->Branch("melaPhi", &melaPhi);
 	newtree->Branch("melaPhi1", &melaPhi1);
 	newtree->Branch("melaQ2V1", &Q2V1);
@@ -155,7 +156,7 @@ void anaHTT(TString InFile, TString OutFile)
 
 	Long64_t nbytes = 0, nb = 0;
 	for (Long64_t jentry=0; jentry<nentries;jentry++) {
-		//if ( jentry % 100 == 0 ) std::cout << jentry << std::endl;
+		if ( jentry % 10000 == 0 ) std::cout << jentry << std::endl;
 		nb = tree->GetEntry(jentry);   nbytes += nb;
 
 		tree->GetEntry(jentry);
@@ -191,11 +192,11 @@ void anaHTT(TString InFile, TString OutFile)
 		mymu.SetPtEtaPhiM(pt_1,eta_1,phi_1,m_1);
 		TLorentzVector mymet;
 		mymet.SetPtEtaPhiM(met,0,metphi,0);
-/*
+
 		pt_sv=(mymu+mytau+mymet).Pt();
 		phi_sv=(mymu+mytau+mymet).Phi();
 		eta_sv=(mymu+mytau+mymet).Eta(); /////////this is actually not correct
-*/
+
 		if (njets>=2){
 			TLorentzVector jet1(0, 0, 1e-3, 1e-3), jet2(0, 0, 1e-3, 1e-3), higgs(0, 0, 0, 0), blank1(0, 0, 0, 0);
 			jet1.SetPtEtaPhiM(jpt_1, jeta_1, jphi_1, 0);
