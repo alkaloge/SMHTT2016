@@ -1,0 +1,7 @@
+executable            = EXECHERE
+arguments             = $(ClusterID) $(ProcId) 
+output                = output/FILEHERE.$(ClusterId).$(ProcId).out
+error                 = error/FILEHERE.$(ClusterId).$(ProcId).err
+log                   = log/FILEHERE.$(ClusterId).log
+queue
+
