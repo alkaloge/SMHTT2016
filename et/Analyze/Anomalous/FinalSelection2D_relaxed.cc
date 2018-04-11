@@ -3566,7 +3566,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         }
 
 	const char * namee ; namee = postfix;
-
+//0jet
         OS0jet->cd();
         h0_OS[k]->SetName(name.c_str()+postfix);
         h0_WOS[k]->SetName(name.c_str()+postfix);
@@ -3607,6 +3607,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h0_ggHQCD[k]->SetName(h0_ggHQCD[k]->GetName()+postfix);
         h0_ggHQCD[k]->Write();
 
+//Control Region / signal region
         OScontrol->cd();
         h1D_OS[k]->SetName(name.c_str()+postfix);
         h1D_WOS[k]->SetName(name.c_str()+postfix);
@@ -3691,27 +3692,27 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 	h1D_mjj_OS[k]->Write();
 	h1D_met_OS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCP_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_OS_boosted[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_OS_boosted[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_OS_boosted[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_OS_boosted[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_OS_boosted[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_OS_boosted[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_OS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_OS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_OS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_OS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_OS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_OS_VBF[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_OS_VBF[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_OS_VBF[k]->SetName(name_);
 
 
 
-	   hmelaDCP_OS_boosted[k]->Write();
-	   hmelaDCPggH_OS_boosted[k]->Write();
-	   hmelaD0minus_OS_boosted[k]->Write();
-	   hmelaD0minusggH_OS_boosted[k]->Write();
-	   hmelaDPhijj_OS_boosted[k]->Write();
-	   hmelaDPhiUnsignedjj_OS_boosted[k]->Write();
+	   hmelaDCP_OS_VBF[k]->Write();
+	   hmelaDCPggH_OS_VBF[k]->Write();
+	   hmelaD0minus_OS_VBF[k]->Write();
+	   hmelaD0minusggH_OS_VBF[k]->Write();
+	   hmelaDPhijj_OS_VBF[k]->Write();
+	   hmelaDPhiUnsignedjj_OS_VBF[k]->Write();
 
        }
 
@@ -3873,69 +3874,17 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 	   hmelaDPhijj_QCD_VBF[k]->Write();
 	   hmelaDPhiUnsignedjj_QCD_VBF[k]->Write();
 
-
+///boosted
         OS1jet->cd();
         h1_OS[k]->SetName(name.c_str()+postfix);
         h1_WOS[k]->SetName(name.c_str()+postfix);
 
         if (sample=="W"){
            h1_WOS[k]->Write();
-	sprintf(name_,"%s_%s%s",h1D_jpt1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_met_WOS[k]->SetName(name_);
-
-	h1D_jpt1_WOS[k]->Write();
-	h1D_jpt2_WOS[k]->Write();
-	h1D_jeta1_WOS[k]->Write();
-	h1D_jeta2_WOS[k]->Write();
-	h1D_phi1_WOS[k]->Write();
-	h1D_phi2_WOS[k]->Write();
-	h1D_mjj_WOS[k]->Write();
-	h1D_met_WOS[k]->Write();
-
 	}
 	
 	else{
            h1_OS[k]->Write();
-
-	sprintf(name_,"%s_%s%s",h1D_jpt1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_OS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_OS[k]->GetName(),name.c_str(),namee);
-	h1D_met_OS[k]->SetName(name_);
-
-	h1D_jpt1_OS[k]->Write();
-	h1D_jpt2_OS[k]->Write();
-	h1D_jeta1_OS[k]->Write();
-	h1D_jeta2_OS[k]->Write();
-	h1D_phi1_OS[k]->Write();
-	h1D_phi2_OS[k]->Write();
-	h1D_mjj_OS[k]->Write();
-	h1D_met_OS[k]->Write();
 
 	}
 
@@ -3949,49 +3898,49 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         if (sample=="W"){
            h1_WSS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCP_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_WSS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_WSS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_WSS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_WSS_boosted[k]->SetName(name_);
 
-	   hmelaDCP_WSS_VBF[k]->Write();
-	   hmelaDCPggH_WSS_VBF[k]->Write();
-	   hmelaD0minus_WSS_VBF[k]->Write();
-	   hmelaD0minusggH_WSS_VBF[k]->Write();
-	   hmelaDPhijj_WSS_VBF[k]->Write();
-	   hmelaDPhiUnsignedjj_WSS_VBF[k]->Write();
+	   hmelaDCP_WSS_boosted[k]->Write();
+	   hmelaDCPggH_WSS_boosted[k]->Write();
+	   hmelaD0minus_WSS_boosted[k]->Write();
+	   hmelaD0minusggH_WSS_boosted[k]->Write();
+	   hmelaDPhijj_WSS_boosted[k]->Write();
+	   hmelaDPhiUnsignedjj_WSS_boosted[k]->Write();
 
 	}
         else{
            h1_SS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCP_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_SS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_SS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_SS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_SS_boosted[k]->SetName(name_);
 
-	   hmelaDCP_SS_VBF[k]->Write();
-	   hmelaDCPggH_SS_VBF[k]->Write();
-	   hmelaD0minus_SS_VBF[k]->Write();
-	   hmelaD0minusggH_SS_VBF[k]->Write();
-	   hmelaDPhijj_SS_VBF[k]->Write();
-	   hmelaDPhiUnsignedjj_SS_VBF[k]->Write();
+	   hmelaDCP_SS_boosted[k]->Write();
+	   hmelaDCPggH_SS_boosted[k]->Write();
+	   hmelaD0minus_SS_boosted[k]->Write();
+	   hmelaD0minusggH_SS_boosted[k]->Write();
+	   hmelaDPhijj_SS_boosted[k]->Write();
+	   hmelaDPhiUnsignedjj_SS_boosted[k]->Write();
 
 	}
 
@@ -4006,51 +3955,51 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
         if (sample=="W"){
            h2_WOS[k]->Write();
-	sprintf(name_,"%s_%s%s",hmelaDCP_WOS_VBF[k]->GetName(),name.c_str(),namee);
-	hmelaDCP_WOS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_WOS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_WOS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_WOS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_WOS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WOS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_WOS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_WOS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_WOS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WOS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_WOS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_WOS_boosted[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_WOS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_WOS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_WOS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_WOS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_WOS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WOS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_WOS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_WOS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_WOS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WOS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_WOS_boosted[k]->SetName(name_);
 
-	hmelaDCP_WOS_VBF[k]->Write();
-	hmelaDCPggH_WOS_VBF[k]->Write();
-	hmelaD0minus_WOS_VBF[k]->Write();
-	hmelaD0minusggH_WOS_VBF[k]->Write();
-	hmelaDPhijj_WOS_VBF[k]->Write();
-	hmelaDPhiUnsignedjj_WOS_VBF[k]->Write();
+	hmelaDCP_WOS_boosted[k]->Write();
+	hmelaDCPggH_WOS_boosted[k]->Write();
+	hmelaD0minus_WOS_boosted[k]->Write();
+	hmelaD0minusggH_WOS_boosted[k]->Write();
+	hmelaDPhijj_WOS_boosted[k]->Write();
+	hmelaDPhiUnsignedjj_WOS_boosted[k]->Write();
 
 
 	}
         else 
 		{
            h2_OS[k]->Write();
-	sprintf(name_,"%s_%s%s",hmelaDCP_OS_VBF[k]->GetName(),name.c_str(),namee);
-	hmelaDCP_OS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_OS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_OS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_OS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_OS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_OS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_OS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_OS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_OS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_OS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_OS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_OS_boosted[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_OS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_OS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_OS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_OS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_OS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_OS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_OS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_OS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_OS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_OS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_OS_boosted[k]->SetName(name_);
 
 
-	hmelaDCP_OS_VBF[k]->Write();
-	hmelaDCPggH_OS_VBF[k]->Write();
-	hmelaD0minus_OS_VBF[k]->Write();
-	hmelaD0minusggH_OS_VBF[k]->Write();
-	hmelaDPhijj_OS_VBF[k]->Write();
-	hmelaDPhiUnsignedjj_OS_VBF[k]->Write();
+	hmelaDCP_OS_boosted[k]->Write();
+	hmelaDCPggH_OS_boosted[k]->Write();
+	hmelaD0minus_OS_boosted[k]->Write();
+	hmelaD0minusggH_OS_boosted[k]->Write();
+	hmelaDPhijj_OS_boosted[k]->Write();
+	hmelaDPhiUnsignedjj_OS_boosted[k]->Write();
 		}
 
 
@@ -4106,48 +4055,48 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
         if (sample=="W"){
            h2_WSS[k]->Write();
-	sprintf(name_,"%s_%s%s",hmelaDCP_WSS_VBF[k]->GetName(),name.c_str(),namee);
-	hmelaDCP_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_WSS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_WSS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WSS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_WSS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_WSS_boosted[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_WSS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_WSS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_WSS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_WSS_boosted[k]->SetName(name_);
 
-	hmelaDCP_WSS_VBF[k]->Write();
-	hmelaDCPggH_WSS_VBF[k]->Write();
-	hmelaD0minus_WSS_VBF[k]->Write();
-	hmelaD0minusggH_WSS_VBF[k]->Write();
-	hmelaDPhijj_WSS_VBF[k]->Write();
-	hmelaDPhiUnsignedjj_WSS_VBF[k]->Write();
+	hmelaDCP_WSS_boosted[k]->Write();
+	hmelaDCPggH_WSS_boosted[k]->Write();
+	hmelaD0minus_WSS_boosted[k]->Write();
+	hmelaD0minusggH_WSS_boosted[k]->Write();
+	hmelaDPhijj_WSS_boosted[k]->Write();
+	hmelaDPhiUnsignedjj_WSS_boosted[k]->Write();
 
 	}
         else{
            h2_SS[k]->Write();
-	sprintf(name_,"%s_%s%s",hmelaDCP_SS_VBF[k]->GetName(),name.c_str(),namee);
-	hmelaDCP_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_SS_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_SS_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_SS_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_SS_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_SS_boosted[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_SS_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_SS_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_SS_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_SS_boosted[k]->SetName(name_);
 
-	hmelaDCP_SS_VBF[k]->Write();
-	hmelaDCPggH_SS_VBF[k]->Write();
-	hmelaD0minus_SS_VBF[k]->Write();
-	hmelaD0minusggH_SS_VBF[k]->Write();
-	hmelaDPhijj_SS_VBF[k]->Write();
-	hmelaDPhiUnsignedjj_SS_VBF[k]->Write();
+	hmelaDCP_SS_boosted[k]->Write();
+	hmelaDCPggH_SS_boosted[k]->Write();
+	hmelaD0minus_SS_boosted[k]->Write();
+	hmelaD0minusggH_SS_boosted[k]->Write();
+	hmelaDPhijj_SS_boosted[k]->Write();
+	hmelaDPhiUnsignedjj_SS_boosted[k]->Write();
 
 	}
 
@@ -4155,18 +4104,18 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h2_QCD[k]->SetName(name.c_str()+postfix);
         h2_QCD[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCP_QCD_VBF[k]->GetName(),name.c_str(),namee);
-	hmelaDCP_QCD_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_QCD_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_QCD_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_QCD_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_QCD_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_QCD_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_QCD_VBF[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_QCD_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_QCD_VBF[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_QCD_VBF[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_QCD_VBF[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_QCD_boosted[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_QCD_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_QCD_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_QCD_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_QCD_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_QCD_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_QCD_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_QCD_boosted[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_QCD_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_QCD_boosted[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_QCD_boosted[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_QCD_boosted[k]->SetName(name_);
 
 
 
