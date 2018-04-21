@@ -462,8 +462,64 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
     std::vector<TH2F*> h3j_dphi_OS;
     std::vector<TH2F*> h3k_dphi_OS;
     std::vector<TH2F*> h3l_dphi_OS;
- //   std::vector<TH2F*> h3m_dphi_OS;
- //   std::vector<TH1F*> h3n_dphi_OS;
+
+
+    std::vector<TH2F*> h3a_dphi_WOS;
+    std::vector<TH2F*> h3b_dphi_WOS;
+    std::vector<TH2F*> h3c_dphi_WOS;
+    std::vector<TH2F*> h3d_dphi_WOS;
+    std::vector<TH2F*> h3e_dphi_WOS;
+    std::vector<TH2F*> h3f_dphi_WOS;
+    std::vector<TH2F*> h3g_dphi_WOS;
+    std::vector<TH2F*> h3h_dphi_WOS;
+    std::vector<TH2F*> h3i_dphi_WOS;
+    std::vector<TH2F*> h3j_dphi_WOS;
+    std::vector<TH2F*> h3k_dphi_WOS;
+    std::vector<TH2F*> h3l_dphi_WOS;
+
+
+    std::vector<TH2F*> h3a_dphi_SS;
+    std::vector<TH2F*> h3b_dphi_SS;
+    std::vector<TH2F*> h3c_dphi_SS;
+    std::vector<TH2F*> h3d_dphi_SS;
+    std::vector<TH2F*> h3e_dphi_SS;
+    std::vector<TH2F*> h3f_dphi_SS;
+    std::vector<TH2F*> h3g_dphi_SS;
+    std::vector<TH2F*> h3h_dphi_SS;
+    std::vector<TH2F*> h3i_dphi_SS;
+    std::vector<TH2F*> h3j_dphi_SS;
+    std::vector<TH2F*> h3k_dphi_SS;
+    std::vector<TH2F*> h3l_dphi_SS;
+
+
+    std::vector<TH2F*> h3a_dphi_QCD;
+    std::vector<TH2F*> h3b_dphi_QCD;
+    std::vector<TH2F*> h3c_dphi_QCD;
+    std::vector<TH2F*> h3d_dphi_QCD;
+    std::vector<TH2F*> h3e_dphi_QCD;
+    std::vector<TH2F*> h3f_dphi_QCD;
+    std::vector<TH2F*> h3g_dphi_QCD;
+    std::vector<TH2F*> h3h_dphi_QCD;
+    std::vector<TH2F*> h3i_dphi_QCD;
+    std::vector<TH2F*> h3j_dphi_QCD;
+    std::vector<TH2F*> h3k_dphi_QCD;
+    std::vector<TH2F*> h3l_dphi_QCD;
+
+    std::vector<TH2F*> h3a_dphi_WSS;
+    std::vector<TH2F*> h3b_dphi_WSS;
+    std::vector<TH2F*> h3c_dphi_WSS;
+    std::vector<TH2F*> h3d_dphi_WSS;
+    std::vector<TH2F*> h3e_dphi_WSS;
+    std::vector<TH2F*> h3f_dphi_WSS;
+    std::vector<TH2F*> h3g_dphi_WSS;
+    std::vector<TH2F*> h3h_dphi_WSS;
+    std::vector<TH2F*> h3i_dphi_WSS;
+    std::vector<TH2F*> h3j_dphi_WSS;
+    std::vector<TH2F*> h3k_dphi_WSS;
+    std::vector<TH2F*> h3l_dphi_WSS;
+
+
+
 
    std::vector<TH1F*> h3_CR_W;
    std::vector<TH1F*> h3_CR_QCD;
@@ -629,16 +685,16 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
    std::vector<TH2F*> h77_WSS;
 
 
-   std::vector<TH2F*> h0_ggHOS;
-   std::vector<TH2F*> h0_ggHSS;
-   std::vector<TH2F*> h0_ggHQCD;
-   std::vector<TH2F*> h0_ggHWOS;
-   std::vector<TH2F*> h0_ggHWSS;
-   std::vector<TH2F*> h1_ggHOS;
-   std::vector<TH2F*> h1_ggHSS;
-   std::vector<TH2F*> h1_ggHQCD;
-   std::vector<TH2F*> h1_ggHWOS;
-   std::vector<TH2F*> h1_ggHWSS;
+   std::vector<TH2F*> h0_OSggH;
+   std::vector<TH2F*> h0_SSggH;
+   std::vector<TH2F*> h0_QCDggH;
+   std::vector<TH2F*> h0_WOSggH;
+   std::vector<TH2F*> h0_WSSggH;
+   std::vector<TH2F*> h1_OSggH;
+   std::vector<TH2F*> h1_SSggH;
+   std::vector<TH2F*> h1_QCDggH;
+   std::vector<TH2F*> h1_WOSggH;
+   std::vector<TH2F*> h1_WSSggH;
    /*
    std::vector<TH2F*> h2_dPhi_mvOS;
    std::vector<TH2F*> h2_dPhi_mvSS;
@@ -646,110 +702,110 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
    std::vector<TH2F*> h2_dPhi_mvWOS;
    std::vector<TH2F*> h2_dPhi_mvWSS;
    */
-   std::vector<TH2F*> h3_ggHOS;
-   std::vector<TH2F*> h3_ggHSS;
-   std::vector<TH2F*> h3_ggHQCD;
-   std::vector<TH2F*> h3_ggHWOS;
-   std::vector<TH2F*> h3_ggHWSS;
-   std::vector<TH2F*> h4_ggHOS;
-   std::vector<TH2F*> h4_ggHSS;
-   std::vector<TH2F*> h4_ggHQCD;
-   std::vector<TH2F*> h4_ggHWOS;
-   std::vector<TH2F*> h4_ggHWSS;
-   std::vector<TH2F*> h5_ggHOS;
-   std::vector<TH2F*> h5_ggHSS;
-   std::vector<TH2F*> h5_ggHQCD;
-   std::vector<TH2F*> h5_ggHWOS;
-   std::vector<TH2F*> h5_ggHWSS;
-   std::vector<TH2F*> h7_ggHOS;
-   std::vector<TH2F*> h7_ggHSS;
-   std::vector<TH2F*> h7_ggHQCD;
-   std::vector<TH2F*> h7_ggHWOS;
-   std::vector<TH2F*> h7_ggHWSS;
+   std::vector<TH2F*> h3_OSggH;
+   std::vector<TH2F*> h3_SSggH;
+   std::vector<TH2F*> h3_QCDggH;
+   std::vector<TH2F*> h3_WOSggH;
+   std::vector<TH2F*> h3_WSSggH;
+   std::vector<TH2F*> h4_OSggH;
+   std::vector<TH2F*> h4_SSggH;
+   std::vector<TH2F*> h4_QCDggH;
+   std::vector<TH2F*> h4_WOSggH;
+   std::vector<TH2F*> h4_WSSggH;
+   std::vector<TH2F*> h5_OSggH;
+   std::vector<TH2F*> h5_SSggH;
+   std::vector<TH2F*> h5_QCDggH;
+   std::vector<TH2F*> h5_WOSggH;
+   std::vector<TH2F*> h5_WSSggH;
+   std::vector<TH2F*> h7_OSggH;
+   std::vector<TH2F*> h7_SSggH;
+   std::vector<TH2F*> h7_QCDggH;
+   std::vector<TH2F*> h7_WOSggH;
+   std::vector<TH2F*> h7_WSSggH;
 
-   std::vector<TH2F*> h33_ggHOS;
-   std::vector<TH2F*> h33_ggHSS;
-   std::vector<TH2F*> h33_ggHQCD;
-   std::vector<TH2F*> h33_ggHWOS;
-   std::vector<TH2F*> h33_ggHWSS;
-   std::vector<TH2F*> h34_ggHOS;
-   std::vector<TH2F*> h34_ggHSS;
-   std::vector<TH2F*> h34_ggHQCD;
-   std::vector<TH2F*> h34_ggHWOS;
-   std::vector<TH2F*> h34_ggHWSS;
-   std::vector<TH2F*> h35_ggHOS;
-   std::vector<TH2F*> h35_ggHSS;
-   std::vector<TH2F*> h35_ggHQCD;
-   std::vector<TH2F*> h35_ggHWOS;
-   std::vector<TH2F*> h35_ggHWSS;
-   std::vector<TH2F*> h37_ggHOS;
-   std::vector<TH2F*> h37_ggHSS;
-   std::vector<TH2F*> h37_ggHQCD;
-   std::vector<TH2F*> h37_ggHWOS;
-   std::vector<TH2F*> h37_ggHWSS;
+   std::vector<TH2F*> h33_OSggH;
+   std::vector<TH2F*> h33_SSggH;
+   std::vector<TH2F*> h33_QCDggH;
+   std::vector<TH2F*> h33_WOSggH;
+   std::vector<TH2F*> h33_WSSggH;
+   std::vector<TH2F*> h34_OSggH;
+   std::vector<TH2F*> h34_SSggH;
+   std::vector<TH2F*> h34_QCDggH;
+   std::vector<TH2F*> h34_WOSggH;
+   std::vector<TH2F*> h34_WSSggH;
+   std::vector<TH2F*> h35_OSggH;
+   std::vector<TH2F*> h35_SSggH;
+   std::vector<TH2F*> h35_QCDggH;
+   std::vector<TH2F*> h35_WOSggH;
+   std::vector<TH2F*> h35_WSSggH;
+   std::vector<TH2F*> h37_OSggH;
+   std::vector<TH2F*> h37_SSggH;
+   std::vector<TH2F*> h37_QCDggH;
+   std::vector<TH2F*> h37_WOSggH;
+   std::vector<TH2F*> h37_WSSggH;
 
-   std::vector<TH2F*> h43_ggHOS;
-   std::vector<TH2F*> h43_ggHSS;
-   std::vector<TH2F*> h43_ggHQCD;
-   std::vector<TH2F*> h43_ggHWOS;
-   std::vector<TH2F*> h43_ggHWSS;
-   std::vector<TH2F*> h44_ggHOS;
-   std::vector<TH2F*> h44_ggHSS;
-   std::vector<TH2F*> h44_ggHQCD;
-   std::vector<TH2F*> h44_ggHWOS;
-   std::vector<TH2F*> h44_ggHWSS;
-   std::vector<TH2F*> h45_ggHOS;
-   std::vector<TH2F*> h45_ggHSS;
-   std::vector<TH2F*> h45_ggHQCD;
-   std::vector<TH2F*> h45_ggHWOS;
-   std::vector<TH2F*> h45_ggHWSS;
-   std::vector<TH2F*> h47_ggHOS;
-   std::vector<TH2F*> h47_ggHSS;
-   std::vector<TH2F*> h47_ggHQCD;
-   std::vector<TH2F*> h47_ggHWOS;
-   std::vector<TH2F*> h47_ggHWSS;
+   std::vector<TH2F*> h43_OSggH;
+   std::vector<TH2F*> h43_SSggH;
+   std::vector<TH2F*> h43_QCDggH;
+   std::vector<TH2F*> h43_WOSggH;
+   std::vector<TH2F*> h43_WSSggH;
+   std::vector<TH2F*> h44_OSggH;
+   std::vector<TH2F*> h44_SSggH;
+   std::vector<TH2F*> h44_QCDggH;
+   std::vector<TH2F*> h44_WOSggH;
+   std::vector<TH2F*> h44_WSSggH;
+   std::vector<TH2F*> h45_OSggH;
+   std::vector<TH2F*> h45_SSggH;
+   std::vector<TH2F*> h45_QCDggH;
+   std::vector<TH2F*> h45_WOSggH;
+   std::vector<TH2F*> h45_WSSggH;
+   std::vector<TH2F*> h47_OSggH;
+   std::vector<TH2F*> h47_SSggH;
+   std::vector<TH2F*> h47_QCDggH;
+   std::vector<TH2F*> h47_WOSggH;
+   std::vector<TH2F*> h47_WSSggH;
 
-   std::vector<TH2F*> h63_ggHOS;
-   std::vector<TH2F*> h63_ggHSS;
-   std::vector<TH2F*> h63_ggHQCD;
-   std::vector<TH2F*> h63_ggHWOS;
-   std::vector<TH2F*> h63_ggHWSS;
-   std::vector<TH2F*> h64_ggHOS;
-   std::vector<TH2F*> h64_ggHSS;
-   std::vector<TH2F*> h64_ggHQCD;
-   std::vector<TH2F*> h64_ggHWOS;
-   std::vector<TH2F*> h64_ggHWSS;
-   std::vector<TH2F*> h65_ggHOS;
-   std::vector<TH2F*> h65_ggHSS;
-   std::vector<TH2F*> h65_ggHQCD;
-   std::vector<TH2F*> h65_ggHWOS;
-   std::vector<TH2F*> h65_ggHWSS;
-   std::vector<TH2F*> h67_ggHOS;
-   std::vector<TH2F*> h67_ggHSS;
-   std::vector<TH2F*> h67_ggHQCD;
-   std::vector<TH2F*> h67_ggHWOS;
-   std::vector<TH2F*> h67_ggHWSS;
+   std::vector<TH2F*> h63_OSggH;
+   std::vector<TH2F*> h63_SSggH;
+   std::vector<TH2F*> h63_QCDggH;
+   std::vector<TH2F*> h63_WOSggH;
+   std::vector<TH2F*> h63_WSSggH;
+   std::vector<TH2F*> h64_OSggH;
+   std::vector<TH2F*> h64_SSggH;
+   std::vector<TH2F*> h64_QCDggH;
+   std::vector<TH2F*> h64_WOSggH;
+   std::vector<TH2F*> h64_WSSggH;
+   std::vector<TH2F*> h65_OSggH;
+   std::vector<TH2F*> h65_SSggH;
+   std::vector<TH2F*> h65_QCDggH;
+   std::vector<TH2F*> h65_WOSggH;
+   std::vector<TH2F*> h65_WSSggH;
+   std::vector<TH2F*> h67_OSggH;
+   std::vector<TH2F*> h67_SSggH;
+   std::vector<TH2F*> h67_QCDggH;
+   std::vector<TH2F*> h67_WOSggH;
+   std::vector<TH2F*> h67_WSSggH;
 
-   std::vector<TH2F*> h53_ggHOS;
-   std::vector<TH2F*> h53_ggHSS;
-   std::vector<TH2F*> h53_ggHQCD;
-   std::vector<TH2F*> h53_ggHWOS;
-   std::vector<TH2F*> h53_ggHWSS;
-   std::vector<TH2F*> h54_ggHOS;
-   std::vector<TH2F*> h54_ggHSS;
-   std::vector<TH2F*> h54_ggHQCD;
-   std::vector<TH2F*> h54_ggHWOS;
-   std::vector<TH2F*> h54_ggHWSS;
-   std::vector<TH2F*> h55_ggHOS;
-   std::vector<TH2F*> h55_ggHSS;
-   std::vector<TH2F*> h55_ggHQCD;
-   std::vector<TH2F*> h55_ggHWOS;
-   std::vector<TH2F*> h55_ggHWSS;
-   std::vector<TH2F*> h57_ggHOS;
-   std::vector<TH2F*> h57_ggHSS;
-   std::vector<TH2F*> h57_ggHQCD;
-   std::vector<TH2F*> h57_ggHWOS;
-   std::vector<TH2F*> h57_ggHWSS;
+   std::vector<TH2F*> h53_OSggH;
+   std::vector<TH2F*> h53_SSggH;
+   std::vector<TH2F*> h53_QCDggH;
+   std::vector<TH2F*> h53_WOSggH;
+   std::vector<TH2F*> h53_WSSggH;
+   std::vector<TH2F*> h54_OSggH;
+   std::vector<TH2F*> h54_SSggH;
+   std::vector<TH2F*> h54_QCDggH;
+   std::vector<TH2F*> h54_WOSggH;
+   std::vector<TH2F*> h54_WSSggH;
+   std::vector<TH2F*> h55_OSggH;
+   std::vector<TH2F*> h55_SSggH;
+   std::vector<TH2F*> h55_QCDggH;
+   std::vector<TH2F*> h55_WOSggH;
+   std::vector<TH2F*> h55_WSSggH;
+   std::vector<TH2F*> h57_OSggH;
+   std::vector<TH2F*> h57_SSggH;
+   std::vector<TH2F*> h57_QCDggH;
+   std::vector<TH2F*> h57_WOSggH;
+   std::vector<TH2F*> h57_WSSggH;
 
 
    std::vector<TH1F*> h1D_OS;
@@ -759,91 +815,91 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
    std::vector<TH1F*> h1D_WSS;
 
 
-   std::vector<TH1F*> h1D_jpt1_OS;
-   std::vector<TH1F*> h1D_jeta1_OS;
-   std::vector<TH1F*> h1D_phi1_OS;
-   std::vector<TH1F*> h1D_jpt2_OS;
-   std::vector<TH1F*> h1D_jeta2_OS;
-   std::vector<TH1F*> h1D_phi2_OS;
-   std::vector<TH1F*> h1D_mjj_OS;
-   std::vector<TH1F*> h1D_met_OS;
+   std::vector<TH1F*> h1D_jpt1_VBF_OS;
+   std::vector<TH1F*> h1D_jeta1_VBF_OS;
+   std::vector<TH1F*> h1D_phi1_VBF_OS;
+   std::vector<TH1F*> h1D_jpt2_VBF_OS;
+   std::vector<TH1F*> h1D_jeta2_VBF_OS;
+   std::vector<TH1F*> h1D_phi2_VBF_OS;
+   std::vector<TH1F*> h1D_mjj_VBF_OS;
+   std::vector<TH1F*> h1D_met_VBF_OS;
 
 
-   std::vector<TH1F*> h1D_jpt1_SS;
-   std::vector<TH1F*> h1D_jeta1_SS;
-   std::vector<TH1F*> h1D_phi1_SS;
-   std::vector<TH1F*> h1D_jpt2_SS;
-   std::vector<TH1F*> h1D_jeta2_SS;
-   std::vector<TH1F*> h1D_phi2_SS;
-   std::vector<TH1F*> h1D_mjj_SS;
-   std::vector<TH1F*> h1D_met_SS;
+   std::vector<TH1F*> h1D_jpt1_VBF_SS;
+   std::vector<TH1F*> h1D_jeta1_VBF_SS;
+   std::vector<TH1F*> h1D_phi1_VBF_SS;
+   std::vector<TH1F*> h1D_jpt2_VBF_SS;
+   std::vector<TH1F*> h1D_jeta2_VBF_SS;
+   std::vector<TH1F*> h1D_phi2_VBF_SS;
+   std::vector<TH1F*> h1D_mjj_VBF_SS;
+   std::vector<TH1F*> h1D_met_VBF_SS;
 
 
-   std::vector<TH1F*> h1D_jpt1_WSS;
-   std::vector<TH1F*> h1D_jeta1_WSS;
-   std::vector<TH1F*> h1D_phi1_WSS;
-   std::vector<TH1F*> h1D_jpt2_WSS;
-   std::vector<TH1F*> h1D_jeta2_WSS;
-   std::vector<TH1F*> h1D_phi2_WSS;
-   std::vector<TH1F*> h1D_mjj_WSS;
-   std::vector<TH1F*> h1D_met_WSS;
+   std::vector<TH1F*> h1D_jpt1_VBF_WSS;
+   std::vector<TH1F*> h1D_jeta1_VBF_WSS;
+   std::vector<TH1F*> h1D_phi1_VBF_WSS;
+   std::vector<TH1F*> h1D_jpt2_VBF_WSS;
+   std::vector<TH1F*> h1D_jeta2_VBF_WSS;
+   std::vector<TH1F*> h1D_phi2_VBF_WSS;
+   std::vector<TH1F*> h1D_mjj_VBF_WSS;
+   std::vector<TH1F*> h1D_met_VBF_WSS;
 
 
-   std::vector<TH1F*> h1D_jpt1_WOS;
-   std::vector<TH1F*> h1D_jeta1_WOS;
-   std::vector<TH1F*> h1D_phi1_WOS;
-   std::vector<TH1F*> h1D_jpt2_WOS;
-   std::vector<TH1F*> h1D_jeta2_WOS;
-   std::vector<TH1F*> h1D_phi2_WOS;
-   std::vector<TH1F*> h1D_mjj_WOS;
-   std::vector<TH1F*> h1D_met_WOS;
+   std::vector<TH1F*> h1D_jpt1_VBF_WOS;
+   std::vector<TH1F*> h1D_jeta1_VBF_WOS;
+   std::vector<TH1F*> h1D_phi1_VBF_WOS;
+   std::vector<TH1F*> h1D_jpt2_VBF_WOS;
+   std::vector<TH1F*> h1D_jeta2_VBF_WOS;
+   std::vector<TH1F*> h1D_phi2_VBF_WOS;
+   std::vector<TH1F*> h1D_mjj_VBF_WOS;
+   std::vector<TH1F*> h1D_met_VBF_WOS;
 
-   std::vector<TH1F*> h1D_jpt1_QCD;
-   std::vector<TH1F*> h1D_jeta1_QCD;
-   std::vector<TH1F*> h1D_phi1_QCD;
-   std::vector<TH1F*> h1D_jpt2_QCD;
-   std::vector<TH1F*> h1D_jeta2_QCD;
-   std::vector<TH1F*> h1D_phi2_QCD;
-   std::vector<TH1F*> h1D_mjj_QCD;
-   std::vector<TH1F*> h1D_met_QCD;
+   std::vector<TH1F*> h1D_jpt1_VBF_QCD;
+   std::vector<TH1F*> h1D_jeta1_VBF_QCD;
+   std::vector<TH1F*> h1D_phi1_VBF_QCD;
+   std::vector<TH1F*> h1D_jpt2_VBF_QCD;
+   std::vector<TH1F*> h1D_jeta2_VBF_QCD;
+   std::vector<TH1F*> h1D_phi2_VBF_QCD;
+   std::vector<TH1F*> h1D_mjj_VBF_QCD;
+   std::vector<TH1F*> h1D_met_VBF_QCD;
 
 
    std::vector<TH1F*> hmelaDCP_0jet_OS;
    std::vector<TH1F*> hmelaDCP_0jet_SS;
    std::vector<TH1F*> hmelaDCP_0jet_QCD;
    std::vector<TH1F*> hmelaDCP_0jet_WOS;
-   std::vector<TH1F*> hmelaDCP_0jet_OSS;
+   std::vector<TH1F*> hmelaDCP_0jet_WSS;
 
    std::vector<TH1F*> hmelaDCPggH_0jet_OS;
    std::vector<TH1F*> hmelaDCPggH_0jet_SS;
    std::vector<TH1F*> hmelaDCPggH_0jet_QCD;
    std::vector<TH1F*> hmelaDCPggH_0jet_WOS;
-   std::vector<TH1F*> hmelaDCPggH_0jet_OSS;
+   std::vector<TH1F*> hmelaDCPggH_0jet_WSS;
 
    std::vector<TH1F*> hmelaD0minusggH_0jet_OS;
    std::vector<TH1F*> hmelaD0minusggH_0jet_SS;
    std::vector<TH1F*> hmelaD0minusggH_0jet_QCD;
    std::vector<TH1F*> hmelaD0minusggH_0jet_WOS;
-   std::vector<TH1F*> hmelaD0minusggH_0jet_OSS;
+   std::vector<TH1F*> hmelaD0minusggH_0jet_WSS;
 
    std::vector<TH1F*> hmelaD0minus_0jet_OS;
    std::vector<TH1F*> hmelaD0minus_0jet_SS;
    std::vector<TH1F*> hmelaD0minus_0jet_QCD;
    std::vector<TH1F*> hmelaD0minus_0jet_WOS;
-   std::vector<TH1F*> hmelaD0minus_0jet_OSS;
+   std::vector<TH1F*> hmelaD0minus_0jet_WSS;
 
 
    std::vector<TH1F*> hmelaDPhijj_0jet_OS;
    std::vector<TH1F*> hmelaDPhijj_0jet_SS;
    std::vector<TH1F*> hmelaDPhijj_0jet_QCD;
    std::vector<TH1F*> hmelaDPhijj_0jet_WOS;
-   std::vector<TH1F*> hmelaDPhijj_0jet_OSS;
+   std::vector<TH1F*> hmelaDPhijj_0jet_WSS;
 
    std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_OS;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_SS;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_QCD;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_WOS;
-   std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_OSS;
+   std::vector<TH1F*> hmelaDPhiUnsignedjj_0jet_WSS;
 
 
 
@@ -851,38 +907,38 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
    std::vector<TH1F*> hmelaDCP_VBF_SS;
    std::vector<TH1F*> hmelaDCP_VBF_QCD;
    std::vector<TH1F*> hmelaDCP_VBF_WOS;
-   std::vector<TH1F*> hmelaDCPVBF_WSS;
+   std::vector<TH1F*> hmelaDCP_VBF_WSS;
 
    std::vector<TH1F*> hmelaDCPggH_VBF_OS;
    std::vector<TH1F*> hmelaDCPggH_VBF_SS;
    std::vector<TH1F*> hmelaDCPggH_VBF_QCD;
    std::vector<TH1F*> hmelaDCPggH_VBF_WOS;
-   std::vector<TH1F*> hmelaDCPggHVBF_WSS;
+   std::vector<TH1F*> hmelaDCPggH_VBF_WSS;
 
    std::vector<TH1F*> hmelaD0minusggH_VBF_OS;
    std::vector<TH1F*> hmelaD0minusggH_VBF_SS;
    std::vector<TH1F*> hmelaD0minusggH_VBF_QCD;
    std::vector<TH1F*> hmelaD0minusggH_VBF_WOS;
-   std::vector<TH1F*> hmelaD0minusggHVBF_WSS;
+   std::vector<TH1F*> hmelaD0minusggH_VBF_WSS;
 
    std::vector<TH1F*> hmelaD0minus_VBF_OS;
    std::vector<TH1F*> hmelaD0minus_VBF_SS;
    std::vector<TH1F*> hmelaD0minus_VBF_QCD;
    std::vector<TH1F*> hmelaD0minus_VBF_WOS;
-   std::vector<TH1F*> hmelaD0minusVBF_WSS;
+   std::vector<TH1F*> hmelaD0minus_VBF_WSS;
 
 
    std::vector<TH1F*> hmelaDPhijj_VBF_OS;
    std::vector<TH1F*> hmelaDPhijj_VBF_SS;
    std::vector<TH1F*> hmelaDPhijj_VBF_QCD;
    std::vector<TH1F*> hmelaDPhijj_VBF_WOS;
-   std::vector<TH1F*> hmelaDPhijjVBF_WSS;
+   std::vector<TH1F*> hmelaDPhijj_VBF_WSS;
 
    std::vector<TH1F*> hmelaDPhiUnsignedjj_VBF_OS;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_VBF_SS;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_VBF_QCD;
    std::vector<TH1F*> hmelaDPhiUnsignedjj_VBF_WOS;
-   std::vector<TH1F*> hmelaDPhiUnsignedjjVBF_WSS;
+   std::vector<TH1F*> hmelaDPhiUnsignedjj_VBF_WSS;
 
 
    std::vector<TH1F*> hmelaDCP_boosted_OS;
@@ -1238,262 +1294,262 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h77_WOS.push_back(new TH2F (HNS77WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h77_WOS[k]->Sumw2();
 
 ////////////ggH
-        ostringstream HNggHS0OS; HNggHS0OS << "h0_ggHOS" << k;
-        ostringstream HNggHS1OS; HNggHS1OS << "h1_ggHOS" << k;
+        ostringstream HNggHS0OS; HNggHS0OS << "h0_OSggH" << k;
+        ostringstream HNggHS1OS; HNggHS1OS << "h1_OSggH" << k;
 //        ostringstream HNggHS2OS; HNggHS2OS << "h2_dPhi_mvOS" << k;
-        ostringstream HNggHS3OS; HNggHS3OS << "h3_ggHOS" << k;
-        ostringstream HNggHS4OS; HNggHS4OS << "h4_ggHOS" << k;
-        ostringstream HNggHS5OS; HNggHS5OS << "h5_ggHOS" << k;
-        ostringstream HNggHS7OS; HNggHS7OS << "h7_ggHOS" << k;
-        h0_ggHOS.push_back(new TH2F (HNggHS0OS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_ggHOS[k]->Sumw2();
-        h1_ggHOS.push_back(new TH2F (HNggHS1OS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_ggHOS[k]->Sumw2();
+        ostringstream HNggHS3OS; HNggHS3OS << "h3_OSggH" << k;
+        ostringstream HNggHS4OS; HNggHS4OS << "h4_OSggH" << k;
+        ostringstream HNggHS5OS; HNggHS5OS << "h5_OSggH" << k;
+        ostringstream HNggHS7OS; HNggHS7OS << "h7_OSggH" << k;
+        h0_OSggH.push_back(new TH2F (HNggHS0OS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_OSggH[k]->Sumw2();
+        h1_OSggH.push_back(new TH2F (HNggHS1OS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_OSggH[k]->Sumw2();
   //      h2_dPhi_mvOS.push_back(new TH2F (HNggHS2OS.str().c_str(),"DPhi",binnum_dphijj,bins_dphijj,binnum2,bins2)); h2_dPhi_mvOS[k]->Sumw2();
-        h3_ggHOS.push_back(new TH2F (HNggHS3OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_ggHOS[k]->Sumw2();
-        h4_ggHOS.push_back(new TH2F (HNggHS4OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_ggHOS[k]->Sumw2();
-        h5_ggHOS.push_back(new TH2F (HNggHS5OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_ggHOS[k]->Sumw2();
-        h7_ggHOS.push_back(new TH2F (HNggHS7OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_ggHOS[k]->Sumw2();
+        h3_OSggH.push_back(new TH2F (HNggHS3OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_OSggH[k]->Sumw2();
+        h4_OSggH.push_back(new TH2F (HNggHS4OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_OSggH[k]->Sumw2();
+        h5_OSggH.push_back(new TH2F (HNggHS5OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_OSggH[k]->Sumw2();
+        h7_OSggH.push_back(new TH2F (HNggHS7OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_OSggH[k]->Sumw2();
 
-        ostringstream HNggHS33OS; HNggHS33OS << "h33_ggHOS" << k;
-        ostringstream HNggHS34OS; HNggHS34OS << "h34_ggHOS" << k;
-        ostringstream HNggHS35OS; HNggHS35OS << "h35_ggHOS" << k;
-        ostringstream HNggHS37OS; HNggHS37OS << "h37_ggHOS" << k;
-        h33_ggHOS.push_back(new TH2F (HNggHS33OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_ggHOS[k]->Sumw2();
-        h34_ggHOS.push_back(new TH2F (HNggHS34OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_ggHOS[k]->Sumw2();
-        h35_ggHOS.push_back(new TH2F (HNggHS35OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_ggHOS[k]->Sumw2();
-        h37_ggHOS.push_back(new TH2F (HNggHS37OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_ggHOS[k]->Sumw2();
+        ostringstream HNggHS33OS; HNggHS33OS << "h33_OSggH" << k;
+        ostringstream HNggHS34OS; HNggHS34OS << "h34_OSggH" << k;
+        ostringstream HNggHS35OS; HNggHS35OS << "h35_OSggH" << k;
+        ostringstream HNggHS37OS; HNggHS37OS << "h37_OSggH" << k;
+        h33_OSggH.push_back(new TH2F (HNggHS33OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_OSggH[k]->Sumw2();
+        h34_OSggH.push_back(new TH2F (HNggHS34OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_OSggH[k]->Sumw2();
+        h35_OSggH.push_back(new TH2F (HNggHS35OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_OSggH[k]->Sumw2();
+        h37_OSggH.push_back(new TH2F (HNggHS37OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_OSggH[k]->Sumw2();
 
-        ostringstream HNggHS43OS; HNggHS43OS << "h43_ggHOS" << k;
-        ostringstream HNggHS44OS; HNggHS44OS << "h44_ggHOS" << k;
-        ostringstream HNggHS45OS; HNggHS45OS << "h45_ggHOS" << k;
-        ostringstream HNggHS47OS; HNggHS47OS << "h47_ggHOS" << k;
-        h43_ggHOS.push_back(new TH2F (HNggHS43OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_ggHOS[k]->Sumw2();
-        h44_ggHOS.push_back(new TH2F (HNggHS44OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_ggHOS[k]->Sumw2();
-        h45_ggHOS.push_back(new TH2F (HNggHS45OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_ggHOS[k]->Sumw2();
-        h47_ggHOS.push_back(new TH2F (HNggHS47OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_ggHOS[k]->Sumw2();
+        ostringstream HNggHS43OS; HNggHS43OS << "h43_OSggH" << k;
+        ostringstream HNggHS44OS; HNggHS44OS << "h44_OSggH" << k;
+        ostringstream HNggHS45OS; HNggHS45OS << "h45_OSggH" << k;
+        ostringstream HNggHS47OS; HNggHS47OS << "h47_OSggH" << k;
+        h43_OSggH.push_back(new TH2F (HNggHS43OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_OSggH[k]->Sumw2();
+        h44_OSggH.push_back(new TH2F (HNggHS44OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_OSggH[k]->Sumw2();
+        h45_OSggH.push_back(new TH2F (HNggHS45OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_OSggH[k]->Sumw2();
+        h47_OSggH.push_back(new TH2F (HNggHS47OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_OSggH[k]->Sumw2();
 
-        ostringstream HNggHS53OS; HNggHS53OS << "h53_ggHOS" << k;
-        ostringstream HNggHS54OS; HNggHS54OS << "h54_ggHOS" << k;
-        ostringstream HNggHS55OS; HNggHS55OS << "h55_ggHOS" << k;
-        ostringstream HNggHS57OS; HNggHS57OS << "h57_ggHOS" << k;
-        h53_ggHOS.push_back(new TH2F (HNggHS53OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_ggHOS[k]->Sumw2();
-        h54_ggHOS.push_back(new TH2F (HNggHS54OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_ggHOS[k]->Sumw2();
-        h55_ggHOS.push_back(new TH2F (HNggHS55OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_ggHOS[k]->Sumw2();
-        h57_ggHOS.push_back(new TH2F (HNggHS57OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_ggHOS[k]->Sumw2();
+        ostringstream HNggHS53OS; HNggHS53OS << "h53_OSggH" << k;
+        ostringstream HNggHS54OS; HNggHS54OS << "h54_OSggH" << k;
+        ostringstream HNggHS55OS; HNggHS55OS << "h55_OSggH" << k;
+        ostringstream HNggHS57OS; HNggHS57OS << "h57_OSggH" << k;
+        h53_OSggH.push_back(new TH2F (HNggHS53OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_OSggH[k]->Sumw2();
+        h54_OSggH.push_back(new TH2F (HNggHS54OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_OSggH[k]->Sumw2();
+        h55_OSggH.push_back(new TH2F (HNggHS55OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_OSggH[k]->Sumw2();
+        h57_OSggH.push_back(new TH2F (HNggHS57OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_OSggH[k]->Sumw2();
 
-        ostringstream HNggHS63OS; HNggHS63OS << "h63_ggHOS" << k;
-        ostringstream HNggHS64OS; HNggHS64OS << "h64_ggHOS" << k;
-        ostringstream HNggHS65OS; HNggHS65OS << "h65_ggHOS" << k;
-        ostringstream HNggHS67OS; HNggHS67OS << "h67_ggHOS" << k;
-        h63_ggHOS.push_back(new TH2F (HNggHS63OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_ggHOS[k]->Sumw2();
-        h64_ggHOS.push_back(new TH2F (HNggHS64OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_ggHOS[k]->Sumw2();
-        h65_ggHOS.push_back(new TH2F (HNggHS65OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_ggHOS[k]->Sumw2();
-        h67_ggHOS.push_back(new TH2F (HNggHS67OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_ggHOS[k]->Sumw2();
+        ostringstream HNggHS63OS; HNggHS63OS << "h63_OSggH" << k;
+        ostringstream HNggHS64OS; HNggHS64OS << "h64_OSggH" << k;
+        ostringstream HNggHS65OS; HNggHS65OS << "h65_OSggH" << k;
+        ostringstream HNggHS67OS; HNggHS67OS << "h67_OSggH" << k;
+        h63_OSggH.push_back(new TH2F (HNggHS63OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_OSggH[k]->Sumw2();
+        h64_OSggH.push_back(new TH2F (HNggHS64OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_OSggH[k]->Sumw2();
+        h65_OSggH.push_back(new TH2F (HNggHS65OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_OSggH[k]->Sumw2();
+        h67_OSggH.push_back(new TH2F (HNggHS67OS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_OSggH[k]->Sumw2();
 
 
-        ostringstream HNggHS0SS; HNggHS0SS << "h0_ggHSS" << k;
-        ostringstream HNggHS1SS; HNggHS1SS << "h1_ggHSS" << k;
+        ostringstream HNggHS0SS; HNggHS0SS << "h0_SSggH" << k;
+        ostringstream HNggHS1SS; HNggHS1SS << "h1_SSggH" << k;
  //       ostringstream HNggHS2SS; HNggHS2SS << "h2_dPhi_mvSS" << k;
-        ostringstream HNggHS3SS; HNggHS3SS << "h3_ggHSS" << k;
-        ostringstream HNggHS4SS; HNggHS4SS << "h4_ggHSS" << k;
-        ostringstream HNggHS5SS; HNggHS5SS << "h5_ggHSS" << k;
-        ostringstream HNggHS7SS; HNggHS7SS << "h7_ggHSS" << k;
-        h0_ggHSS.push_back(new TH2F (HNggHS0SS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_ggHSS[k]->Sumw2();
-        h1_ggHSS.push_back(new TH2F (HNggHS1SS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_ggHSS[k]->Sumw2();
+        ostringstream HNggHS3SS; HNggHS3SS << "h3_SSggH" << k;
+        ostringstream HNggHS4SS; HNggHS4SS << "h4_SSggH" << k;
+        ostringstream HNggHS5SS; HNggHS5SS << "h5_SSggH" << k;
+        ostringstream HNggHS7SS; HNggHS7SS << "h7_SSggH" << k;
+        h0_SSggH.push_back(new TH2F (HNggHS0SS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_SSggH[k]->Sumw2();
+        h1_SSggH.push_back(new TH2F (HNggHS1SS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_SSggH[k]->Sumw2();
 //        h2_dPhi_mvSS.push_back(new TH2F (HNggHS2SS.str().c_str(),"DPhi",binnum_dphijj,bins_dphijj,binnum2,bins2)); h2_dPhi_mvSS[k]->Sumw2();
-        h3_ggHSS.push_back(new TH2F (HNggHS3SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_ggHSS[k]->Sumw2();
-        h4_ggHSS.push_back(new TH2F (HNggHS4SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_ggHSS[k]->Sumw2();
-        h5_ggHSS.push_back(new TH2F (HNggHS5SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_ggHSS[k]->Sumw2();
-        h7_ggHSS.push_back(new TH2F (HNggHS7SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_ggHSS[k]->Sumw2();
+        h3_SSggH.push_back(new TH2F (HNggHS3SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_SSggH[k]->Sumw2();
+        h4_SSggH.push_back(new TH2F (HNggHS4SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_SSggH[k]->Sumw2();
+        h5_SSggH.push_back(new TH2F (HNggHS5SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_SSggH[k]->Sumw2();
+        h7_SSggH.push_back(new TH2F (HNggHS7SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_SSggH[k]->Sumw2();
 
-        ostringstream HNggHS33SS; HNggHS33SS << "h33_ggHSS" << k;
-        ostringstream HNggHS34SS; HNggHS34SS << "h34_ggHSS" << k;
-        ostringstream HNggHS35SS; HNggHS35SS << "h35_ggHSS" << k;
-        ostringstream HNggHS37SS; HNggHS37SS << "h37_ggHSS" << k;
-        h33_ggHSS.push_back(new TH2F (HNggHS33SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_ggHSS[k]->Sumw2();
-        h34_ggHSS.push_back(new TH2F (HNggHS34SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_ggHSS[k]->Sumw2();
-        h35_ggHSS.push_back(new TH2F (HNggHS35SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_ggHSS[k]->Sumw2();
-        h37_ggHSS.push_back(new TH2F (HNggHS37SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_ggHSS[k]->Sumw2();
+        ostringstream HNggHS33SS; HNggHS33SS << "h33_SSggH" << k;
+        ostringstream HNggHS34SS; HNggHS34SS << "h34_SSggH" << k;
+        ostringstream HNggHS35SS; HNggHS35SS << "h35_SSggH" << k;
+        ostringstream HNggHS37SS; HNggHS37SS << "h37_SSggH" << k;
+        h33_SSggH.push_back(new TH2F (HNggHS33SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_SSggH[k]->Sumw2();
+        h34_SSggH.push_back(new TH2F (HNggHS34SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_SSggH[k]->Sumw2();
+        h35_SSggH.push_back(new TH2F (HNggHS35SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_SSggH[k]->Sumw2();
+        h37_SSggH.push_back(new TH2F (HNggHS37SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_SSggH[k]->Sumw2();
 
-        ostringstream HNggHS43SS; HNggHS43SS << "h43_ggHSS" << k;
-        ostringstream HNggHS44SS; HNggHS44SS << "h44_ggHSS" << k;
-        ostringstream HNggHS45SS; HNggHS45SS << "h45_ggHSS" << k;
-        ostringstream HNggHS47SS; HNggHS47SS << "h47_ggHSS" << k;
-        h43_ggHSS.push_back(new TH2F (HNggHS43SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_ggHSS[k]->Sumw2();
-        h44_ggHSS.push_back(new TH2F (HNggHS44SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_ggHSS[k]->Sumw2();
-        h45_ggHSS.push_back(new TH2F (HNggHS45SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_ggHSS[k]->Sumw2();
-        h47_ggHSS.push_back(new TH2F (HNggHS47SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_ggHSS[k]->Sumw2();
+        ostringstream HNggHS43SS; HNggHS43SS << "h43_SSggH" << k;
+        ostringstream HNggHS44SS; HNggHS44SS << "h44_SSggH" << k;
+        ostringstream HNggHS45SS; HNggHS45SS << "h45_SSggH" << k;
+        ostringstream HNggHS47SS; HNggHS47SS << "h47_SSggH" << k;
+        h43_SSggH.push_back(new TH2F (HNggHS43SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_SSggH[k]->Sumw2();
+        h44_SSggH.push_back(new TH2F (HNggHS44SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_SSggH[k]->Sumw2();
+        h45_SSggH.push_back(new TH2F (HNggHS45SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_SSggH[k]->Sumw2();
+        h47_SSggH.push_back(new TH2F (HNggHS47SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_SSggH[k]->Sumw2();
 
-        ostringstream HNggHS53SS; HNggHS53SS << "h53_ggHSS" << k;
-        ostringstream HNggHS54SS; HNggHS54SS << "h54_ggHSS" << k;
-        ostringstream HNggHS55SS; HNggHS55SS << "h55_ggHSS" << k;
-        ostringstream HNggHS57SS; HNggHS57SS << "h57_ggHSS" << k;
-        h53_ggHSS.push_back(new TH2F (HNggHS53SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_ggHSS[k]->Sumw2();
-        h54_ggHSS.push_back(new TH2F (HNggHS54SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_ggHSS[k]->Sumw2();
-        h55_ggHSS.push_back(new TH2F (HNggHS55SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_ggHSS[k]->Sumw2();
-        h57_ggHSS.push_back(new TH2F (HNggHS57SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_ggHSS[k]->Sumw2();
+        ostringstream HNggHS53SS; HNggHS53SS << "h53_SSggH" << k;
+        ostringstream HNggHS54SS; HNggHS54SS << "h54_SSggH" << k;
+        ostringstream HNggHS55SS; HNggHS55SS << "h55_SSggH" << k;
+        ostringstream HNggHS57SS; HNggHS57SS << "h57_SSggH" << k;
+        h53_SSggH.push_back(new TH2F (HNggHS53SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_SSggH[k]->Sumw2();
+        h54_SSggH.push_back(new TH2F (HNggHS54SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_SSggH[k]->Sumw2();
+        h55_SSggH.push_back(new TH2F (HNggHS55SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_SSggH[k]->Sumw2();
+        h57_SSggH.push_back(new TH2F (HNggHS57SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_SSggH[k]->Sumw2();
 
-        ostringstream HNggHS63SS; HNggHS63SS << "h63_ggHSS" << k;
-        ostringstream HNggHS64SS; HNggHS64SS << "h64_ggHSS" << k;
-        ostringstream HNggHS65SS; HNggHS65SS << "h65_ggHSS" << k;
-        ostringstream HNggHS67SS; HNggHS67SS << "h67_ggHSS" << k;
-        h63_ggHSS.push_back(new TH2F (HNggHS63SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_ggHSS[k]->Sumw2();
-        h64_ggHSS.push_back(new TH2F (HNggHS64SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_ggHSS[k]->Sumw2();
-        h65_ggHSS.push_back(new TH2F (HNggHS65SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_ggHSS[k]->Sumw2();
-        h67_ggHSS.push_back(new TH2F (HNggHS67SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_ggHSS[k]->Sumw2();
+        ostringstream HNggHS63SS; HNggHS63SS << "h63_SSggH" << k;
+        ostringstream HNggHS64SS; HNggHS64SS << "h64_SSggH" << k;
+        ostringstream HNggHS65SS; HNggHS65SS << "h65_SSggH" << k;
+        ostringstream HNggHS67SS; HNggHS67SS << "h67_SSggH" << k;
+        h63_SSggH.push_back(new TH2F (HNggHS63SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_SSggH[k]->Sumw2();
+        h64_SSggH.push_back(new TH2F (HNggHS64SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_SSggH[k]->Sumw2();
+        h65_SSggH.push_back(new TH2F (HNggHS65SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_SSggH[k]->Sumw2();
+        h67_SSggH.push_back(new TH2F (HNggHS67SS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_SSggH[k]->Sumw2();
 
 
-        ostringstream HNggHS0QCD; HNggHS0QCD << "h0_ggHQCD" << k;
-        ostringstream HNggHS1QCD; HNggHS1QCD << "h1_ggHQCD" << k;
+        ostringstream HNggHS0QCD; HNggHS0QCD << "h0_QCDggH" << k;
+        ostringstream HNggHS1QCD; HNggHS1QCD << "h1_QCDggH" << k;
 //        ostringstream HNggHS2QCD; HNggHS2QCD << "h2_dPhi_mvQCD" << k;
-        ostringstream HNggHS3QCD; HNggHS3QCD << "h3_ggHQCD" << k;
-        ostringstream HNggHS4QCD; HNggHS4QCD << "h4_ggHQCD" << k;
-        ostringstream HNggHS5QCD; HNggHS5QCD << "h5_ggHQCD" << k;
-        ostringstream HNggHS7QCD; HNggHS7QCD << "h7_ggHQCD" << k;
-        h0_ggHQCD.push_back(new TH2F (HNggHS0QCD.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_ggHQCD[k]->Sumw2();
-        h1_ggHQCD.push_back(new TH2F (HNggHS1QCD.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_ggHQCD[k]->Sumw2();
+        ostringstream HNggHS3QCD; HNggHS3QCD << "h3_QCDggH" << k;
+        ostringstream HNggHS4QCD; HNggHS4QCD << "h4_QCDggH" << k;
+        ostringstream HNggHS5QCD; HNggHS5QCD << "h5_QCDggH" << k;
+        ostringstream HNggHS7QCD; HNggHS7QCD << "h7_QCDggH" << k;
+        h0_QCDggH.push_back(new TH2F (HNggHS0QCD.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_QCDggH[k]->Sumw2();
+        h1_QCDggH.push_back(new TH2F (HNggHS1QCD.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_QCDggH[k]->Sumw2();
   //      h2_dPhi_mvQCD.push_back(new TH2F (HNggHS2QCD.str().c_str(),"DPhi",binnum_dphijj,bins_dphijj,binnum2,bins2)); h2_dPhi_mvQCD[k]->Sumw2();
-        h3_ggHQCD.push_back(new TH2F (HNggHS3QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_ggHQCD[k]->Sumw2();
-        h4_ggHQCD.push_back(new TH2F (HNggHS4QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_ggHQCD[k]->Sumw2();
-        h5_ggHQCD.push_back(new TH2F (HNggHS5QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_ggHQCD[k]->Sumw2();
-        h7_ggHQCD.push_back(new TH2F (HNggHS7QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_ggHQCD[k]->Sumw2();
+        h3_QCDggH.push_back(new TH2F (HNggHS3QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_QCDggH[k]->Sumw2();
+        h4_QCDggH.push_back(new TH2F (HNggHS4QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_QCDggH[k]->Sumw2();
+        h5_QCDggH.push_back(new TH2F (HNggHS5QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_QCDggH[k]->Sumw2();
+        h7_QCDggH.push_back(new TH2F (HNggHS7QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_QCDggH[k]->Sumw2();
 
-        ostringstream HNggHS33QCD; HNggHS33QCD << "h33_ggHQCD" << k;
-        ostringstream HNggHS34QCD; HNggHS34QCD << "h34_ggHQCD" << k;
-        ostringstream HNggHS35QCD; HNggHS35QCD << "h35_ggHQCD" << k;
-        ostringstream HNggHS37QCD; HNggHS37QCD << "h37_ggHQCD" << k;
-        h33_ggHQCD.push_back(new TH2F (HNggHS33QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_ggHQCD[k]->Sumw2();
-        h34_ggHQCD.push_back(new TH2F (HNggHS34QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_ggHQCD[k]->Sumw2();
-        h35_ggHQCD.push_back(new TH2F (HNggHS35QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_ggHQCD[k]->Sumw2();
-        h37_ggHQCD.push_back(new TH2F (HNggHS37QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_ggHQCD[k]->Sumw2();
+        ostringstream HNggHS33QCD; HNggHS33QCD << "h33_QCDggH" << k;
+        ostringstream HNggHS34QCD; HNggHS34QCD << "h34_QCDggH" << k;
+        ostringstream HNggHS35QCD; HNggHS35QCD << "h35_QCDggH" << k;
+        ostringstream HNggHS37QCD; HNggHS37QCD << "h37_QCDggH" << k;
+        h33_QCDggH.push_back(new TH2F (HNggHS33QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_QCDggH[k]->Sumw2();
+        h34_QCDggH.push_back(new TH2F (HNggHS34QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_QCDggH[k]->Sumw2();
+        h35_QCDggH.push_back(new TH2F (HNggHS35QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_QCDggH[k]->Sumw2();
+        h37_QCDggH.push_back(new TH2F (HNggHS37QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_QCDggH[k]->Sumw2();
 
-        ostringstream HNggHS43QCD; HNggHS43QCD << "h43_ggHQCD" << k;
-        ostringstream HNggHS44QCD; HNggHS44QCD << "h44_ggHQCD" << k;
-        ostringstream HNggHS45QCD; HNggHS45QCD << "h45_ggHQCD" << k;
-        ostringstream HNggHS47QCD; HNggHS47QCD << "h47_ggHQCD" << k;
-        h43_ggHQCD.push_back(new TH2F (HNggHS43QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_ggHQCD[k]->Sumw2();
-        h44_ggHQCD.push_back(new TH2F (HNggHS44QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_ggHQCD[k]->Sumw2();
-        h45_ggHQCD.push_back(new TH2F (HNggHS45QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_ggHQCD[k]->Sumw2();
-        h47_ggHQCD.push_back(new TH2F (HNggHS47QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_ggHQCD[k]->Sumw2();
+        ostringstream HNggHS43QCD; HNggHS43QCD << "h43_QCDggH" << k;
+        ostringstream HNggHS44QCD; HNggHS44QCD << "h44_QCDggH" << k;
+        ostringstream HNggHS45QCD; HNggHS45QCD << "h45_QCDggH" << k;
+        ostringstream HNggHS47QCD; HNggHS47QCD << "h47_QCDggH" << k;
+        h43_QCDggH.push_back(new TH2F (HNggHS43QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_QCDggH[k]->Sumw2();
+        h44_QCDggH.push_back(new TH2F (HNggHS44QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_QCDggH[k]->Sumw2();
+        h45_QCDggH.push_back(new TH2F (HNggHS45QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_QCDggH[k]->Sumw2();
+        h47_QCDggH.push_back(new TH2F (HNggHS47QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_QCDggH[k]->Sumw2();
 
-        ostringstream HNggHS53QCD; HNggHS53QCD << "h53_ggHQCD" << k;
-        ostringstream HNggHS54QCD; HNggHS54QCD << "h54_ggHQCD" << k;
-        ostringstream HNggHS55QCD; HNggHS55QCD << "h55_ggHQCD" << k;
-        ostringstream HNggHS57QCD; HNggHS57QCD << "h57_ggHQCD" << k;
-        h53_ggHQCD.push_back(new TH2F (HNggHS53QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_ggHQCD[k]->Sumw2();
-        h54_ggHQCD.push_back(new TH2F (HNggHS54QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_ggHQCD[k]->Sumw2();
-        h55_ggHQCD.push_back(new TH2F (HNggHS55QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_ggHQCD[k]->Sumw2();
-        h57_ggHQCD.push_back(new TH2F (HNggHS57QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_ggHQCD[k]->Sumw2();
+        ostringstream HNggHS53QCD; HNggHS53QCD << "h53_QCDggH" << k;
+        ostringstream HNggHS54QCD; HNggHS54QCD << "h54_QCDggH" << k;
+        ostringstream HNggHS55QCD; HNggHS55QCD << "h55_QCDggH" << k;
+        ostringstream HNggHS57QCD; HNggHS57QCD << "h57_QCDggH" << k;
+        h53_QCDggH.push_back(new TH2F (HNggHS53QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_QCDggH[k]->Sumw2();
+        h54_QCDggH.push_back(new TH2F (HNggHS54QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_QCDggH[k]->Sumw2();
+        h55_QCDggH.push_back(new TH2F (HNggHS55QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_QCDggH[k]->Sumw2();
+        h57_QCDggH.push_back(new TH2F (HNggHS57QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_QCDggH[k]->Sumw2();
 
-        ostringstream HNggHS63QCD; HNggHS63QCD << "h63_ggHQCD" << k;
-        ostringstream HNggHS64QCD; HNggHS64QCD << "h64_ggHQCD" << k;
-        ostringstream HNggHS65QCD; HNggHS65QCD << "h65_ggHQCD" << k;
-        ostringstream HNggHS67QCD; HNggHS67QCD << "h67_ggHQCD" << k;
-        h63_ggHQCD.push_back(new TH2F (HNggHS63QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_ggHQCD[k]->Sumw2();
-        h64_ggHQCD.push_back(new TH2F (HNggHS64QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_ggHQCD[k]->Sumw2();
-        h65_ggHQCD.push_back(new TH2F (HNggHS65QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_ggHQCD[k]->Sumw2();
-        h67_ggHQCD.push_back(new TH2F (HNggHS67QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_ggHQCD[k]->Sumw2();
+        ostringstream HNggHS63QCD; HNggHS63QCD << "h63_QCDggH" << k;
+        ostringstream HNggHS64QCD; HNggHS64QCD << "h64_QCDggH" << k;
+        ostringstream HNggHS65QCD; HNggHS65QCD << "h65_QCDggH" << k;
+        ostringstream HNggHS67QCD; HNggHS67QCD << "h67_QCDggH" << k;
+        h63_QCDggH.push_back(new TH2F (HNggHS63QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_QCDggH[k]->Sumw2();
+        h64_QCDggH.push_back(new TH2F (HNggHS64QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_QCDggH[k]->Sumw2();
+        h65_QCDggH.push_back(new TH2F (HNggHS65QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_QCDggH[k]->Sumw2();
+        h67_QCDggH.push_back(new TH2F (HNggHS67QCD.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_QCDggH[k]->Sumw2();
 
-        ostringstream HNggHS0WSS; HNggHS0WSS << "h0_ggHWSS" << k;
-        ostringstream HNggHS1WSS; HNggHS1WSS << "h1_ggHWSS" << k;
+        ostringstream HNggHS0WSS; HNggHS0WSS << "h0_WSSggH" << k;
+        ostringstream HNggHS1WSS; HNggHS1WSS << "h1_WSSggH" << k;
 //       ostringstream HNggHS2WSS; HNggHS2WSS << "h2_dPhi_mvWSS" << k;
-        ostringstream HNggHS3WSS; HNggHS3WSS << "h3_ggHWSS" << k;
-        ostringstream HNggHS4WSS; HNggHS4WSS << "h4_ggHWSS" << k;
-        ostringstream HNggHS5WSS; HNggHS5WSS << "h5_ggHWSS" << k;
-        ostringstream HNggHS7WSS; HNggHS7WSS << "h7_ggHWSS" << k;
-        h0_ggHWSS.push_back(new TH2F (HNggHS0WSS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_ggHWSS[k]->Sumw2();
-        h1_ggHWSS.push_back(new TH2F (HNggHS1WSS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1));h1_ggHWSS[k]->Sumw2();
+        ostringstream HNggHS3WSS; HNggHS3WSS << "h3_WSSggH" << k;
+        ostringstream HNggHS4WSS; HNggHS4WSS << "h4_WSSggH" << k;
+        ostringstream HNggHS5WSS; HNggHS5WSS << "h5_WSSggH" << k;
+        ostringstream HNggHS7WSS; HNggHS7WSS << "h7_WSSggH" << k;
+        h0_WSSggH.push_back(new TH2F (HNggHS0WSS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_WSSggH[k]->Sumw2();
+        h1_WSSggH.push_back(new TH2F (HNggHS1WSS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1));h1_WSSggH[k]->Sumw2();
   //      h2_dPhi_mvWSS.push_back(new TH2F (HNggHS2WSS.str().c_str(),"DPhi",binnum_dphijj,bins_dphijj,binnum2,bins2));h2_dPhi_mvWSS[k]->Sumw2();
-        h3_ggHWSS.push_back(new TH2F (HNggHS3WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h3_ggHWSS[k]->Sumw2();
-        h4_ggHWSS.push_back(new TH2F (HNggHS4WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h4_ggHWSS[k]->Sumw2();
-        h5_ggHWSS.push_back(new TH2F (HNggHS5WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h5_ggHWSS[k]->Sumw2();
-        h7_ggHWSS.push_back(new TH2F (HNggHS7WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h7_ggHWSS[k]->Sumw2();
+        h3_WSSggH.push_back(new TH2F (HNggHS3WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h3_WSSggH[k]->Sumw2();
+        h4_WSSggH.push_back(new TH2F (HNggHS4WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h4_WSSggH[k]->Sumw2();
+        h5_WSSggH.push_back(new TH2F (HNggHS5WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h5_WSSggH[k]->Sumw2();
+        h7_WSSggH.push_back(new TH2F (HNggHS7WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h7_WSSggH[k]->Sumw2();
 
-        ostringstream HNggHS33WSS; HNggHS33WSS << "h33_ggHWSS" << k;
-        ostringstream HNggHS34WSS; HNggHS34WSS << "h34_ggHWSS" << k;
-        ostringstream HNggHS35WSS; HNggHS35WSS << "h35_ggHWSS" << k;
-        ostringstream HNggHS37WSS; HNggHS37WSS << "h37_ggHWSS" << k;
-        h33_ggHWSS.push_back(new TH2F (HNggHS33WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h33_ggHWSS[k]->Sumw2();
-        h34_ggHWSS.push_back(new TH2F (HNggHS34WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h34_ggHWSS[k]->Sumw2();
-        h35_ggHWSS.push_back(new TH2F (HNggHS35WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h35_ggHWSS[k]->Sumw2();
-        h37_ggHWSS.push_back(new TH2F (HNggHS37WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h37_ggHWSS[k]->Sumw2();
+        ostringstream HNggHS33WSS; HNggHS33WSS << "h33_WSSggH" << k;
+        ostringstream HNggHS34WSS; HNggHS34WSS << "h34_WSSggH" << k;
+        ostringstream HNggHS35WSS; HNggHS35WSS << "h35_WSSggH" << k;
+        ostringstream HNggHS37WSS; HNggHS37WSS << "h37_WSSggH" << k;
+        h33_WSSggH.push_back(new TH2F (HNggHS33WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h33_WSSggH[k]->Sumw2();
+        h34_WSSggH.push_back(new TH2F (HNggHS34WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h34_WSSggH[k]->Sumw2();
+        h35_WSSggH.push_back(new TH2F (HNggHS35WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h35_WSSggH[k]->Sumw2();
+        h37_WSSggH.push_back(new TH2F (HNggHS37WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h37_WSSggH[k]->Sumw2();
 
-        ostringstream HNggHS43WSS; HNggHS43WSS << "h43_ggHWSS" << k;
-        ostringstream HNggHS44WSS; HNggHS44WSS << "h44_ggHWSS" << k;
-        ostringstream HNggHS45WSS; HNggHS45WSS << "h45_ggHWSS" << k;
-        ostringstream HNggHS47WSS; HNggHS47WSS << "h47_ggHWSS" << k;
-        h43_ggHWSS.push_back(new TH2F (HNggHS43WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h43_ggHWSS[k]->Sumw2();
-        h44_ggHWSS.push_back(new TH2F (HNggHS44WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h44_ggHWSS[k]->Sumw2();
-        h45_ggHWSS.push_back(new TH2F (HNggHS45WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h45_ggHWSS[k]->Sumw2();
-        h47_ggHWSS.push_back(new TH2F (HNggHS47WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h47_ggHWSS[k]->Sumw2();
+        ostringstream HNggHS43WSS; HNggHS43WSS << "h43_WSSggH" << k;
+        ostringstream HNggHS44WSS; HNggHS44WSS << "h44_WSSggH" << k;
+        ostringstream HNggHS45WSS; HNggHS45WSS << "h45_WSSggH" << k;
+        ostringstream HNggHS47WSS; HNggHS47WSS << "h47_WSSggH" << k;
+        h43_WSSggH.push_back(new TH2F (HNggHS43WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h43_WSSggH[k]->Sumw2();
+        h44_WSSggH.push_back(new TH2F (HNggHS44WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h44_WSSggH[k]->Sumw2();
+        h45_WSSggH.push_back(new TH2F (HNggHS45WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h45_WSSggH[k]->Sumw2();
+        h47_WSSggH.push_back(new TH2F (HNggHS47WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h47_WSSggH[k]->Sumw2();
 
-        ostringstream HNggHS53WSS; HNggHS53WSS << "h53_ggHWSS" << k;
-        ostringstream HNggHS54WSS; HNggHS54WSS << "h54_ggHWSS" << k;
-        ostringstream HNggHS55WSS; HNggHS55WSS << "h55_ggHWSS" << k;
-        ostringstream HNggHS57WSS; HNggHS57WSS << "h57_ggHWSS" << k;
-        h53_ggHWSS.push_back(new TH2F (HNggHS53WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h53_ggHWSS[k]->Sumw2();
-        h54_ggHWSS.push_back(new TH2F (HNggHS54WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h54_ggHWSS[k]->Sumw2();
-        h55_ggHWSS.push_back(new TH2F (HNggHS55WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h55_ggHWSS[k]->Sumw2();
-        h57_ggHWSS.push_back(new TH2F (HNggHS57WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h57_ggHWSS[k]->Sumw2();
+        ostringstream HNggHS53WSS; HNggHS53WSS << "h53_WSSggH" << k;
+        ostringstream HNggHS54WSS; HNggHS54WSS << "h54_WSSggH" << k;
+        ostringstream HNggHS55WSS; HNggHS55WSS << "h55_WSSggH" << k;
+        ostringstream HNggHS57WSS; HNggHS57WSS << "h57_WSSggH" << k;
+        h53_WSSggH.push_back(new TH2F (HNggHS53WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h53_WSSggH[k]->Sumw2();
+        h54_WSSggH.push_back(new TH2F (HNggHS54WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h54_WSSggH[k]->Sumw2();
+        h55_WSSggH.push_back(new TH2F (HNggHS55WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h55_WSSggH[k]->Sumw2();
+        h57_WSSggH.push_back(new TH2F (HNggHS57WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h57_WSSggH[k]->Sumw2();
 
-        ostringstream HNggHS63WSS; HNggHS63WSS << "h63_ggHWSS" << k;
-        ostringstream HNggHS64WSS; HNggHS64WSS << "h64_ggHWSS" << k;
-        ostringstream HNggHS65WSS; HNggHS65WSS << "h65_ggHWSS" << k;
-        ostringstream HNggHS67WSS; HNggHS67WSS << "h67_ggHWSS" << k;
-        h63_ggHWSS.push_back(new TH2F (HNggHS63WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h63_ggHWSS[k]->Sumw2();
-        h64_ggHWSS.push_back(new TH2F (HNggHS64WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h64_ggHWSS[k]->Sumw2();
-        h65_ggHWSS.push_back(new TH2F (HNggHS65WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h65_ggHWSS[k]->Sumw2();
-        h67_ggHWSS.push_back(new TH2F (HNggHS67WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h67_ggHWSS[k]->Sumw2();
+        ostringstream HNggHS63WSS; HNggHS63WSS << "h63_WSSggH" << k;
+        ostringstream HNggHS64WSS; HNggHS64WSS << "h64_WSSggH" << k;
+        ostringstream HNggHS65WSS; HNggHS65WSS << "h65_WSSggH" << k;
+        ostringstream HNggHS67WSS; HNggHS67WSS << "h67_WSSggH" << k;
+        h63_WSSggH.push_back(new TH2F (HNggHS63WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h63_WSSggH[k]->Sumw2();
+        h64_WSSggH.push_back(new TH2F (HNggHS64WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h64_WSSggH[k]->Sumw2();
+        h65_WSSggH.push_back(new TH2F (HNggHS65WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h65_WSSggH[k]->Sumw2();
+        h67_WSSggH.push_back(new TH2F (HNggHS67WSS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2));h67_WSSggH[k]->Sumw2();
 
-        ostringstream HNggHS0WOS; HNggHS0WOS << "h0_ggHWOS" << k;
-        ostringstream HNggHS1WOS; HNggHS1WOS << "h1_ggHWOS" << k;
+        ostringstream HNggHS0WOS; HNggHS0WOS << "h0_WOSggH" << k;
+        ostringstream HNggHS1WOS; HNggHS1WOS << "h1_WOSggH" << k;
 //        ostringstream HNggHS2WOS; HNggHS2WOS << "h2_dPhi_mvWOS" << k;
-        ostringstream HNggHS3WOS; HNggHS3WOS << "h3_ggHWOS" << k;
-        ostringstream HNggHS4WOS; HNggHS4WOS << "h4_ggHWOS" << k;
-        ostringstream HNggHS5WOS; HNggHS5WOS << "h5_ggHWOS" << k;
-        ostringstream HNggHS7WOS; HNggHS7WOS << "h7_ggHWOS" << k;
-        h0_ggHWOS.push_back(new TH2F (HNggHS0WOS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_ggHWOS[k]->Sumw2();
-        h1_ggHWOS.push_back(new TH2F (HNggHS1WOS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_ggHWOS[k]->Sumw2();
+        ostringstream HNggHS3WOS; HNggHS3WOS << "h3_WOSggH" << k;
+        ostringstream HNggHS4WOS; HNggHS4WOS << "h4_WOSggH" << k;
+        ostringstream HNggHS5WOS; HNggHS5WOS << "h5_WOSggH" << k;
+        ostringstream HNggHS7WOS; HNggHS7WOS << "h7_WOSggH" << k;
+        h0_WOSggH.push_back(new TH2F (HNggHS0WOS.str().c_str(),"InvMa",binnum_taupt,bins_taupt,binnum0,bins0)); h0_WOSggH[k]->Sumw2();
+        h1_WOSggH.push_back(new TH2F (HNggHS1WOS.str().c_str(),"InvMa",binnum_pth,bins_pth,binnum1,bins1)); h1_WOSggH[k]->Sumw2();
   //      h2_dPhi_mvWOS.push_back(new TH2F (HNggHS2WOS.str().c_str(),"DPhi",binnum_dphijj,bins_dphijj,binnum2,bins2)); h2_dPhi_mvWOS[k]->Sumw2();
-        h3_ggHWOS.push_back(new TH2F (HNggHS3WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_ggHWOS[k]->Sumw2();
-        h4_ggHWOS.push_back(new TH2F (HNggHS4WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_ggHWOS[k]->Sumw2();
-        h5_ggHWOS.push_back(new TH2F (HNggHS5WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_ggHWOS[k]->Sumw2();
-        h7_ggHWOS.push_back(new TH2F (HNggHS7WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_ggHWOS[k]->Sumw2();
+        h3_WOSggH.push_back(new TH2F (HNggHS3WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h3_WOSggH[k]->Sumw2();
+        h4_WOSggH.push_back(new TH2F (HNggHS4WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h4_WOSggH[k]->Sumw2();
+        h5_WOSggH.push_back(new TH2F (HNggHS5WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h5_WOSggH[k]->Sumw2();
+        h7_WOSggH.push_back(new TH2F (HNggHS7WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h7_WOSggH[k]->Sumw2();
 
-        ostringstream HNggHS33WOS; HNggHS33WOS << "h33_ggHWOS" << k;
-        ostringstream HNggHS34WOS; HNggHS34WOS << "h34_ggHWOS" << k;
-        ostringstream HNggHS35WOS; HNggHS35WOS << "h35_ggHWOS" << k;
-        ostringstream HNggHS37WOS; HNggHS37WOS << "h37_ggHWOS" << k;
-        h33_ggHWOS.push_back(new TH2F (HNggHS33WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_ggHWOS[k]->Sumw2();
-        h34_ggHWOS.push_back(new TH2F (HNggHS34WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_ggHWOS[k]->Sumw2();
-        h35_ggHWOS.push_back(new TH2F (HNggHS35WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_ggHWOS[k]->Sumw2();
-        h37_ggHWOS.push_back(new TH2F (HNggHS37WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_ggHWOS[k]->Sumw2();
+        ostringstream HNggHS33WOS; HNggHS33WOS << "h33_WOSggH" << k;
+        ostringstream HNggHS34WOS; HNggHS34WOS << "h34_WOSggH" << k;
+        ostringstream HNggHS35WOS; HNggHS35WOS << "h35_WOSggH" << k;
+        ostringstream HNggHS37WOS; HNggHS37WOS << "h37_WOSggH" << k;
+        h33_WOSggH.push_back(new TH2F (HNggHS33WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h33_WOSggH[k]->Sumw2();
+        h34_WOSggH.push_back(new TH2F (HNggHS34WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h34_WOSggH[k]->Sumw2();
+        h35_WOSggH.push_back(new TH2F (HNggHS35WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h35_WOSggH[k]->Sumw2();
+        h37_WOSggH.push_back(new TH2F (HNggHS37WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h37_WOSggH[k]->Sumw2();
 
-        ostringstream HNggHS43WOS; HNggHS43WOS << "h43_ggHWOS" << k;
-        ostringstream HNggHS44WOS; HNggHS44WOS << "h44_ggHWOS" << k;
-        ostringstream HNggHS45WOS; HNggHS45WOS << "h45_ggHWOS" << k;
-        ostringstream HNggHS47WOS; HNggHS47WOS << "h47_ggHWOS" << k;
-        h43_ggHWOS.push_back(new TH2F (HNggHS43WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_ggHWOS[k]->Sumw2();
-        h44_ggHWOS.push_back(new TH2F (HNggHS44WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_ggHWOS[k]->Sumw2();
-        h45_ggHWOS.push_back(new TH2F (HNggHS45WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_ggHWOS[k]->Sumw2();
-        h47_ggHWOS.push_back(new TH2F (HNggHS47WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_ggHWOS[k]->Sumw2();
+        ostringstream HNggHS43WOS; HNggHS43WOS << "h43_WOSggH" << k;
+        ostringstream HNggHS44WOS; HNggHS44WOS << "h44_WOSggH" << k;
+        ostringstream HNggHS45WOS; HNggHS45WOS << "h45_WOSggH" << k;
+        ostringstream HNggHS47WOS; HNggHS47WOS << "h47_WOSggH" << k;
+        h43_WOSggH.push_back(new TH2F (HNggHS43WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h43_WOSggH[k]->Sumw2();
+        h44_WOSggH.push_back(new TH2F (HNggHS44WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h44_WOSggH[k]->Sumw2();
+        h45_WOSggH.push_back(new TH2F (HNggHS45WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h45_WOSggH[k]->Sumw2();
+        h47_WOSggH.push_back(new TH2F (HNggHS47WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h47_WOSggH[k]->Sumw2();
 
-        ostringstream HNggHS53WOS; HNggHS53WOS << "h53_ggHWOS" << k;
-        ostringstream HNggHS54WOS; HNggHS54WOS << "h54_ggHWOS" << k;
-        ostringstream HNggHS55WOS; HNggHS55WOS << "h55_ggHWOS" << k;
-        ostringstream HNggHS57WOS; HNggHS57WOS << "h57_ggHWOS" << k;
-        h53_ggHWOS.push_back(new TH2F (HNggHS53WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_ggHWOS[k]->Sumw2();
-        h54_ggHWOS.push_back(new TH2F (HNggHS54WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_ggHWOS[k]->Sumw2();
-        h55_ggHWOS.push_back(new TH2F (HNggHS55WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_ggHWOS[k]->Sumw2();
-        h57_ggHWOS.push_back(new TH2F (HNggHS57WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_ggHWOS[k]->Sumw2();
+        ostringstream HNggHS53WOS; HNggHS53WOS << "h53_WOSggH" << k;
+        ostringstream HNggHS54WOS; HNggHS54WOS << "h54_WOSggH" << k;
+        ostringstream HNggHS55WOS; HNggHS55WOS << "h55_WOSggH" << k;
+        ostringstream HNggHS57WOS; HNggHS57WOS << "h57_WOSggH" << k;
+        h53_WOSggH.push_back(new TH2F (HNggHS53WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h53_WOSggH[k]->Sumw2();
+        h54_WOSggH.push_back(new TH2F (HNggHS54WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h54_WOSggH[k]->Sumw2();
+        h55_WOSggH.push_back(new TH2F (HNggHS55WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h55_WOSggH[k]->Sumw2();
+        h57_WOSggH.push_back(new TH2F (HNggHS57WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h57_WOSggH[k]->Sumw2();
 
-        ostringstream HNggHS63WOS; HNggHS63WOS << "h63_ggHWOS" << k;
-        ostringstream HNggHS64WOS; HNggHS64WOS << "h64_ggHWOS" << k;
-        ostringstream HNggHS65WOS; HNggHS65WOS << "h65_ggHWOS" << k;
-        ostringstream HNggHS67WOS; HNggHS67WOS << "h67_ggHWOS" << k;
-        h63_ggHWOS.push_back(new TH2F (HNggHS63WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_ggHWOS[k]->Sumw2();
-        h64_ggHWOS.push_back(new TH2F (HNggHS64WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_ggHWOS[k]->Sumw2();
-        h65_ggHWOS.push_back(new TH2F (HNggHS65WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_ggHWOS[k]->Sumw2();
-        h67_ggHWOS.push_back(new TH2F (HNggHS67WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_ggHWOS[k]->Sumw2();
+        ostringstream HNggHS63WOS; HNggHS63WOS << "h63_WOSggH" << k;
+        ostringstream HNggHS64WOS; HNggHS64WOS << "h64_WOSggH" << k;
+        ostringstream HNggHS65WOS; HNggHS65WOS << "h65_WOSggH" << k;
+        ostringstream HNggHS67WOS; HNggHS67WOS << "h67_WOSggH" << k;
+        h63_WOSggH.push_back(new TH2F (HNggHS63WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h63_WOSggH[k]->Sumw2();
+        h64_WOSggH.push_back(new TH2F (HNggHS64WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h64_WOSggH[k]->Sumw2();
+        h65_WOSggH.push_back(new TH2F (HNggHS65WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h65_WOSggH[k]->Sumw2();
+        h67_WOSggH.push_back(new TH2F (HNggHS67WOS.str().c_str(),"InvMa",binnum_mjj,bins_mjj,binnum2,bins2)); h67_WOSggH[k]->Sumw2();
 
 
 ///////////dPhi
@@ -1510,8 +1566,63 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h3j_dphi_OS.push_back(new TH2F ("h3j_dphi_OS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3j_dphi_OS[k]->Sumw2();
         h3k_dphi_OS.push_back(new TH2F ("h3k_dphi_OS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3k_dphi_OS[k]->Sumw2();
         h3l_dphi_OS.push_back(new TH2F ("h3l_dphi_OS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3l_dphi_OS[k]->Sumw2();
-        //h3m_dphi_OS.push_back(new TH2F ("h3m_dphi_OS","InvMa",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3m_dphi_OS[k]->Sumw2();
-//        h3n_dphi_OS.push_back(new TH2F ("h3n_dphi_OS","InvMa",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3n_dphi_OS[k]->Sumw2();
+
+        h3a_dphi_WOS.push_back(new TH2F ("h3a_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3a_dphi_WOS[k]->Sumw2();
+        h3b_dphi_WOS.push_back(new TH2F ("h3b_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3b_dphi_WOS[k]->Sumw2();
+        h3c_dphi_WOS.push_back(new TH2F ("h3c_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3c_dphi_WOS[k]->Sumw2();
+        h3d_dphi_WOS.push_back(new TH2F ("h3d_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3d_dphi_WOS[k]->Sumw2();
+        h3e_dphi_WOS.push_back(new TH2F ("h3e_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3e_dphi_WOS[k]->Sumw2();
+        h3f_dphi_WOS.push_back(new TH2F ("h3f_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3f_dphi_WOS[k]->Sumw2();
+        h3g_dphi_WOS.push_back(new TH2F ("h3g_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3g_dphi_WOS[k]->Sumw2();
+        h3h_dphi_WOS.push_back(new TH2F ("h3h_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3h_dphi_WOS[k]->Sumw2();
+        h3i_dphi_WOS.push_back(new TH2F ("h3i_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3i_dphi_WOS[k]->Sumw2();
+        h3j_dphi_WOS.push_back(new TH2F ("h3j_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3j_dphi_WOS[k]->Sumw2();
+        h3k_dphi_WOS.push_back(new TH2F ("h3k_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3k_dphi_WOS[k]->Sumw2();
+        h3l_dphi_WOS.push_back(new TH2F ("h3l_dphi_WOS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3l_dphi_WOS[k]->Sumw2();
+
+
+        h3a_dphi_SS.push_back(new TH2F ("h3a_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3a_dphi_SS[k]->Sumw2();
+        h3b_dphi_SS.push_back(new TH2F ("h3b_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3b_dphi_SS[k]->Sumw2();
+        h3c_dphi_SS.push_back(new TH2F ("h3c_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3c_dphi_SS[k]->Sumw2();
+        h3d_dphi_SS.push_back(new TH2F ("h3d_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3d_dphi_SS[k]->Sumw2();
+        h3e_dphi_SS.push_back(new TH2F ("h3e_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3e_dphi_SS[k]->Sumw2();
+        h3f_dphi_SS.push_back(new TH2F ("h3f_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3f_dphi_SS[k]->Sumw2();
+        h3g_dphi_SS.push_back(new TH2F ("h3g_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3g_dphi_SS[k]->Sumw2();
+        h3h_dphi_SS.push_back(new TH2F ("h3h_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3h_dphi_SS[k]->Sumw2();
+        h3i_dphi_SS.push_back(new TH2F ("h3i_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3i_dphi_SS[k]->Sumw2();
+        h3j_dphi_SS.push_back(new TH2F ("h3j_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3j_dphi_SS[k]->Sumw2();
+        h3k_dphi_SS.push_back(new TH2F ("h3k_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3k_dphi_SS[k]->Sumw2();
+        h3l_dphi_SS.push_back(new TH2F ("h3l_dphi_SS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3l_dphi_SS[k]->Sumw2();
+
+
+        h3a_dphi_WSS.push_back(new TH2F ("h3a_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3a_dphi_WSS[k]->Sumw2();
+        h3b_dphi_WSS.push_back(new TH2F ("h3b_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3b_dphi_WSS[k]->Sumw2();
+        h3c_dphi_WSS.push_back(new TH2F ("h3c_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3c_dphi_WSS[k]->Sumw2();
+        h3d_dphi_WSS.push_back(new TH2F ("h3d_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3d_dphi_WSS[k]->Sumw2();
+        h3e_dphi_WSS.push_back(new TH2F ("h3e_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3e_dphi_WSS[k]->Sumw2();
+        h3f_dphi_WSS.push_back(new TH2F ("h3f_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3f_dphi_WSS[k]->Sumw2();
+        h3g_dphi_WSS.push_back(new TH2F ("h3g_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3g_dphi_WSS[k]->Sumw2();
+        h3h_dphi_WSS.push_back(new TH2F ("h3h_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3h_dphi_WSS[k]->Sumw2();
+        h3i_dphi_WSS.push_back(new TH2F ("h3i_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3i_dphi_WSS[k]->Sumw2();
+        h3j_dphi_WSS.push_back(new TH2F ("h3j_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3j_dphi_WSS[k]->Sumw2();
+        h3k_dphi_WSS.push_back(new TH2F ("h3k_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3k_dphi_WSS[k]->Sumw2();
+        h3l_dphi_WSS.push_back(new TH2F ("h3l_dphi_WSS","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3l_dphi_WSS[k]->Sumw2();
+
+
+        h3a_dphi_QCD.push_back(new TH2F ("h3a_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3a_dphi_QCD[k]->Sumw2();
+        h3b_dphi_QCD.push_back(new TH2F ("h3b_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3b_dphi_QCD[k]->Sumw2();
+        h3c_dphi_QCD.push_back(new TH2F ("h3c_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3c_dphi_QCD[k]->Sumw2();
+        h3d_dphi_QCD.push_back(new TH2F ("h3d_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3d_dphi_QCD[k]->Sumw2();
+        h3e_dphi_QCD.push_back(new TH2F ("h3e_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3e_dphi_QCD[k]->Sumw2();
+        h3f_dphi_QCD.push_back(new TH2F ("h3f_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3f_dphi_QCD[k]->Sumw2();
+        h3g_dphi_QCD.push_back(new TH2F ("h3g_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3g_dphi_QCD[k]->Sumw2();
+        h3h_dphi_QCD.push_back(new TH2F ("h3h_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3h_dphi_QCD[k]->Sumw2();
+        h3i_dphi_QCD.push_back(new TH2F ("h3i_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3i_dphi_QCD[k]->Sumw2();
+        h3j_dphi_QCD.push_back(new TH2F ("h3j_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3j_dphi_QCD[k]->Sumw2();
+        h3k_dphi_QCD.push_back(new TH2F ("h3k_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3k_dphi_QCD[k]->Sumw2();
+        h3l_dphi_QCD.push_back(new TH2F ("h3l_dphi_QCD","dPhijj",binnum_dphijj,bins_dphijj,binnum0,bins0)); h3l_dphi_QCD[k]->Sumw2();
+
+
 
 
    }
@@ -1584,8 +1695,8 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         hmelaD0minusggH_boosted_QCD.push_back(new TH1F ("hmelaD0minusggH_boosted_QCD","D0minusggH",10,0,1)); hmelaD0minusggH_boosted_QCD[k]->Sumw2();
         hmelaD0minus_boosted_QCD.push_back(new TH1F ("hmelaD0minus_boosted_QCD","D0minus",10,0,1)); hmelaD0minus_boosted_QCD[k]->Sumw2();
         hmelaDPhijj_boosted_QCD.push_back(new TH1F ("hmelaDPhijj_boosted_QCD","DPhijj",64,-3.2,3.2)); hmelaDPhijj_boosted_QCD[k]->Sumw2();
-        hmelaDPhiUnsignedjj_boosted_QCD.push_back(new TH1F ("hmelaDPhiUnsignedjj_boosted_QCD","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_boosted_QCD[k]->Sumw2();
-
+        hmelaDPhiUnsignedjj_boosted_QCD.push_back(new TH1F ("hmelaDPhiUnsignedjj_boosted_QCD","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_boosted_QCD[k]->Sumw2();///////
+///////
 
         hmelaDCP_0jet_WOS.push_back(new TH1F ("hmelaDCP_0jet_WOS","DCP",20,-1,1)); hmelaDCP_0jet_WOS[k]->Sumw2();
         hmelaDCPggH_0jet_WOS.push_back(new TH1F ("hmelaDCPggH_0jet_WOS","DCPggH",20,-1,1)); hmelaDCPggH_0jet_WOS[k]->Sumw2();
@@ -1608,21 +1719,21 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         hmelaD0minus_boosted_WOS.push_back(new TH1F ("hmelaD0minus_boosted_WOS","D0minus",10,0,1)); hmelaD0minus_boosted_WOS[k]->Sumw2();
         hmelaDPhijj_boosted_WOS.push_back(new TH1F ("hmelaDPhijj_boosted_WOS","DPhijj",64,-3.2,3.2)); hmelaDPhijj_boosted_WOS[k]->Sumw2();
         hmelaDPhiUnsignedjj_boosted_WOS.push_back(new TH1F ("hmelaDPhiUnsignedjj_boosted_WOS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_boosted_WOS[k]->Sumw2();
+////////////
+///////
+        hmelaDCP_0jet_WSS.push_back(new TH1F ("hmelaDCP_0jet_WSS","DCP",20,-1,1)); hmelaDCP_0jet_WSS[k]->Sumw2();
+        hmelaDCPggH_0jet_WSS.push_back(new TH1F ("hmelaDCPggH_0jet_WSS","DCPggH",20,-1,1)); hmelaDCPggH_0jet_WSS[k]->Sumw2();
+        hmelaD0minusggH_0jet_WSS.push_back(new TH1F ("hmelaD0minusggH_0jet_WSS","D0minusggH",10,0,1)); hmelaD0minusggH_0jet_WSS[k]->Sumw2();
+        hmelaD0minus_0jet_WSS.push_back(new TH1F ("hmelaD0minus_0jet_WSS","D0minus",10,0,1)); hmelaD0minus_0jet_WSS[k]->Sumw2();
+        hmelaDPhijj_0jet_WSS.push_back(new TH1F ("hmelaDPhijj_0jet_WSS","DPhijj",64,-3.2,3.2)); hmelaDPhijj_0jet_WSS[k]->Sumw2();
+        hmelaDPhiUnsignedjj_0jet_WSS.push_back(new TH1F ("hmelaDPhiUnsignedjj_0jet_WSS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_0jet_WSS[k]->Sumw2();
 
-
-        hmelaDCP_0jet_OSS.push_back(new TH1F ("hmelaDCP_0jet_OSS","DCP",20,-1,1)); hmelaDCP_0jet_OSS[k]->Sumw2();
-        hmelaDCPggH_0jet_OSS.push_back(new TH1F ("hmelaDCPggH_0jet_OSS","DCPggH",20,-1,1)); hmelaDCPggH_0jet_OSS[k]->Sumw2();
-        hmelaD0minusggH_0jet_OSS.push_back(new TH1F ("hmelaD0minusggH_0jet_OSS","D0minusggH",10,0,1)); hmelaD0minusggH_0jet_OSS[k]->Sumw2();
-        hmelaD0minus_0jet_OSS.push_back(new TH1F ("hmelaD0minus_0jet_OSS","D0minus",10,0,1)); hmelaD0minus_0jet_OSS[k]->Sumw2();
-        hmelaDPhijj_0jet_OSS.push_back(new TH1F ("hmelaDPhijj_0jet_OSS","DPhijj",64,-3.2,3.2)); hmelaDPhijj_0jet_OSS[k]->Sumw2();
-        hmelaDPhiUnsignedjj_0jet_OSS.push_back(new TH1F ("hmelaDPhiUnsignedjj_0jet_OSS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_0jet_OSS[k]->Sumw2();
-
-        hmelaDCPVBF_WSS.push_back(new TH1F ("hmelaDCPVBF_WSS","DCP",20,-1,1)); hmelaDCPVBF_WSS[k]->Sumw2();
-        hmelaDCPggHVBF_WSS.push_back(new TH1F ("hmelaDCPggHVBF_WSS","DCPggH",20,-1,1)); hmelaDCPggHVBF_WSS[k]->Sumw2();
-        hmelaD0minusggHVBF_WSS.push_back(new TH1F ("hmelaD0minusggHVBF_WSS","D0minusggH",10,0,1)); hmelaD0minusggHVBF_WSS[k]->Sumw2();
-        hmelaD0minusVBF_WSS.push_back(new TH1F ("hmelaD0minusVBF_WSS","D0minus",10,0,1)); hmelaD0minusVBF_WSS[k]->Sumw2();
-        hmelaDPhijjVBF_WSS.push_back(new TH1F ("hmelaDPhijjVBF_WSS","DPhijj",64,-3.2,3.2)); hmelaDPhijjVBF_WSS[k]->Sumw2();
-        hmelaDPhiUnsignedjjVBF_WSS.push_back(new TH1F ("hmelaDPhiUnsignedjjVBF_WSS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjjVBF_WSS[k]->Sumw2();
+        hmelaDCP_VBF_WSS.push_back(new TH1F ("hmelaDCP_VBF_WSS","DCP",20,-1,1)); hmelaDCP_VBF_WSS[k]->Sumw2();
+        hmelaDCPggH_VBF_WSS.push_back(new TH1F ("hmelaDCPggH_VBF_WSS","DCPggH",20,-1,1)); hmelaDCPggH_VBF_WSS[k]->Sumw2();
+        hmelaD0minusggH_VBF_WSS.push_back(new TH1F ("hmelaD0minusggH_VBF_WSS","D0minusggH",10,0,1)); hmelaD0minusggH_VBF_WSS[k]->Sumw2();
+        hmelaD0minus_VBF_WSS.push_back(new TH1F ("hmelaD0minus_VBF_WSS","D0minus",10,0,1)); hmelaD0minus_VBF_WSS[k]->Sumw2();
+        hmelaDPhijj_VBF_WSS.push_back(new TH1F ("hmelaDPhijj_VBF_WSS","DPhijj",64,-3.2,3.2)); hmelaDPhijj_VBF_WSS[k]->Sumw2();
+        hmelaDPhiUnsignedjj_VBF_WSS.push_back(new TH1F ("hmelaDPhiUnsignedjj_VBF_WSS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_VBF_WSS[k]->Sumw2();
 
 
         hmelaDCP_boosted_WSS.push_back(new TH1F ("hmelaDCP_boosted_WSS","DCP",20,-1,1)); hmelaDCP_boosted_WSS[k]->Sumw2();
@@ -1633,59 +1744,57 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         hmelaDPhiUnsignedjj_boosted_WSS.push_back(new TH1F ("hmelaDPhiUnsignedjj_boosted_WSS","DPhiUnsignedjj",64,-3.2,3.2)); hmelaDPhiUnsignedjj_boosted_WSS[k]->Sumw2();
 
 
-
-
         ostringstream H1D1; H1D1 << "h1D_OS" << k;
         h1D_OS.push_back(new TH1F (H1D1.str().c_str(),"InvMa",10,0,400)); h1D_OS[k]->Sumw2();
 
 
-        h1D_jpt1_OS.push_back(new TH1F ("h1D_jpt1_OS","pT",40,0,400)); h1D_jpt1_OS[k]->Sumw2();
-        h1D_jpt2_OS.push_back(new TH1F ("h1D_jpt2_OS","pT",40,0,400)); h1D_jpt2_OS[k]->Sumw2();
-        h1D_jeta1_OS.push_back(new TH1F ("h1D_jeta1_OS","eta",50,-2.5,2.5)); h1D_jeta1_OS[k]->Sumw2();
-        h1D_jeta2_OS.push_back(new TH1F ("h1D_jeta2_OS","eta",50,-2.5,2.5)); h1D_jeta2_OS[k]->Sumw2();
-        h1D_phi1_OS.push_back(new TH1F ("h1D_phi1_OS","phi",40,-4,4)); h1D_phi1_OS[k]->Sumw2();
-        h1D_phi2_OS.push_back(new TH1F ("h1D_phi2_OS","phi",40,-4,4)); h1D_phi2_OS[k]->Sumw2();
-        h1D_mjj_OS.push_back(new TH1F ("h1D_mjj_OS","Mass_jj",100,0,1000)); h1D_mjj_OS[k]->Sumw2();
-        h1D_met_OS.push_back(new TH1F ("h1D_met_OS","MET",50,0,500)); h1D_met_OS[k]->Sumw2();
+        h1D_jpt1_VBF_OS.push_back(new TH1F ("h1D_jpt1_VBF_OS","pT",40,0,400)); h1D_jpt1_VBF_OS[k]->Sumw2();
+        h1D_jpt2_VBF_OS.push_back(new TH1F ("h1D_jpt2_VBF_OS","pT",40,0,400)); h1D_jpt2_VBF_OS[k]->Sumw2();
+        h1D_jeta1_VBF_OS.push_back(new TH1F ("h1D_jeta1_VBF_OS","eta",50,-2.5,2.5)); h1D_jeta1_VBF_OS[k]->Sumw2();
+        h1D_jeta2_VBF_OS.push_back(new TH1F ("h1D_jeta2_VBF_OS","eta",50,-2.5,2.5)); h1D_jeta2_VBF_OS[k]->Sumw2();
+        h1D_phi1_VBF_OS.push_back(new TH1F ("h1D_phi1_VBF_OS","phi",40,-4,4)); h1D_phi1_VBF_OS[k]->Sumw2();
+        h1D_phi2_VBF_OS.push_back(new TH1F ("h1D_phi2_VBF_OS","phi",40,-4,4)); h1D_phi2_VBF_OS[k]->Sumw2();
+        h1D_mjj_VBF_OS.push_back(new TH1F ("h1D_mjj_VBF_OS","Mass_jj",100,0,1000)); h1D_mjj_VBF_OS[k]->Sumw2();
+        h1D_met_VBF_OS.push_back(new TH1F ("h1D_met_VBF_OS","MET",50,0,500)); h1D_met_VBF_OS[k]->Sumw2();
 
 
 
-        h1D_jpt1_SS.push_back(new TH1F ("h1D_jpt1_SS","pT",40,0,400)); h1D_jpt1_SS[k]->Sumw2();
-        h1D_jpt2_SS.push_back(new TH1F ("h1D_jpt2_SS","pT",40,0,400)); h1D_jpt2_SS[k]->Sumw2();
-        h1D_jeta1_SS.push_back(new TH1F ("h1D_jeta1_SS","eta",50,-2.5,2.5)); h1D_jeta1_SS[k]->Sumw2();
-        h1D_jeta2_SS.push_back(new TH1F ("h1D_jeta2_SS","eta",50,-2.5,2.5)); h1D_jeta2_SS[k]->Sumw2();
-        h1D_phi1_SS.push_back(new TH1F ("h1D_phi1_SS","phi",40,-4,4)); h1D_phi1_SS[k]->Sumw2();
-        h1D_phi2_SS.push_back(new TH1F ("h1D_phi2_SS","phi",40,-4,4)); h1D_phi2_SS[k]->Sumw2();
-        h1D_mjj_SS.push_back(new TH1F ("h1D_mjj_SS","Mass_jj",100,0,1000)); h1D_mjj_SS[k]->Sumw2();
-        h1D_met_SS.push_back(new TH1F ("h1D_met_SS","MET",50,0,500)); h1D_met_SS[k]->Sumw2();
+        h1D_jpt1_VBF_SS.push_back(new TH1F ("h1D_jpt1_VBF_SS","pT",40,0,400)); h1D_jpt1_VBF_SS[k]->Sumw2();
+        h1D_jpt2_VBF_SS.push_back(new TH1F ("h1D_jpt2_VBF_SS","pT",40,0,400)); h1D_jpt2_VBF_SS[k]->Sumw2();
+        h1D_jeta1_VBF_SS.push_back(new TH1F ("h1D_jeta1_VBF_SS","eta",50,-2.5,2.5)); h1D_jeta1_VBF_SS[k]->Sumw2();
+        h1D_jeta2_VBF_SS.push_back(new TH1F ("h1D_jeta2_VBF_SS","eta",50,-2.5,2.5)); h1D_jeta2_VBF_SS[k]->Sumw2();
+        h1D_phi1_VBF_SS.push_back(new TH1F ("h1D_phi1_VBF_SS","phi",40,-4,4)); h1D_phi1_VBF_SS[k]->Sumw2();
+        h1D_phi2_VBF_SS.push_back(new TH1F ("h1D_phi2_VBF_SS","phi",40,-4,4)); h1D_phi2_VBF_SS[k]->Sumw2();
+        h1D_mjj_VBF_SS.push_back(new TH1F ("h1D_mjj_VBF_SS","Mass_jj",100,0,1000)); h1D_mjj_VBF_SS[k]->Sumw2();
+        h1D_met_VBF_SS.push_back(new TH1F ("h1D_met_VBF_SS","MET",50,0,500)); h1D_met_VBF_SS[k]->Sumw2();
 
-        h1D_jpt1_QCD.push_back(new TH1F ("h1D_jpt1_QCD","pT",40,0,400)); h1D_jpt1_QCD[k]->Sumw2();
-        h1D_jpt2_QCD.push_back(new TH1F ("h1D_jpt2_QCD","pT",40,0,400)); h1D_jpt2_QCD[k]->Sumw2();
-        h1D_jeta1_QCD.push_back(new TH1F ("h1D_jeta1_QCD","eta",50,-2.5,2.5)); h1D_jeta1_QCD[k]->Sumw2();
-        h1D_jeta2_QCD.push_back(new TH1F ("h1D_jeta2_QCD","eta",50,-2.5,2.5)); h1D_jeta2_QCD[k]->Sumw2();
-        h1D_phi1_QCD.push_back(new TH1F ("h1D_phi1_QCD","phi",40,-4,4)); h1D_phi1_QCD[k]->Sumw2();
-        h1D_phi2_QCD.push_back(new TH1F ("h1D_phi2_QCD","phi",40,-4,4)); h1D_phi2_QCD[k]->Sumw2();
-        h1D_mjj_QCD.push_back(new TH1F ("h1D_mjj_QCD","Mass_jj",100,0,1000)); h1D_mjj_QCD[k]->Sumw2();
-        h1D_met_QCD.push_back(new TH1F ("h1D_met_QCD","MET",50,0,500)); h1D_met_QCD[k]->Sumw2();
+        h1D_jpt1_VBF_QCD.push_back(new TH1F ("h1D_jpt1_VBF_QCD","pT",40,0,400)); h1D_jpt1_VBF_QCD[k]->Sumw2();
+        h1D_jpt2_VBF_QCD.push_back(new TH1F ("h1D_jpt2_VBF_QCD","pT",40,0,400)); h1D_jpt2_VBF_QCD[k]->Sumw2();
+        h1D_jeta1_VBF_QCD.push_back(new TH1F ("h1D_jeta1_VBF_QCD","eta",50,-2.5,2.5)); h1D_jeta1_VBF_QCD[k]->Sumw2();
+        h1D_jeta2_VBF_QCD.push_back(new TH1F ("h1D_jeta2_VBF_QCD","eta",50,-2.5,2.5)); h1D_jeta2_VBF_QCD[k]->Sumw2();
+        h1D_phi1_VBF_QCD.push_back(new TH1F ("h1D_phi1_VBF_QCD","phi",40,-4,4)); h1D_phi1_VBF_QCD[k]->Sumw2();
+        h1D_phi2_VBF_QCD.push_back(new TH1F ("h1D_phi2_VBF_QCD","phi",40,-4,4)); h1D_phi2_VBF_QCD[k]->Sumw2();
+        h1D_mjj_VBF_QCD.push_back(new TH1F ("h1D_mjj_VBF_QCD","Mass_jj",100,0,1000)); h1D_mjj_VBF_QCD[k]->Sumw2();
+        h1D_met_VBF_QCD.push_back(new TH1F ("h1D_met_VBF_QCD","MET",50,0,500)); h1D_met_VBF_QCD[k]->Sumw2();
 
 
-        h1D_jpt1_WOS.push_back(new TH1F ("h1D_jpt1_WOS","pT",40,0,400)); h1D_jpt1_WOS[k]->Sumw2();
-        h1D_jpt2_WOS.push_back(new TH1F ("h1D_jpt2_WOS","pT",40,0,400)); h1D_jpt2_WOS[k]->Sumw2();
-        h1D_jeta1_WOS.push_back(new TH1F ("h1D_jeta1_WOS","eta",50,-2.5,2.5)); h1D_jeta1_WOS[k]->Sumw2();
-        h1D_jeta2_WOS.push_back(new TH1F ("h1D_jeta2_WOS","eta",50,-2.5,2.5)); h1D_jeta2_WOS[k]->Sumw2();
-        h1D_phi1_WOS.push_back(new TH1F ("h1D_phi1_WOS","phi",40,-4,4)); h1D_phi1_WOS[k]->Sumw2();
-        h1D_phi2_WOS.push_back(new TH1F ("h1D_phi2_WOS","phi",40,-4,4)); h1D_phi2_WOS[k]->Sumw2();
-        h1D_mjj_WOS.push_back(new TH1F ("h1D_mjj_WOS","Mass_jj",100,0,1000)); h1D_mjj_WOS[k]->Sumw2();
-        h1D_met_WOS.push_back(new TH1F ("h1D_met_WOS","MET",50,0,500)); h1D_met_WOS[k]->Sumw2();
+        h1D_jpt1_VBF_WOS.push_back(new TH1F ("h1D_jpt1_VBF_WOS","pT",40,0,400)); h1D_jpt1_VBF_WOS[k]->Sumw2();
+        h1D_jpt2_VBF_WOS.push_back(new TH1F ("h1D_jpt2_VBF_WOS","pT",40,0,400)); h1D_jpt2_VBF_WOS[k]->Sumw2();
+        h1D_jeta1_VBF_WOS.push_back(new TH1F ("h1D_jeta1_VBF_WOS","eta",50,-2.5,2.5)); h1D_jeta1_VBF_WOS[k]->Sumw2();
+        h1D_jeta2_VBF_WOS.push_back(new TH1F ("h1D_jeta2_VBF_WOS","eta",50,-2.5,2.5)); h1D_jeta2_VBF_WOS[k]->Sumw2();
+        h1D_phi1_VBF_WOS.push_back(new TH1F ("h1D_phi1_VBF_WOS","phi",40,-4,4)); h1D_phi1_VBF_WOS[k]->Sumw2();
+        h1D_phi2_VBF_WOS.push_back(new TH1F ("h1D_phi2_VBF_WOS","phi",40,-4,4)); h1D_phi2_VBF_WOS[k]->Sumw2();
+        h1D_mjj_VBF_WOS.push_back(new TH1F ("h1D_mjj_VBF_WOS","Mass_jj",100,0,1000)); h1D_mjj_VBF_WOS[k]->Sumw2();
+        h1D_met_VBF_WOS.push_back(new TH1F ("h1D_met_VBF_WOS","MET",50,0,500)); h1D_met_VBF_WOS[k]->Sumw2();
 
-        h1D_jpt1_WSS.push_back(new TH1F ("h1D_jpt1_WSS","pT",40,0,400)); h1D_jpt1_WSS[k]->Sumw2();
-        h1D_jpt2_WSS.push_back(new TH1F ("h1D_jpt2_WSS","pT",40,0,400)); h1D_jpt2_WSS[k]->Sumw2();
-        h1D_jeta1_WSS.push_back(new TH1F ("h1D_jeta1_WSS","eta",50,-2.5,2.5)); h1D_jeta1_WSS[k]->Sumw2();
-        h1D_jeta2_WSS.push_back(new TH1F ("h1D_jeta2_WSS","eta",50,-2.5,2.5)); h1D_jeta2_WSS[k]->Sumw2();
-        h1D_phi1_WSS.push_back(new TH1F ("h1D_phi1_WSS","phi",40,-4,4)); h1D_phi1_WSS[k]->Sumw2();
-        h1D_phi2_WSS.push_back(new TH1F ("h1D_phi2_WSS","phi",40,-4,4)); h1D_phi2_WSS[k]->Sumw2();
-        h1D_mjj_WSS.push_back(new TH1F ("h1D_mjj_WSS","Mass_jj",100,0,1000)); h1D_mjj_WSS[k]->Sumw2();
-        h1D_met_WSS.push_back(new TH1F ("h1D_met_WSS","MET",50,0,500)); h1D_met_WSS[k]->Sumw2();
+        h1D_jpt1_VBF_WSS.push_back(new TH1F ("h1D_jpt1_VBF_WSS","pT",40,0,400)); h1D_jpt1_VBF_WSS[k]->Sumw2();
+        h1D_jpt2_VBF_WSS.push_back(new TH1F ("h1D_jpt2_VBF_WSS","pT",40,0,400)); h1D_jpt2_VBF_WSS[k]->Sumw2();
+        h1D_jeta1_VBF_WSS.push_back(new TH1F ("h1D_jeta1_VBF_WSS","eta",50,-2.5,2.5)); h1D_jeta1_VBF_WSS[k]->Sumw2();
+        h1D_jeta2_VBF_WSS.push_back(new TH1F ("h1D_jeta2_VBF_WSS","eta",50,-2.5,2.5)); h1D_jeta2_VBF_WSS[k]->Sumw2();
+        h1D_phi1_VBF_WSS.push_back(new TH1F ("h1D_phi1_VBF_WSS","phi",40,-4,4)); h1D_phi1_VBF_WSS[k]->Sumw2();
+        h1D_phi2_VBF_WSS.push_back(new TH1F ("h1D_phi2_VBF_WSS","phi",40,-4,4)); h1D_phi2_VBF_WSS[k]->Sumw2();
+        h1D_mjj_VBF_WSS.push_back(new TH1F ("h1D_mjj_VBF_WSS","Mass_jj",100,0,1000)); h1D_mjj_VBF_WSS[k]->Sumw2();
+        h1D_met_VBF_WSS.push_back(new TH1F ("h1D_met_VBF_WSS","MET",50,0,500)); h1D_met_VBF_WSS[k]->Sumw2();
 
 
         ostringstream H1D2; H1D2 << "h1D_SS" << k;
@@ -2132,15 +2241,38 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
                 if (signalRegion && q_1*q_2>0)
                     h0_SS[k]->Fill(var1_0,var2,aweight*weight2);
-                if (wRegion && q_1*q_2<0)
+                if (wRegion && q_1*q_2<0){
                     h0_WOS[k]->Fill(var1_0,var2,aweight*weight2);
-                if (wRegion && q_1*q_2>0)
+		   hmelaDCP_0jet_WOS[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_0jet_WOS[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_0jet_WOS[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_0jet_WOS[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_0jet_WOS[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_0jet_WOS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+
+		}
+
+                if (wRegion && q_1*q_2>0){
                     h0_WSS[k]->Fill(var1_0,var2,aweight*weight2);
-                if (qcdRegion && q_1*q_2>0)
+		   hmelaDCP_0jet_WSS[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_0jet_WSS[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_0jet_WSS[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_0jet_WSS[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_0jet_WSS[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_0jet_WSS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+
+		}
+		////////STOPED HERE
+                if (qcdRegion && q_1*q_2>0){
                     h0_QCD[k]->Fill(var1_0,var2,aweight*weight2);
-
+		   hmelaDCP_0jet_QCD[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_0jet_QCD[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_0jet_QCD[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_0jet_QCD[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_0jet_QCD[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_0jet_QCD[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+		}
 	    }
-
             if (is_boosted && mt<50){
                 if (tes==12) weight2=weight2*(0.9195 + 0.0010055*var1_1);
                 if (tes==-12) weight2=weight2*(2-(0.9195 + 0.0010055*var1_1));
@@ -2157,19 +2289,53 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		   hmelaDPhiUnsignedjj_boosted_OS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
 
 		}
-                if (signalRegion && q_1*q_2>0)
+                if (signalRegion && q_1*q_2>0){
                     h1_SS[k]->Fill(var1_1,var2,aweight*weight2);
-                if (wRegion && q_1*q_2<0)
+		   hmelaDCP_boosted_SS[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_boosted_SS[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_boosted_SS[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_boosted_SS[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_boosted_SS[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_boosted_SS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+
+
+		}
+                if (wRegion && q_1*q_2<0){
                     h1_WOS[k]->Fill(var1_1,var2,aweight*weight2);
-                if (wRegion && q_1*q_2>0)
+		   hmelaDCP_boosted_WOS[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_boosted_WOS[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_boosted_WOS[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_boosted_WOS[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_boosted_WOS[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_boosted_WOS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+
+		}
+                if (wRegion && q_1*q_2>0){
                     h1_WSS[k]->Fill(var1_1,var2,aweight*weight2);
-                if (qcdRegion && q_1*q_2>0)
+		   hmelaDCP_boosted_WSS[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_boosted_WSS[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_boosted_WSS[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_boosted_WSS[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_boosted_OS[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_boosted_WSS[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+		}
+                if (qcdRegion && q_1*q_2>0){
                     h1_QCD[k]->Fill(var1_1,var2,aweight*weight2);
+		   hmelaDCP_boosted_QCD[k]->Fill(melaDCP,aweight*weight2);
+		   hmelaDCPggH_boosted_QCD[k]->Fill(melaDCPggH,aweight*weight2);
+		   hmelaD0minusggH_boosted_QCD[k]->Fill(melaD0minusggH,aweight*weight2);
+		   hmelaD0minus_boosted_QCD[k]->Fill(melaD0minus,aweight*weight2);
+		   hmelaDPhijj_boosted_QCD[k]->Fill(melaDPhijj,aweight*weight2);
+		   hmelaDPhiUnsignedjj_boosted_QCD[k]->Fill(melaDPhiUnsignedjj,aweight*weight2);
+
+		}
             }
-	    /*TLorentzVector myjet1;
-            myjet1.SetPtEtaPhiM(jpt_1, jeta_1, jphi_1, 0);
-            TLorentzVector myjet2;
-            myjet2.SetPtEtaPhiM(jpt_2, jeta_2, jphi_2, 0);*/
+	    //TLorentzVector myjet1;
+            //myjet1.SetPtEtaPhiM(jpt_1, jeta_1, jphi_1, 0);
+            //TLorentzVector myjet2;
+            //myjet2.SetPtEtaPhiM(jpt_2, jeta_2, jphi_2, 0);
+
+
 	    float var_1D=(myele+mytau+mymet).Pt();
             if (is_VBF && mt<50){
                 if (tes==12) weight2=weight2*(1.0258 + 0.00006596*var1_2);
@@ -2187,14 +2353,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		    hmelaDPhijj_VBF_OS[k]->Fill(melaDPhijj,weight2*aweight);
 		    hmelaDPhiUnsignedjj_VBF_OS[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
 			
-		    h1D_jpt1_OS[k]->Fill(jpt_1,weight2*aweight);
-		    h1D_jpt2_OS[k]->Fill(jpt_2,weight2*aweight);
-		    h1D_jeta1_OS[k]->Fill(jeta_1,weight2*aweight);
-		    h1D_jeta2_OS[k]->Fill(jeta_2,weight2*aweight);
-		    h1D_phi1_OS[k]->Fill(jphi_1,weight2*aweight);
-		    h1D_phi2_OS[k]->Fill(jphi_2,weight2*aweight);
-		    h1D_mjj_OS[k]->Fill(mjj,weight2*aweight);
-		    h1D_met_OS[k]->Fill(mymet.Pt(),weight2*aweight);
+		    h1D_jpt1_VBF_OS[k]->Fill(jpt_1,weight2*aweight);
+		    h1D_jpt2_VBF_OS[k]->Fill(jpt_2,weight2*aweight);
+		    h1D_jeta1_VBF_OS[k]->Fill(jeta_1,weight2*aweight);
+		    h1D_jeta2_VBF_OS[k]->Fill(jeta_2,weight2*aweight);
+		    h1D_phi1_VBF_OS[k]->Fill(jphi_1,weight2*aweight);
+		    h1D_phi2_VBF_OS[k]->Fill(jphi_2,weight2*aweight);
+		    h1D_mjj_VBF_OS[k]->Fill(mjj,weight2*aweight);
+		    h1D_met_VBF_OS[k]->Fill(mymet.Pt(),weight2*aweight);
 		    
 		
                     if (melaD0minus>=0.0 and melaD0minus<0.2)
@@ -2259,52 +2425,52 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     //h2_dPhi_mvOS[k]->Fill(var1_3,var2,aweight*weight2);
 
                     if (melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h3_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h3_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h4_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h4_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h5_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h5_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h7_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h7_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
                     if (melaDCPggH<0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h33_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h33_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h34_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h34_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h35_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h35_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h37_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h37_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDCPggH>=0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h43_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h43_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h44_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h44_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h45_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h45_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h47_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h47_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhijj>=0.0 and melaDPhijj<0.2)
-                       h53_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h53_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.2 and melaDPhijj<0.4)
-                       h54_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h54_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.4 and melaDPhijj<0.8)
-                       h55_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h55_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.8 and melaDPhijj<1.0)
-                       h57_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h57_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhiUnsignedjj>=0.0 and melaDPhiUnsignedjj<0.2)
-                       h63_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h63_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.2 and melaDPhiUnsignedjj<0.4)
-                       h64_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h64_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.4 and melaDPhiUnsignedjj<0.8)
-                       h65_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h65_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
-                       h67_ggHOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h67_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
 		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
@@ -2312,30 +2478,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
 		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl;
-		if (dPhi>-TMath::Pi() && dPhi<-2.5)
+		if (dPhi>-TMath::Pi() && dPhi<-1.5)
 			h3a_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>-2.5 && dPhi<-2.)
+		if (dPhi>-1.5 && dPhi<-0)
 			h3b_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>-2 && dPhi<-1.5)
+		if (dPhi>=0 && dPhi<1.5)
 			h3c_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>-1.5 && dPhi<-1.)
+		if (dPhi>1.5 && dPhi<TMath::Pi())
 			h3d_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>-1. && dPhi<-0.5)
-			h3e_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>-0.5 && dPhi<0.)
-			h3f_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>0 && dPhi<0.5)
-			h3g_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>0.5 && dPhi<1)
-			h3h_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>1 && dPhi<1.5)
-			h3i_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>1.5 && dPhi<2)
-			h3j_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>2 && dPhi<2.5)
-			h3k_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
-		if (dPhi>2.5 && dPhi<TMath::Pi())
-			h3l_dphi_OS[k]->Fill(var1_2,var2,weight2*aweight);
 		  }
 
 /////////////////
@@ -2353,14 +2503,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		    hmelaDPhijj_VBF_SS[k]->Fill(melaDPhijj,weight2*aweight);
 		    hmelaDPhiUnsignedjj_VBF_SS[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
 			
-		    h1D_jpt1_SS[k]->Fill(jpt_1,weight2*aweight);
-		    h1D_jpt2_SS[k]->Fill(jpt_2,weight2*aweight);
-		    h1D_jeta1_SS[k]->Fill(jeta_1,weight2*aweight);
-		    h1D_jeta2_SS[k]->Fill(jeta_2,weight2*aweight);
-		    h1D_phi1_SS[k]->Fill(jphi_1,weight2*aweight);
-		    h1D_phi2_SS[k]->Fill(jphi_2,weight2*aweight);
-		    h1D_mjj_SS[k]->Fill(mjj,weight2*aweight);
-		    h1D_met_SS[k]->Fill(mymet.Pt(),weight2*aweight);
+		    h1D_jpt1_VBF_SS[k]->Fill(jpt_1,weight2*aweight);
+		    h1D_jpt2_VBF_SS[k]->Fill(jpt_2,weight2*aweight);
+		    h1D_jeta1_VBF_SS[k]->Fill(jeta_1,weight2*aweight);
+		    h1D_jeta2_VBF_SS[k]->Fill(jeta_2,weight2*aweight);
+		    h1D_phi1_VBF_SS[k]->Fill(jphi_1,weight2*aweight);
+		    h1D_phi2_VBF_SS[k]->Fill(jphi_2,weight2*aweight);
+		    h1D_mjj_VBF_SS[k]->Fill(mjj,weight2*aweight);
+		    h1D_met_VBF_SS[k]->Fill(mymet.Pt(),weight2*aweight);
 
 
 
@@ -2426,52 +2576,69 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     //h2_dPhi_mvSS[k]->Fill(var1_3,var2,aweight*weight2);
 
                     if (melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h3_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h3_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h4_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h4_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h5_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h5_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h7_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h7_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
                     if (melaDCPggH<0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h33_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h33_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h34_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h34_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h35_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h35_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h37_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h37_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDCPggH>=0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h43_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h43_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h44_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h44_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h45_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h45_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h47_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h47_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhijj>=0.0 and melaDPhijj<0.2)
-                       h53_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h53_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.2 and melaDPhijj<0.4)
-                       h54_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h54_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.4 and melaDPhijj<0.8)
-                       h55_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h55_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.8 and melaDPhijj<1.0)
-                       h57_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h57_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhiUnsignedjj>=0.0 and melaDPhiUnsignedjj<0.2)
-                       h63_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h63_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.2 and melaDPhiUnsignedjj<0.4)
-                       h64_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h64_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.4 and melaDPhiUnsignedjj<0.8)
-                       h65_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h65_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
-                       h67_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h67_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
+
+		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+                   double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
+		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
+  		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
+		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl
+
+		if (dPhi>-TMath::Pi() && dPhi<-1.5)
+			h3a_dphi_SS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>-1.5 && dPhi<-0)
+			h3b_dphi_SS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>=0 && dPhi<1.5)
+			h3c_dphi_SS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>1.5 && dPhi<TMath::Pi())
+			h3d_dphi_SS[k]->Fill(var1_2,var2,weight2*aweight);
+		  }
+
 
 		}
                 if (wRegion && q_1*q_2<0){
@@ -2485,14 +2652,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		    hmelaDPhijj_VBF_WOS[k]->Fill(melaDPhijj,weight2*aweight);
 		    hmelaDPhiUnsignedjj_VBF_WOS[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
 			
-		    h1D_jpt1_WOS[k]->Fill(jpt_1,weight2*aweight);
-		    h1D_jpt2_WOS[k]->Fill(jpt_2,weight2*aweight);
-		    h1D_jeta1_WOS[k]->Fill(jeta_1,weight2*aweight);
-		    h1D_jeta2_WOS[k]->Fill(jeta_2,weight2*aweight);
-		    h1D_phi1_WOS[k]->Fill(jphi_1,weight2*aweight);
-		    h1D_phi2_WOS[k]->Fill(jphi_2,weight2*aweight);
-		    h1D_mjj_WOS[k]->Fill(mjj,weight2*aweight);
-		    h1D_met_WOS[k]->Fill(mymet.Pt(),weight2*aweight);
+		    h1D_jpt1_VBF_WOS[k]->Fill(jpt_1,weight2*aweight);
+		    h1D_jpt2_VBF_WOS[k]->Fill(jpt_2,weight2*aweight);
+		    h1D_jeta1_VBF_WOS[k]->Fill(jeta_1,weight2*aweight);
+		    h1D_jeta2_VBF_WOS[k]->Fill(jeta_2,weight2*aweight);
+		    h1D_phi1_VBF_WOS[k]->Fill(jphi_1,weight2*aweight);
+		    h1D_phi2_VBF_WOS[k]->Fill(jphi_2,weight2*aweight);
+		    h1D_mjj_VBF_WOS[k]->Fill(mjj,weight2*aweight);
+		    h1D_met_VBF_WOS[k]->Fill(mymet.Pt(),weight2*aweight);
 
 
                     if (melaD0minus>=0.0 and melaD0minus<0.2)
@@ -2553,52 +2720,72 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 //			
                     //h2_dPhi_mvWOS[k]->Fill(var1_3,var2,aweight*weight2);
                     if (melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h3_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h3_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h4_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h4_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h5_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h5_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h7_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h7_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
                     if (melaDCPggH<0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h33_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h33_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h34_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h34_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h35_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h35_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h37_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h37_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDCPggH>=0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h43_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h43_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h44_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h44_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h45_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h45_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h47_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h47_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhijj>=0.0 and melaDPhijj<0.2)
-                       h53_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h53_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.2 and melaDPhijj<0.4)
-                       h54_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h54_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.4 and melaDPhijj<0.8)
-                       h55_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h55_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.8 and melaDPhijj<1.0)
-                       h57_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h57_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhiUnsignedjj>=0.0 and melaDPhiUnsignedjj<0.2)
-                       h63_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h63_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.2 and melaDPhiUnsignedjj<0.4)
-                       h64_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h64_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.4 and melaDPhiUnsignedjj<0.8)
-                       h65_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h65_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
-                       h67_ggHWOS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h67_WOSggH[k]->Fill(var1_2,var2,weight2*aweight);
+
+
+
+		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+                   double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
+		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
+  		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
+		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl;
+
+		if (dPhi>-TMath::Pi() && dPhi<-1.5)
+			h3a_dphi_WOS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>-1.5 && dPhi<-0)
+			h3b_dphi_WOS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>=0 && dPhi<1.5)
+			h3c_dphi_WOS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>1.5 && dPhi<TMath::Pi())
+			h3d_dphi_WOS[k]->Fill(var1_2,var2,weight2*aweight);
+
+		  }
+
 
 
 		}
@@ -2606,21 +2793,21 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     h2_WSS[k]->Fill(var1_2,var2,aweight*weight2);
                     h1D_WSS[k]->Fill(var_1D,weight2*aweight);
 
-		    hmelaDCPVBF_WSS[k]->Fill(melaDCP,weight2*aweight);
-		    hmelaDCPggHVBF_WSS[k]->Fill(melaDCPggH,weight2*aweight);
-		    hmelaD0minusVBF_WSS[k]->Fill(melaD0minus,weight2*aweight);
-		    hmelaD0minusggHVBF_WSS[k]->Fill(melaD0minusggH,weight2*aweight);
-		    hmelaDPhijjVBF_WSS[k]->Fill(melaDPhijj,weight2*aweight);
-		    hmelaDPhiUnsignedjjVBF_WSS[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
+		    hmelaDCP_VBF_WSS[k]->Fill(melaDCP,weight2*aweight);
+		    hmelaDCPggH_VBF_WSS[k]->Fill(melaDCPggH,weight2*aweight);
+		    hmelaD0minus_VBF_WSS[k]->Fill(melaD0minus,weight2*aweight);
+		    hmelaD0minusggH_VBF_WSS[k]->Fill(melaD0minusggH,weight2*aweight);
+		    hmelaDPhijj_VBF_WSS[k]->Fill(melaDPhijj,weight2*aweight);
+		    hmelaDPhiUnsignedjj_VBF_WSS[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
 			
-		    h1D_jpt1_WSS[k]->Fill(jpt_1,weight2*aweight);
-		    h1D_jpt2_WSS[k]->Fill(jpt_2,weight2*aweight);
-		    h1D_jeta1_WSS[k]->Fill(jeta_1,weight2*aweight);
-		    h1D_jeta2_WSS[k]->Fill(jeta_2,weight2*aweight);
-		    h1D_phi1_WSS[k]->Fill(jphi_1,weight2*aweight);
-		    h1D_phi2_WSS[k]->Fill(jphi_2,weight2*aweight);
-		    h1D_mjj_WSS[k]->Fill(mjj,weight2*aweight);
-		    h1D_met_WSS[k]->Fill(mymet.Pt(),weight2*aweight);
+		    h1D_jpt1_VBF_WSS[k]->Fill(jpt_1,weight2*aweight);
+		    h1D_jpt2_VBF_WSS[k]->Fill(jpt_2,weight2*aweight);
+		    h1D_jeta1_VBF_WSS[k]->Fill(jeta_1,weight2*aweight);
+		    h1D_jeta2_VBF_WSS[k]->Fill(jeta_2,weight2*aweight);
+		    h1D_phi1_VBF_WSS[k]->Fill(jphi_1,weight2*aweight);
+		    h1D_phi2_VBF_WSS[k]->Fill(jphi_2,weight2*aweight);
+		    h1D_mjj_VBF_WSS[k]->Fill(mjj,weight2*aweight);
+		    h1D_met_VBF_WSS[k]->Fill(mymet.Pt(),weight2*aweight);
 
 
 
@@ -2682,53 +2869,68 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 //////////////////
                     //h2_dPhi_mvWSS[k]->Fill(var1_3,var2,aweight*weight2);
                     if (melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h3_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h3_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h4_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h4_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h5_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h5_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h7_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h7_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
                     if (melaDCPggH<0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h33_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h33_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h34_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h34_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h35_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h35_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h37_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h37_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDCPggH>=0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h43_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h43_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h44_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h44_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h45_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h45_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h47_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h47_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhijj>=0.0 and melaDPhijj<0.2)
-                       h53_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h53_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.2 and melaDPhijj<0.4)
-                       h54_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h54_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.4 and melaDPhijj<0.8)
-                       h55_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h55_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.8 and melaDPhijj<1.0)
-                       h57_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h57_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhiUnsignedjj>=0.0 and melaDPhiUnsignedjj<0.2)
-                       h63_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h63_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.2 and melaDPhiUnsignedjj<0.4)
-                       h64_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h64_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.4 and melaDPhiUnsignedjj<0.8)
-                       h65_ggHWSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h65_WSSggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
-                       h67_ggHSS[k]->Fill(var1_2,var2,weight2*aweight);
+                       h67_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
+		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+                   double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
+		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
+  		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
+		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl;
+	
+		if (dPhi>-TMath::Pi() && dPhi<-1.5)
+			h3a_dphi_WSS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>-1.5 && dPhi<-0)
+			h3b_dphi_WSS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>=0 && dPhi<1.5)
+			h3c_dphi_WSS[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>1.5 && dPhi<TMath::Pi())
+			h3d_dphi_WSS[k]->Fill(var1_2,var2,weight2*aweight);
+		  }
 
 		}
                 if (qcdRegion && q_1*q_2>0){
@@ -2742,14 +2944,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		    hmelaDPhijj_VBF_QCD[k]->Fill(melaDPhijj,weight2*aweight);
 		    hmelaDPhiUnsignedjj_VBF_QCD[k]->Fill(melaDPhiUnsignedjj,weight2*aweight);
 			
-		    h1D_jpt1_QCD[k]->Fill(jpt_1,weight2*aweight);
-		    h1D_jpt2_QCD[k]->Fill(jpt_2,weight2*aweight);
-		    h1D_jeta1_QCD[k]->Fill(jeta_1,weight2*aweight);
-		    h1D_jeta2_QCD[k]->Fill(jeta_2,weight2*aweight);
-		    h1D_phi1_QCD[k]->Fill(jphi_1,weight2*aweight);
-		    h1D_phi2_QCD[k]->Fill(jphi_2,weight2*aweight);
-		    h1D_mjj_QCD[k]->Fill(mjj,weight2*aweight);
-		    h1D_met_QCD[k]->Fill(mymet.Pt(),weight2*aweight);
+		    h1D_jpt1_VBF_QCD[k]->Fill(jpt_1,weight2*aweight);
+		    h1D_jpt2_VBF_QCD[k]->Fill(jpt_2,weight2*aweight);
+		    h1D_jeta1_VBF_QCD[k]->Fill(jeta_1,weight2*aweight);
+		    h1D_jeta2_VBF_QCD[k]->Fill(jeta_2,weight2*aweight);
+		    h1D_phi1_VBF_QCD[k]->Fill(jphi_1,weight2*aweight);
+		    h1D_phi2_VBF_QCD[k]->Fill(jphi_2,weight2*aweight);
+		    h1D_mjj_VBF_QCD[k]->Fill(mjj,weight2*aweight);
+		    h1D_met_VBF_QCD[k]->Fill(mymet.Pt(),weight2*aweight);
 
 
 
@@ -2813,56 +3015,72 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     //h2_dPhi_mvQCD[k]->Fill(var1_3,var2,aweight*weight2);
 
                     if (melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h3_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h3_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h4_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h4_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h5_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h5_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h7_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h7_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
                     if (melaDCPggH<0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h33_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h33_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h34_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h34_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h35_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h35_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH<0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h37_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h37_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDCPggH>=0 and melaD0minusggH>=0.0 and melaD0minusggH<0.2)
-                       h43_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h43_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.2 and melaD0minusggH<0.4)
-                       h44_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h44_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.4 and melaD0minusggH<0.8)
-                       h45_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h45_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDCPggH>=0 and melaD0minusggH>=0.8 and melaD0minusggH<1.0)
-                       h47_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h47_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhijj>=0.0 and melaDPhijj<0.2)
-                       h53_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h53_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.2 and melaDPhijj<0.4)
-                       h54_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h54_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.4 and melaDPhijj<0.8)
-                       h55_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h55_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhijj>=0.8 and melaDPhijj<1.0)
-                       h57_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h57_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
                     if (melaDPhiUnsignedjj>=0.0 and melaDPhiUnsignedjj<0.2)
-                       h63_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h63_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.2 and melaDPhiUnsignedjj<0.4)
-                       h64_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h64_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.4 and melaDPhiUnsignedjj<0.8)
-                       h65_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h65_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
-                       h67_ggHQCD[k]->Fill(var1_2,var2,weight2*aweight);
+                       h67_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
+		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+                   double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
+		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
+  		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
+		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl;
+	
+		if (dPhi>-TMath::Pi() && dPhi<-1.5)
+			h3a_dphi_QCD[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>-1.5 && dPhi<-0)
+			h3b_dphi_QCD[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>=0 && dPhi<1.5)
+			h3c_dphi_QCD[k]->Fill(var1_2,var2,weight2*aweight);
+		if (dPhi>1.5 && dPhi<TMath::Pi())
+			h3d_dphi_QCD[k]->Fill(var1_2,var2,weight2*aweight);
+		  }
 
 		}
             }
+
 	}
     } // end of loop over events
 
@@ -2931,66 +3149,81 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
        h37_WSS[k]->Scale(h37_SS[k]->Integral()/(0.0000000001+h37_WSS[k]->Integral()));
 
 ///ggH
-       h0_ggHWOS[k]->Scale(h0_ggHOS[k]->Integral()/h0_ggHWOS[k]->Integral());
-       h1_ggHWOS[k]->Scale(h1_ggHOS[k]->Integral()/h1_ggHWOS[k]->Integral());
-//       h2_dPhi_mvWOS[k]->Scale(h2_dPhi_mvOS[k]->Integral()/h2_dPhi_mvWOS[k]->Integral());
-       h3_ggHWOS[k]->Scale(h3_ggHOS[k]->Integral()/h3_ggHWOS[k]->Integral());
-       h4_ggHWOS[k]->Scale(h4_ggHOS[k]->Integral()/h4_ggHWOS[k]->Integral());
-       h5_ggHWOS[k]->Scale((0.000000001+h5_ggHOS[k]->Integral())/(0.00000001+h5_ggHWOS[k]->Integral()));
-       h7_ggHWOS[k]->Scale(h7_ggHOS[k]->Integral()/h7_ggHWOS[k]->Integral());
-       h0_ggHWSS[k]->Scale(h0_ggHSS[k]->Integral()/h0_ggHWSS[k]->Integral());
-       h1_ggHWSS[k]->Scale(h1_ggHSS[k]->Integral()/h1_ggHWSS[k]->Integral());
-//       h2_dPhi_mvWSS[k]->Scale(h2_dPhi_mvSS[k]->Integral()/h2_dPhi_mvWSS[k]->Integral());
-       h3_ggHWSS[k]->Scale(h3_ggHSS[k]->Integral()/h3_ggHWSS[k]->Integral());
-       h4_ggHWSS[k]->Scale(h4_ggHSS[k]->Integral()/h4_ggHWSS[k]->Integral());
-       h5_ggHWSS[k]->Scale(h5_ggHSS[k]->Integral()/h5_ggHWSS[k]->Integral());
-       h7_ggHWSS[k]->Scale(h7_ggHSS[k]->Integral()/h7_ggHWSS[k]->Integral());
+       h0_WOSggH[k]->Scale(h0_OSggH[k]->Integral()/h0_WOSggH[k]->Integral());
+       h1_WOSggH[k]->Scale(h1_OSggH[k]->Integral()/h1_WOSggH[k]->Integral());
+       h3_WOSggH[k]->Scale(h3_OSggH[k]->Integral()/h3_WOSggH[k]->Integral());
+       h4_WOSggH[k]->Scale(h4_OSggH[k]->Integral()/h4_WOSggH[k]->Integral());
+       h5_WOSggH[k]->Scale((0.000000001+h5_OSggH[k]->Integral())/(0.00000001+h5_WOSggH[k]->Integral()));
+       h7_WOSggH[k]->Scale(h7_OSggH[k]->Integral()/h7_WOSggH[k]->Integral());
+       h0_WSSggH[k]->Scale(h0_SSggH[k]->Integral()/h0_WSSggH[k]->Integral());
+       h1_WSSggH[k]->Scale(h1_SSggH[k]->Integral()/h1_WSSggH[k]->Integral());
+       h3_WSSggH[k]->Scale(h3_SSggH[k]->Integral()/h3_WSSggH[k]->Integral());
+       h4_WSSggH[k]->Scale(h4_SSggH[k]->Integral()/h4_WSSggH[k]->Integral());
+       h5_WSSggH[k]->Scale(h5_SSggH[k]->Integral()/h5_WSSggH[k]->Integral());
+       h7_WSSggH[k]->Scale(h7_SSggH[k]->Integral()/h7_WSSggH[k]->Integral());
 
 
-       h63_ggHWOS[k]->Scale(h63_ggHOS[k]->Integral()/(0.0000000001+h63_ggHWOS[k]->Integral()));
-       h64_ggHWOS[k]->Scale(h64_ggHOS[k]->Integral()/(0.0000000001+h64_ggHWOS[k]->Integral()));
-       h65_ggHWOS[k]->Scale(h65_ggHOS[k]->Integral()/(0.0000000001+h65_ggHWOS[k]->Integral()));
-       h67_ggHWOS[k]->Scale(h67_ggHOS[k]->Integral()/(0.0000000001+h67_ggHWOS[k]->Integral()));
-       h63_ggHWSS[k]->Scale(h63_ggHSS[k]->Integral()/(0.0000000001+h63_ggHWSS[k]->Integral()));
-       h64_ggHWSS[k]->Scale(h64_ggHSS[k]->Integral()/(0.0000000001+h64_ggHWSS[k]->Integral()));
-       h65_ggHWSS[k]->Scale(h65_ggHSS[k]->Integral()/(0.0000000001+h65_ggHWSS[k]->Integral()));
-       h67_ggHWSS[k]->Scale(h67_ggHSS[k]->Integral()/(0.0000000001+h67_ggHWSS[k]->Integral()));
+       h3a_dphi_WSS[k]->Scale(h3a_dphi_SS[k]->Integral()/h3a_dphi_WSS[k]->Integral());
+       h3b_dphi_WSS[k]->Scale(h3b_dphi_SS[k]->Integral()/h3b_dphi_WSS[k]->Integral());
+       h3c_dphi_WSS[k]->Scale(h3c_dphi_SS[k]->Integral()/h3c_dphi_WSS[k]->Integral());
+       h3d_dphi_WSS[k]->Scale(h3d_dphi_SS[k]->Integral()/h3d_dphi_WSS[k]->Integral());
+    /*   h3e_dphi_WSS[k]->Scale(h3e_dphi_SS[k]->Integral()/h3e_dphi_WSS[k]->Integral());
+       h3f_dphi_WSS[k]->Scale(h3f_dphi_SS[k]->Integral()/h3f_dphi_WSS[k]->Integral());
+       h3g_dphi_WSS[k]->Scale(h3g_dphi_SS[k]->Integral()/h3g_dphi_WSS[k]->Integral());
+       h3h_dphi_WSS[k]->Scale(h3h_dphi_SS[k]->Integral()/h3h_dphi_WSS[k]->Integral());
+       h3i_dphi_WSS[k]->Scale(h3u_dphi_SS[k]->Integral()/h3i_dphi_WSS[k]->Integral());
+       h3j_dphi_WSS[k]->Scale(h3j_dphi_SS[k]->Integral()/h3j_dphi_WSS[k]->Integral());
+       h3k_dphi_WSS[k]->Scale(h3k_dphi_SS[k]->Integral()/h3k_dphi_WSS[k]->Integral());
+       h3l_dphi_WSS[k]->Scale(h3l_dphi_SS[k]->Integral()/h3l_dphi_WSS[k]->Integral());
+       h3m_dphi_WSS[k]->Scale(h3m_dphi_SS[k]->Integral()/h3m_dphi_WSS[k]->Integral());
+       h3n_dphi_WSS[k]->Scale(h3n_dphi_SS[k]->Integral()/h3n_dphi_WSS[k]->Integral());
+*/
 
-       h53_ggHWOS[k]->Scale(h53_ggHOS[k]->Integral()/(0.0000000001+h53_ggHWOS[k]->Integral()));
-       h54_ggHWOS[k]->Scale(h54_ggHOS[k]->Integral()/(0.0000000001+h54_ggHWOS[k]->Integral()));
-       h55_ggHWOS[k]->Scale(h55_ggHOS[k]->Integral()/(0.0000000001+h55_ggHWOS[k]->Integral()));
-       h57_ggHWOS[k]->Scale(h57_ggHOS[k]->Integral()/(0.0000000001+h57_ggHWOS[k]->Integral()));
-       h53_ggHWSS[k]->Scale(h53_ggHSS[k]->Integral()/(0.0000000001+h53_ggHWSS[k]->Integral()));
-       h54_ggHWSS[k]->Scale(h54_ggHSS[k]->Integral()/(0.0000000001+h54_ggHWSS[k]->Integral()));
-       h55_ggHWSS[k]->Scale(h55_ggHSS[k]->Integral()/(0.0000000001+h55_ggHWSS[k]->Integral()));
-       h57_ggHWSS[k]->Scale(h57_ggHSS[k]->Integral()/(0.0000000001+h57_ggHWSS[k]->Integral()));
 
-       h43_ggHWOS[k]->Scale(h43_ggHOS[k]->Integral()/(0.0000000001+h43_ggHWOS[k]->Integral()));
-       h44_ggHWOS[k]->Scale(h44_ggHOS[k]->Integral()/(0.0000000001+h44_ggHWOS[k]->Integral()));
-       h45_ggHWOS[k]->Scale(h45_ggHOS[k]->Integral()/(0.0000000001+h45_ggHWOS[k]->Integral()));
-       h47_ggHWOS[k]->Scale(h47_ggHOS[k]->Integral()/(0.0000000001+h47_ggHWOS[k]->Integral()));
-       h43_ggHWSS[k]->Scale(h43_ggHSS[k]->Integral()/(0.0000000001+h43_ggHWSS[k]->Integral()));
-       h44_ggHWSS[k]->Scale(h44_ggHSS[k]->Integral()/(0.0000000001+h44_ggHWSS[k]->Integral()));
-       h45_ggHWSS[k]->Scale(h45_ggHSS[k]->Integral()/(0.0000000001+h45_ggHWSS[k]->Integral()));
-       h47_ggHWSS[k]->Scale(h47_ggHSS[k]->Integral()/(0.0000000001+h47_ggHWSS[k]->Integral()));
+       h63_WOSggH[k]->Scale(h63_OSggH[k]->Integral()/(0.0000000001+h63_WOSggH[k]->Integral()));
+       h64_WOSggH[k]->Scale(h64_OSggH[k]->Integral()/(0.0000000001+h64_WOSggH[k]->Integral()));
+       h65_WOSggH[k]->Scale(h65_OSggH[k]->Integral()/(0.0000000001+h65_WOSggH[k]->Integral()));
+       h67_WOSggH[k]->Scale(h67_OSggH[k]->Integral()/(0.0000000001+h67_WOSggH[k]->Integral()));
+       h63_WSSggH[k]->Scale(h63_SSggH[k]->Integral()/(0.0000000001+h63_WSSggH[k]->Integral()));
+       h64_WSSggH[k]->Scale(h64_SSggH[k]->Integral()/(0.0000000001+h64_WSSggH[k]->Integral()));
+       h65_WSSggH[k]->Scale(h65_SSggH[k]->Integral()/(0.0000000001+h65_WSSggH[k]->Integral()));
+       h67_WSSggH[k]->Scale(h67_SSggH[k]->Integral()/(0.0000000001+h67_WSSggH[k]->Integral()));
 
-       h33_ggHWOS[k]->Scale(h33_ggHOS[k]->Integral()/(0.0000000001+h33_ggHWOS[k]->Integral()));
-       h34_ggHWOS[k]->Scale(h34_ggHOS[k]->Integral()/(0.0000000001+h34_ggHWOS[k]->Integral()));
-       h35_ggHWOS[k]->Scale(h35_ggHOS[k]->Integral()/(0.0000000001+h35_ggHWOS[k]->Integral()));
-       h37_ggHWOS[k]->Scale(h37_ggHOS[k]->Integral()/(0.0000000001+h37_ggHWOS[k]->Integral()));
-       h33_ggHWSS[k]->Scale(h33_ggHSS[k]->Integral()/(0.0000000001+h33_ggHWSS[k]->Integral()));
-       h34_ggHWSS[k]->Scale(h34_ggHSS[k]->Integral()/(0.0000000001+h34_ggHWSS[k]->Integral()));
-       h35_ggHWSS[k]->Scale(h35_ggHSS[k]->Integral()/(0.0000000001+h35_ggHWSS[k]->Integral()));
-       h37_ggHWSS[k]->Scale(h37_ggHSS[k]->Integral()/(0.0000000001+h37_ggHWSS[k]->Integral()));
+       h53_WOSggH[k]->Scale(h53_OSggH[k]->Integral()/(0.0000000001+h53_WOSggH[k]->Integral()));
+       h54_WOSggH[k]->Scale(h54_OSggH[k]->Integral()/(0.0000000001+h54_WOSggH[k]->Integral()));
+       h55_WOSggH[k]->Scale(h55_OSggH[k]->Integral()/(0.0000000001+h55_WOSggH[k]->Integral()));
+       h57_WOSggH[k]->Scale(h57_OSggH[k]->Integral()/(0.0000000001+h57_WOSggH[k]->Integral()));
+       h53_WSSggH[k]->Scale(h53_SSggH[k]->Integral()/(0.0000000001+h53_WSSggH[k]->Integral()));
+       h54_WSSggH[k]->Scale(h54_SSggH[k]->Integral()/(0.0000000001+h54_WSSggH[k]->Integral()));
+       h55_WSSggH[k]->Scale(h55_SSggH[k]->Integral()/(0.0000000001+h55_WSSggH[k]->Integral()));
+       h57_WSSggH[k]->Scale(h57_SSggH[k]->Integral()/(0.0000000001+h57_WSSggH[k]->Integral()));
+
+       h43_WOSggH[k]->Scale(h43_OSggH[k]->Integral()/(0.0000000001+h43_WOSggH[k]->Integral()));
+       h44_WOSggH[k]->Scale(h44_OSggH[k]->Integral()/(0.0000000001+h44_WOSggH[k]->Integral()));
+       h45_WOSggH[k]->Scale(h45_OSggH[k]->Integral()/(0.0000000001+h45_WOSggH[k]->Integral()));
+       h47_WOSggH[k]->Scale(h47_OSggH[k]->Integral()/(0.0000000001+h47_WOSggH[k]->Integral()));
+       h43_WSSggH[k]->Scale(h43_SSggH[k]->Integral()/(0.0000000001+h43_WSSggH[k]->Integral()));
+       h44_WSSggH[k]->Scale(h44_SSggH[k]->Integral()/(0.0000000001+h44_WSSggH[k]->Integral()));
+       h45_WSSggH[k]->Scale(h45_SSggH[k]->Integral()/(0.0000000001+h45_WSSggH[k]->Integral()));
+       h47_WSSggH[k]->Scale(h47_SSggH[k]->Integral()/(0.0000000001+h47_WSSggH[k]->Integral()));
+
+       h33_WOSggH[k]->Scale(h33_OSggH[k]->Integral()/(0.0000000001+h33_WOSggH[k]->Integral()));
+       h34_WOSggH[k]->Scale(h34_OSggH[k]->Integral()/(0.0000000001+h34_WOSggH[k]->Integral()));
+       h35_WOSggH[k]->Scale(h35_OSggH[k]->Integral()/(0.0000000001+h35_WOSggH[k]->Integral()));
+       h37_WOSggH[k]->Scale(h37_OSggH[k]->Integral()/(0.0000000001+h37_WOSggH[k]->Integral()));
+       h33_WSSggH[k]->Scale(h33_SSggH[k]->Integral()/(0.0000000001+h33_WSSggH[k]->Integral()));
+       h34_WSSggH[k]->Scale(h34_SSggH[k]->Integral()/(0.0000000001+h34_WSSggH[k]->Integral()));
+       h35_WSSggH[k]->Scale(h35_SSggH[k]->Integral()/(0.0000000001+h35_WSSggH[k]->Integral()));
+       h37_WSSggH[k]->Scale(h37_SSggH[k]->Integral()/(0.0000000001+h37_WSSggH[k]->Integral()));
 ////////
 ///dPhi
-/*
+
 
        h3a_dphi_WOS[k]->Scale(h3a_dphi_OS[k]->Integral()/h3a_dphi_WOS[k]->Integral());
        h3b_dphi_WOS[k]->Scale(h3b_dphi_OS[k]->Integral()/h3b_dphi_WOS[k]->Integral());
        h3c_dphi_WOS[k]->Scale(h3c_dphi_OS[k]->Integral()/h3c_dphi_WOS[k]->Integral());
        h3d_dphi_WOS[k]->Scale(h3d_dphi_OS[k]->Integral()/h3d_dphi_WOS[k]->Integral());
-       h3e_dphi_WOS[k]->Scale(h3e_dphi_OS[k]->Integral()/h3e_dphi_WOS[k]->Integral());
+/*       h3e_dphi_WOS[k]->Scale(h3e_dphi_OS[k]->Integral()/h3e_dphi_WOS[k]->Integral());
        h3f_dphi_WOS[k]->Scale(h3f_dphi_OS[k]->Integral()/h3f_dphi_WOS[k]->Integral());
        h3g_dphi_WOS[k]->Scale(h3g_dphi_OS[k]->Integral()/h3g_dphi_WOS[k]->Integral());
        h3h_dphi_WOS[k]->Scale(h3h_dphi_OS[k]->Integral()/h3h_dphi_WOS[k]->Integral());
@@ -3091,6 +3324,48 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
     TDirectory *OS7jet =fout->mkdir("et_vbf_D0_0p8to1p0");
     TDirectory *SS7jet =fout->mkdir("SS7");
     TDirectory *QCD7jet =fout->mkdir("QCD7");
+
+
+    TDirectory *SS3jetggH =fout->mkdir("SS3ggH");
+    TDirectory *QCD3jetggH =fout->mkdir("QCD3ggH");
+    TDirectory *SS4jetggH =fout->mkdir("SS4ggH");
+    TDirectory *QCD4jetggH =fout->mkdir("QCD4ggH");
+    TDirectory *SS5jetggH =fout->mkdir("SS5ggH");
+    TDirectory *QCD5jetggH =fout->mkdir("QCD5ggH");
+    TDirectory *SS7jetggH =fout->mkdir("SS7ggH");
+    TDirectory *QCD7jetggH =fout->mkdir("QCD7ggH");
+
+    TDirectory *OS3jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_ggH");
+    TDirectory *OS4jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_ggH");
+    TDirectory *OS5jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_ggH");
+    TDirectory *OS7jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_ggH");
+
+    TDirectory *OS33jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_DCPm_ggH");
+    TDirectory *OS34jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH");
+    TDirectory *OS35jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH");
+    TDirectory *OS37jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH");
+
+    TDirectory *dPhiajetOSggH =fout->mkdir("et_vbf_D0_Pito1p5m_OSggH");
+    TDirectory *dPhibjetOSggH =fout->mkdir("et_vbf_D0_1p5to0_OSggH");
+    TDirectory *dPhicjetOSggH =fout->mkdir("et_vbf_D0_0to1p5p_OSggH");
+    TDirectory *dPhidjetOSggH =fout->mkdir("et_vbf_D0_1p5toPi_OSggH");
+    TDirectory *dPhiajetSSggH =fout->mkdir("et_vbf_D0_Pito1p5m_SSggH");
+    TDirectory *dPhibjetSSggH =fout->mkdir("et_vbf_D0_1p5to0_SSggH");
+    TDirectory *dPhicjetSSggH =fout->mkdir("et_vbf_D0_0to1p5p_SSggH");
+    TDirectory *dPhidjetSSggH =fout->mkdir("et_vbf_D0_1p5toPi_SSggH");
+    TDirectory *dPhiajetQCDggH =fout->mkdir("et_vbf_D0_Pito1p5m_QCDggH");
+    TDirectory *dPhibjetQCDggH =fout->mkdir("et_vbf_D0_1p5to0_QCDggH");
+    TDirectory *dPhicjetQCDggH =fout->mkdir("et_vbf_D0_0to1p5p_QCDggH");
+    TDirectory *dPhidjetQCDggH =fout->mkdir("et_vbf_D0_1p5toPi_QCDggH");
+
+    TDirectory *SS33jetggH =fout->mkdir("SS33ggH");
+    TDirectory *QCD33jetggH =fout->mkdir("QCD33ggH");
+    TDirectory *SS34jetggH =fout->mkdir("SS34ggH");
+    TDirectory *QCD34jetggH =fout->mkdir("QCD34ggH");
+    TDirectory *SS35jetggH =fout->mkdir("SS35ggH");
+    TDirectory *QCD35jetggH =fout->mkdir("QCD35ggH");
+    TDirectory *SS37jetggH =fout->mkdir("SS37ggH");
+    TDirectory *QCD37jetggH =fout->mkdir("QCD37ggH");
 
     TDirectory *OS33jet =fout->mkdir("et_vbf_D0_0p0to0p2_DCPm");
     TDirectory *SS33jet =fout->mkdir("SS33");
@@ -3286,10 +3561,10 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
            if (hmelaD0minusggH_VBF_WOS[k]->GetBinContent(nn)<0) hmelaD0minusggH_VBF_WOS[k]->SetBinContent(nn,0.00001);
            
 	   if (h2_WSS[k]->GetBinContent(nn)<0) h2_WSS[k]->SetBinContent(nn,0.00001);
-           if (hmelaDCPVBF_WSS[k]->GetBinContent(nn)<0) hmelaDCPVBF_WSS[k]->SetBinContent(nn,0.00001);
-           if (hmelaDCPggHVBF_WSS[k]->GetBinContent(nn)<0) hmelaDCPggHVBF_WSS[k]->SetBinContent(nn,0.00001);
-           if (hmelaD0minusVBF_WSS[k]->GetBinContent(nn)<0) hmelaD0minusVBF_WSS[k]->SetBinContent(nn,0.00001);
-           if (hmelaD0minusggHVBF_WSS[k]->GetBinContent(nn)<0) hmelaD0minusggHVBF_WSS[k]->SetBinContent(nn,0.00001);
+           if (hmelaDCP_VBF_WSS[k]->GetBinContent(nn)<0) hmelaDCP_VBF_WSS[k]->SetBinContent(nn,0.00001);
+           if (hmelaDCPggH_VBF_WSS[k]->GetBinContent(nn)<0) hmelaDCPggH_VBF_WSS[k]->SetBinContent(nn,0.00001);
+           if (hmelaD0minus_VBF_WSS[k]->GetBinContent(nn)<0) hmelaD0minus_VBF_WSS[k]->SetBinContent(nn,0.00001);
+           if (hmelaD0minusggH_VBF_WSS[k]->GetBinContent(nn)<0) hmelaD0minusggH_VBF_WSS[k]->SetBinContent(nn,0.00001);
 
            if (h3_OS[k]->GetBinContent(nn)<0) h3_OS[k]->SetBinContent(nn,0.00001);
            if (h3_SS[k]->GetBinContent(nn)<0) h3_SS[k]->SetBinContent(nn,0.00001);
@@ -3419,16 +3694,16 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
 	   //// make copy for ggH
 
-           if (h0_ggHOS[k]->GetBinContent(nn)<0) h0_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h0_ggHSS[k]->GetBinContent(nn)<0) h0_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h0_ggHQCD[k]->GetBinContent(nn)<0) h0_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h0_ggHWOS[k]->GetBinContent(nn)<0) h0_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h0_ggHWSS[k]->GetBinContent(nn)<0) h0_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h1_ggHOS[k]->GetBinContent(nn)<0) h1_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h1_ggHSS[k]->GetBinContent(nn)<0) h1_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h1_ggHQCD[k]->GetBinContent(nn)<0) h1_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h1_ggHWOS[k]->GetBinContent(nn)<0) h1_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h1_ggHWSS[k]->GetBinContent(nn)<0) h1_ggHWSS[k]->SetBinContent(nn,0.00001);
+           if (h0_OSggH[k]->GetBinContent(nn)<0) h0_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h0_SSggH[k]->GetBinContent(nn)<0) h0_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h0_QCDggH[k]->GetBinContent(nn)<0) h0_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h0_WOSggH[k]->GetBinContent(nn)<0) h0_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h0_WSSggH[k]->GetBinContent(nn)<0) h0_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h1_OSggH[k]->GetBinContent(nn)<0) h1_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h1_SSggH[k]->GetBinContent(nn)<0) h1_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h1_QCDggH[k]->GetBinContent(nn)<0) h1_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h1_WOSggH[k]->GetBinContent(nn)<0) h1_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h1_WSSggH[k]->GetBinContent(nn)<0) h1_WSSggH[k]->SetBinContent(nn,0.00001);
 /*
            if (h2_dPhi_mvOS[k]->GetBinContent(nn)<0) h2_dPhi_mvOS[k]->SetBinContent(nn,0.00001);
            if (h2_dPhi_mvSS[k]->GetBinContent(nn)<0) h2_dPhi_mvSS[k]->SetBinContent(nn,0.00001);
@@ -3436,163 +3711,143 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
            if (h2_dPhi_mvWOS[k]->GetBinContent(nn)<0) h2_dPhi_mvWOS[k]->SetBinContent(nn,0.00001);
            if (h2_dPhi_mvWSS[k]->GetBinContent(nn)<0) h2_dPhi_mvWSS[k]->SetBinContent(nn,0.00001);
 */
-           if (h3_ggHOS[k]->GetBinContent(nn)<0) h3_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h3_ggHSS[k]->GetBinContent(nn)<0) h3_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h3_ggHQCD[k]->GetBinContent(nn)<0) h3_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h3_ggHWOS[k]->GetBinContent(nn)<0) h3_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h3_ggHWSS[k]->GetBinContent(nn)<0) h3_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h4_ggHOS[k]->GetBinContent(nn)<0) h4_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h4_ggHSS[k]->GetBinContent(nn)<0) h4_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h4_ggHQCD[k]->GetBinContent(nn)<0) h4_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h4_ggHWOS[k]->GetBinContent(nn)<0) h4_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h4_ggHWSS[k]->GetBinContent(nn)<0) h4_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h5_ggHOS[k]->GetBinContent(nn)<0) h5_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h5_ggHSS[k]->GetBinContent(nn)<0) h5_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h5_ggHQCD[k]->GetBinContent(nn)<0) h5_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h5_ggHWOS[k]->GetBinContent(nn)<0) h5_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h5_ggHWSS[k]->GetBinContent(nn)<0) h5_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h7_ggHOS[k]->GetBinContent(nn)<0) h7_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h7_ggHSS[k]->GetBinContent(nn)<0) h7_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h7_ggHQCD[k]->GetBinContent(nn)<0) h7_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h7_ggHWOS[k]->GetBinContent(nn)<0) h7_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h7_ggHWSS[k]->GetBinContent(nn)<0) h7_ggHWSS[k]->SetBinContent(nn,0.00001);
+           if (h3_OSggH[k]->GetBinContent(nn)<0) h3_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h3_SSggH[k]->GetBinContent(nn)<0) h3_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h3_QCDggH[k]->GetBinContent(nn)<0) h3_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h3_WOSggH[k]->GetBinContent(nn)<0) h3_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h3_WSSggH[k]->GetBinContent(nn)<0) h3_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h4_OSggH[k]->GetBinContent(nn)<0) h4_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h4_SSggH[k]->GetBinContent(nn)<0) h4_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h4_QCDggH[k]->GetBinContent(nn)<0) h4_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h4_WOSggH[k]->GetBinContent(nn)<0) h4_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h4_WSSggH[k]->GetBinContent(nn)<0) h4_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h5_OSggH[k]->GetBinContent(nn)<0) h5_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h5_SSggH[k]->GetBinContent(nn)<0) h5_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h5_QCDggH[k]->GetBinContent(nn)<0) h5_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h5_WOSggH[k]->GetBinContent(nn)<0) h5_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h5_WSSggH[k]->GetBinContent(nn)<0) h5_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h7_OSggH[k]->GetBinContent(nn)<0) h7_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h7_SSggH[k]->GetBinContent(nn)<0) h7_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h7_QCDggH[k]->GetBinContent(nn)<0) h7_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h7_WOSggH[k]->GetBinContent(nn)<0) h7_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h7_WSSggH[k]->GetBinContent(nn)<0) h7_WSSggH[k]->SetBinContent(nn,0.00001);
 
-           if (h33_ggHOS[k]->GetBinContent(nn)<0) h33_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h33_ggHSS[k]->GetBinContent(nn)<0) h33_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h33_ggHQCD[k]->GetBinContent(nn)<0) h33_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h33_ggHWOS[k]->GetBinContent(nn)<0) h33_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h33_ggHWSS[k]->GetBinContent(nn)<0) h33_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h34_ggHOS[k]->GetBinContent(nn)<0) h34_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h34_ggHSS[k]->GetBinContent(nn)<0) h34_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h34_ggHQCD[k]->GetBinContent(nn)<0) h34_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h34_ggHWOS[k]->GetBinContent(nn)<0) h34_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h34_ggHWSS[k]->GetBinContent(nn)<0) h34_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h35_ggHOS[k]->GetBinContent(nn)<0) h35_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h35_ggHSS[k]->GetBinContent(nn)<0) h35_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h35_ggHQCD[k]->GetBinContent(nn)<0) h35_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h35_ggHWOS[k]->GetBinContent(nn)<0) h35_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h35_ggHWSS[k]->GetBinContent(nn)<0) h35_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h37_ggHOS[k]->GetBinContent(nn)<0) h37_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h37_ggHSS[k]->GetBinContent(nn)<0) h37_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h37_ggHQCD[k]->GetBinContent(nn)<0) h37_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h37_ggHWOS[k]->GetBinContent(nn)<0) h37_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h37_ggHWSS[k]->GetBinContent(nn)<0) h37_ggHWSS[k]->SetBinContent(nn,0.00001);
+           if (h33_OSggH[k]->GetBinContent(nn)<0) h33_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h33_SSggH[k]->GetBinContent(nn)<0) h33_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h33_QCDggH[k]->GetBinContent(nn)<0) h33_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h33_WOSggH[k]->GetBinContent(nn)<0) h33_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h33_WSSggH[k]->GetBinContent(nn)<0) h33_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h34_OSggH[k]->GetBinContent(nn)<0) h34_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h34_SSggH[k]->GetBinContent(nn)<0) h34_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h34_QCDggH[k]->GetBinContent(nn)<0) h34_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h34_WOSggH[k]->GetBinContent(nn)<0) h34_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h34_WSSggH[k]->GetBinContent(nn)<0) h34_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h35_OSggH[k]->GetBinContent(nn)<0) h35_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h35_SSggH[k]->GetBinContent(nn)<0) h35_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h35_QCDggH[k]->GetBinContent(nn)<0) h35_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h35_WOSggH[k]->GetBinContent(nn)<0) h35_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h35_WSSggH[k]->GetBinContent(nn)<0) h35_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h37_OSggH[k]->GetBinContent(nn)<0) h37_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h37_SSggH[k]->GetBinContent(nn)<0) h37_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h37_QCDggH[k]->GetBinContent(nn)<0) h37_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h37_WOSggH[k]->GetBinContent(nn)<0) h37_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h37_WSSggH[k]->GetBinContent(nn)<0) h37_WSSggH[k]->SetBinContent(nn,0.00001);
 
-           if (h43_ggHOS[k]->GetBinContent(nn)<0) h43_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h43_ggHSS[k]->GetBinContent(nn)<0) h43_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h43_ggHQCD[k]->GetBinContent(nn)<0) h43_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h43_ggHWOS[k]->GetBinContent(nn)<0) h43_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h43_ggHWSS[k]->GetBinContent(nn)<0) h43_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h44_ggHOS[k]->GetBinContent(nn)<0) h44_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h44_ggHSS[k]->GetBinContent(nn)<0) h44_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h44_ggHQCD[k]->GetBinContent(nn)<0) h44_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h44_ggHWOS[k]->GetBinContent(nn)<0) h44_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h44_ggHWSS[k]->GetBinContent(nn)<0) h44_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h45_ggHOS[k]->GetBinContent(nn)<0) h45_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h45_ggHSS[k]->GetBinContent(nn)<0) h45_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h45_ggHQCD[k]->GetBinContent(nn)<0) h45_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h45_ggHWOS[k]->GetBinContent(nn)<0) h45_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h45_ggHWSS[k]->GetBinContent(nn)<0) h45_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h47_ggHOS[k]->GetBinContent(nn)<0) h47_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h47_ggHSS[k]->GetBinContent(nn)<0) h47_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h47_ggHQCD[k]->GetBinContent(nn)<0) h47_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h47_ggHWOS[k]->GetBinContent(nn)<0) h47_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h47_ggHWSS[k]->GetBinContent(nn)<0) h47_ggHWSS[k]->SetBinContent(nn,0.00001);
+           if (h43_OSggH[k]->GetBinContent(nn)<0) h43_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h43_SSggH[k]->GetBinContent(nn)<0) h43_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h43_QCDggH[k]->GetBinContent(nn)<0) h43_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h43_WOSggH[k]->GetBinContent(nn)<0) h43_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h43_WSSggH[k]->GetBinContent(nn)<0) h43_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h44_OSggH[k]->GetBinContent(nn)<0) h44_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h44_SSggH[k]->GetBinContent(nn)<0) h44_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h44_QCDggH[k]->GetBinContent(nn)<0) h44_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h44_WOSggH[k]->GetBinContent(nn)<0) h44_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h44_WSSggH[k]->GetBinContent(nn)<0) h44_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h45_OSggH[k]->GetBinContent(nn)<0) h45_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h45_SSggH[k]->GetBinContent(nn)<0) h45_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h45_QCDggH[k]->GetBinContent(nn)<0) h45_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h45_WOSggH[k]->GetBinContent(nn)<0) h45_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h45_WSSggH[k]->GetBinContent(nn)<0) h45_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h47_OSggH[k]->GetBinContent(nn)<0) h47_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h47_SSggH[k]->GetBinContent(nn)<0) h47_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h47_QCDggH[k]->GetBinContent(nn)<0) h47_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h47_WOSggH[k]->GetBinContent(nn)<0) h47_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h47_WSSggH[k]->GetBinContent(nn)<0) h47_WSSggH[k]->SetBinContent(nn,0.00001);
 
-          if (h53_ggHOS[k]->GetBinContent(nn)<0) h53_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h53_ggHSS[k]->GetBinContent(nn)<0) h53_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h53_ggHQCD[k]->GetBinContent(nn)<0) h53_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h53_ggHWOS[k]->GetBinContent(nn)<0) h53_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h53_ggHWSS[k]->GetBinContent(nn)<0) h53_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h54_ggHOS[k]->GetBinContent(nn)<0) h54_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h54_ggHSS[k]->GetBinContent(nn)<0) h54_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h54_ggHQCD[k]->GetBinContent(nn)<0) h54_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h54_ggHWOS[k]->GetBinContent(nn)<0) h54_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h54_ggHWSS[k]->GetBinContent(nn)<0) h54_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h55_ggHOS[k]->GetBinContent(nn)<0) h55_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h55_ggHSS[k]->GetBinContent(nn)<0) h55_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h55_ggHQCD[k]->GetBinContent(nn)<0) h55_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h55_ggHWOS[k]->GetBinContent(nn)<0) h55_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h55_ggHWSS[k]->GetBinContent(nn)<0) h55_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h57_ggHOS[k]->GetBinContent(nn)<0) h57_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h57_ggHSS[k]->GetBinContent(nn)<0) h57_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h57_ggHQCD[k]->GetBinContent(nn)<0) h57_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h57_ggHWOS[k]->GetBinContent(nn)<0) h57_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h57_ggHWSS[k]->GetBinContent(nn)<0) h57_ggHWSS[k]->SetBinContent(nn,0.00001);
+          if (h53_OSggH[k]->GetBinContent(nn)<0) h53_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h53_SSggH[k]->GetBinContent(nn)<0) h53_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h53_QCDggH[k]->GetBinContent(nn)<0) h53_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h53_WOSggH[k]->GetBinContent(nn)<0) h53_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h53_WSSggH[k]->GetBinContent(nn)<0) h53_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h54_OSggH[k]->GetBinContent(nn)<0) h54_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h54_SSggH[k]->GetBinContent(nn)<0) h54_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h54_QCDggH[k]->GetBinContent(nn)<0) h54_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h54_WOSggH[k]->GetBinContent(nn)<0) h54_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h54_WSSggH[k]->GetBinContent(nn)<0) h54_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h55_OSggH[k]->GetBinContent(nn)<0) h55_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h55_SSggH[k]->GetBinContent(nn)<0) h55_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h55_QCDggH[k]->GetBinContent(nn)<0) h55_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h55_WOSggH[k]->GetBinContent(nn)<0) h55_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h55_WSSggH[k]->GetBinContent(nn)<0) h55_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h57_OSggH[k]->GetBinContent(nn)<0) h57_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h57_SSggH[k]->GetBinContent(nn)<0) h57_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h57_QCDggH[k]->GetBinContent(nn)<0) h57_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h57_WOSggH[k]->GetBinContent(nn)<0) h57_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h57_WSSggH[k]->GetBinContent(nn)<0) h57_WSSggH[k]->SetBinContent(nn,0.00001);
 
-          if (h63_ggHOS[k]->GetBinContent(nn)<0) h63_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h63_ggHSS[k]->GetBinContent(nn)<0) h63_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h63_ggHQCD[k]->GetBinContent(nn)<0) h63_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h63_ggHWOS[k]->GetBinContent(nn)<0) h63_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h63_ggHWSS[k]->GetBinContent(nn)<0) h63_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h64_ggHOS[k]->GetBinContent(nn)<0) h64_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h64_ggHSS[k]->GetBinContent(nn)<0) h64_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h64_ggHQCD[k]->GetBinContent(nn)<0) h64_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h64_ggHWOS[k]->GetBinContent(nn)<0) h64_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h64_ggHWSS[k]->GetBinContent(nn)<0) h64_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h65_ggHOS[k]->GetBinContent(nn)<0) h65_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h65_ggHSS[k]->GetBinContent(nn)<0) h65_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h65_ggHQCD[k]->GetBinContent(nn)<0) h65_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h65_ggHWOS[k]->GetBinContent(nn)<0) h65_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h65_ggHWSS[k]->GetBinContent(nn)<0) h65_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h67_ggHOS[k]->GetBinContent(nn)<0) h67_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h67_ggHSS[k]->GetBinContent(nn)<0) h67_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h67_ggHQCD[k]->GetBinContent(nn)<0) h67_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h67_ggHWOS[k]->GetBinContent(nn)<0) h67_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h67_ggHWSS[k]->GetBinContent(nn)<0) h67_ggHWSS[k]->SetBinContent(nn,0.00001);
+          if (h63_OSggH[k]->GetBinContent(nn)<0) h63_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h63_SSggH[k]->GetBinContent(nn)<0) h63_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h63_QCDggH[k]->GetBinContent(nn)<0) h63_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h63_WOSggH[k]->GetBinContent(nn)<0) h63_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h63_WSSggH[k]->GetBinContent(nn)<0) h63_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h64_OSggH[k]->GetBinContent(nn)<0) h64_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h64_SSggH[k]->GetBinContent(nn)<0) h64_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h64_QCDggH[k]->GetBinContent(nn)<0) h64_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h64_WOSggH[k]->GetBinContent(nn)<0) h64_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h64_WSSggH[k]->GetBinContent(nn)<0) h64_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h65_OSggH[k]->GetBinContent(nn)<0) h65_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h65_SSggH[k]->GetBinContent(nn)<0) h65_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h65_QCDggH[k]->GetBinContent(nn)<0) h65_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h65_WOSggH[k]->GetBinContent(nn)<0) h65_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h65_WSSggH[k]->GetBinContent(nn)<0) h65_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h67_OSggH[k]->GetBinContent(nn)<0) h67_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h67_SSggH[k]->GetBinContent(nn)<0) h67_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h67_QCDggH[k]->GetBinContent(nn)<0) h67_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h67_WOSggH[k]->GetBinContent(nn)<0) h67_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h67_WSSggH[k]->GetBinContent(nn)<0) h67_WSSggH[k]->SetBinContent(nn,0.00001);
 /*
-          if (h73_ggHOS[k]->GetBinContent(nn)<0) h73_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h73_ggHSS[k]->GetBinContent(nn)<0) h73_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h73_ggHQCD[k]->GetBinContent(nn)<0) h73_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h73_ggHWOS[k]->GetBinContent(nn)<0) h73_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h73_ggHWSS[k]->GetBinContent(nn)<0) h73_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h74_ggHOS[k]->GetBinContent(nn)<0) h74_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h74_ggHSS[k]->GetBinContent(nn)<0) h74_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h74_ggHQCD[k]->GetBinContent(nn)<0) h74_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h74_ggHWOS[k]->GetBinContent(nn)<0) h74_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h74_ggHWSS[k]->GetBinContent(nn)<0) h74_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h75_ggHOS[k]->GetBinContent(nn)<0) h75_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h75_ggHSS[k]->GetBinContent(nn)<0) h75_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h75_ggHQCD[k]->GetBinContent(nn)<0) h75_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h75_ggHWOS[k]->GetBinContent(nn)<0) h75_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h75_ggHWSS[k]->GetBinContent(nn)<0) h75_ggHWSS[k]->SetBinContent(nn,0.00001);
-           if (h77_ggHOS[k]->GetBinContent(nn)<0) h77_ggHOS[k]->SetBinContent(nn,0.00001);
-           if (h77_ggHSS[k]->GetBinContent(nn)<0) h77_ggHSS[k]->SetBinContent(nn,0.00001);
-           if (h77_ggHQCD[k]->GetBinContent(nn)<0) h77_ggHQCD[k]->SetBinContent(nn,0.00001);
-           if (h77_ggHWOS[k]->GetBinContent(nn)<0) h77_ggHWOS[k]->SetBinContent(nn,0.00001);
-           if (h77_ggHWSS[k]->GetBinContent(nn)<0) h77_ggHWSS[k]->SetBinContent(nn,0.00001);
+          if (h73_OSggH[k]->GetBinContent(nn)<0) h73_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h73_SSggH[k]->GetBinContent(nn)<0) h73_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h73_QCDggH[k]->GetBinContent(nn)<0) h73_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h73_WOSggH[k]->GetBinContent(nn)<0) h73_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h73_WSSggH[k]->GetBinContent(nn)<0) h73_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h74_OSggH[k]->GetBinContent(nn)<0) h74_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h74_SSggH[k]->GetBinContent(nn)<0) h74_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h74_QCDggH[k]->GetBinContent(nn)<0) h74_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h74_WOSggH[k]->GetBinContent(nn)<0) h74_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h74_WSSggH[k]->GetBinContent(nn)<0) h74_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h75_OSggH[k]->GetBinContent(nn)<0) h75_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h75_SSggH[k]->GetBinContent(nn)<0) h75_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h75_QCDggH[k]->GetBinContent(nn)<0) h75_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h75_WOSggH[k]->GetBinContent(nn)<0) h75_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h75_WSSggH[k]->GetBinContent(nn)<0) h75_WSSggH[k]->SetBinContent(nn,0.00001);
+           if (h77_OSggH[k]->GetBinContent(nn)<0) h77_OSggH[k]->SetBinContent(nn,0.00001);
+           if (h77_SSggH[k]->GetBinContent(nn)<0) h77_SSggH[k]->SetBinContent(nn,0.00001);
+           if (h77_QCDggH[k]->GetBinContent(nn)<0) h77_QCDggH[k]->SetBinContent(nn,0.00001);
+           if (h77_WOSggH[k]->GetBinContent(nn)<0) h77_WOSggH[k]->SetBinContent(nn,0.00001);
+           if (h77_WSSggH[k]->GetBinContent(nn)<0) h77_WSSggH[k]->SetBinContent(nn,0.00001);
 */
 
         }
 
 	const char * namee ; namee = postfix;
+	char name_[100];
 //0jet
         OS0jet->cd();
         h0_OS[k]->SetName(name.c_str()+postfix);
         h0_WOS[k]->SetName(name.c_str()+postfix);
         h0_OS[k]->Write();
 	
-	char name_[100];
-
-	sprintf(name_,"%s_%s%s",hmelaDCP_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_0jet_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_0jet_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_0jet_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_0jet_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_0jet_OS[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_0jet_OS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_0jet_OS[k]->SetName(name_);
-
-        hmelaDCP_0jet_OS[k]->Write();
-        hmelaDCPggH_0jet_OS[k]->Write();
-        hmelaD0minus_0jet_OS[k]->Write();
-        hmelaD0minusggH_0jet_OS[k]->Write();
-        hmelaDPhijj_0jet_OS[k]->Write();
-        hmelaDPhiUnsignedjj_0jet_OS[k]->Write();
 
 
         SS0jet->cd();
@@ -3604,42 +3859,66 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD0jet->cd();
         h0_QCD[k]->SetName(name.c_str()+postfix);
         h0_QCD[k]->Write();
-        h0_ggHQCD[k]->SetName(h0_ggHQCD[k]->GetName()+postfix);
-        h0_ggHQCD[k]->Write();
+        h0_QCDggH[k]->SetName(h0_QCDggH[k]->GetName()+postfix);
+        h0_QCDggH[k]->Write();
 
 //Control Region / signal region
         OScontrol->cd();
         h1D_OS[k]->SetName(name.c_str()+postfix);
         h1D_WOS[k]->SetName(name.c_str()+postfix);
-		  
+	
 
        if (sample=="W"){
          h1D_WOS[k]->Write();
-	sprintf(name_,"%s_%s%s",h1D_jpt1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_WOS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_WOS[k]->GetName(),name.c_str(),namee);
-	h1D_met_WOS[k]->SetName(name_);
 
-	h1D_jpt1_WOS[k]->Write();
-	h1D_jpt2_WOS[k]->Write();
-	h1D_jeta1_WOS[k]->Write();
-	h1D_jeta2_WOS[k]->Write();
-	h1D_phi1_WOS[k]->Write();
-	h1D_phi2_WOS[k]->Write();
-	h1D_mjj_WOS[k]->Write();
-	h1D_met_WOS[k]->Write();
+	sprintf(name_,"%s_%s%s",hmelaDCP_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_0jet_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_0jet_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_0jet_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_0jet_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_0jet_WOS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_0jet_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_0jet_WOS[k]->SetName(name_);
+
+        hmelaDCP_0jet_WOS[k]->Write();
+        hmelaDCPggH_0jet_WOS[k]->Write();
+        hmelaD0minus_0jet_WOS[k]->Write();
+        hmelaD0minusggH_0jet_WOS[k]->Write();
+        hmelaDPhijj_0jet_WOS[k]->Write();
+        hmelaDPhiUnsignedjj_0jet_WOS[k]->Write();
+
+
+
+
+	sprintf(name_,"%s_%s%s",h1D_jpt1_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt1_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta1_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta1_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi1_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_phi1_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt2_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt2_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta2_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta2_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi2_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_phi2_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_mjj_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_mjj_VBF_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_met_VBF_WOS[k]->GetName(),name.c_str(),namee);
+	h1D_met_VBF_WOS[k]->SetName(name_);
+
+	h1D_jpt1_VBF_WOS[k]->Write();
+	h1D_jpt2_VBF_WOS[k]->Write();
+	h1D_jeta1_VBF_WOS[k]->Write();
+	h1D_jeta2_VBF_WOS[k]->Write();
+	h1D_phi1_VBF_WOS[k]->Write();
+	h1D_phi2_VBF_WOS[k]->Write();
+	h1D_mjj_VBF_WOS[k]->Write();
+	h1D_met_VBF_WOS[k]->Write();
 
 
 	sprintf(name_,"%s_%s%s",hmelaDCP_VBF_WOS[k]->GetName(),name.c_str(),namee);
@@ -3662,35 +3941,78 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 	   hmelaDPhijj_VBF_WOS[k]->Write();
 	   hmelaDPhiUnsignedjj_VBF_WOS[k]->Write();
 
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_WOS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_WOS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_WOS[k]->SetName(name_);
+
+	hmelaDCP_boosted_WOS[k]->Write();
+	hmelaDCPggH_boosted_WOS[k]->Write();
+	hmelaD0minus_boosted_WOS[k]->Write();
+	hmelaD0minusggH_boosted_WOS[k]->Write();
+	hmelaDPhijj_boosted_WOS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_WOS[k]->Write();
+
 
        }
        else{
          h1D_OS[k]->Write();
-	sprintf(name_,"%s_%s%s",h1D_jpt1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_OS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_OS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_OS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_OS[k]->GetName(),name.c_str(),namee);
-	h1D_met_OS[k]->SetName(name_);
 
-	h1D_jpt1_OS[k]->Write();
-	h1D_jpt2_OS[k]->Write();
-	h1D_jeta1_OS[k]->Write();
-	h1D_jeta2_OS[k]->Write();
-	h1D_phi1_OS[k]->Write();
-	h1D_phi2_OS[k]->Write();
-	h1D_mjj_OS[k]->Write();
-	h1D_met_OS[k]->Write();
+
+	sprintf(name_,"%s_%s%s",hmelaDCP_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_0jet_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_0jet_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_0jet_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_0jet_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_0jet_OS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_0jet_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_0jet_OS[k]->SetName(name_);
+
+        hmelaDCP_0jet_OS[k]->Write();
+        hmelaDCPggH_0jet_OS[k]->Write();
+        hmelaD0minus_0jet_OS[k]->Write();
+        hmelaD0minusggH_0jet_OS[k]->Write();
+        hmelaDPhijj_0jet_OS[k]->Write();
+        hmelaDPhiUnsignedjj_0jet_OS[k]->Write();
+
+
+	sprintf(name_,"%s_%s%s",h1D_jpt1_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt1_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta1_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta1_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi1_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_phi1_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt2_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt2_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta2_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta2_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi2_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_phi2_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_mjj_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_mjj_VBF_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_met_VBF_OS[k]->GetName(),name.c_str(),namee);
+	h1D_met_VBF_OS[k]->SetName(name_);
+
+	h1D_jpt1_VBF_OS[k]->Write();
+	h1D_jpt2_VBF_OS[k]->Write();
+	h1D_jeta1_VBF_OS[k]->Write();
+	h1D_jeta2_VBF_OS[k]->Write();
+	h1D_phi1_VBF_OS[k]->Write();
+	h1D_phi2_VBF_OS[k]->Write();
+	h1D_mjj_VBF_OS[k]->Write();
+	h1D_met_VBF_OS[k]->Write();
 
 	sprintf(name_,"%s_%s%s",hmelaDCP_VBF_OS[k]->GetName(),name.c_str(),namee);
         hmelaDCP_VBF_OS[k]->SetName(name_);
@@ -3714,7 +4036,30 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 	   hmelaDPhijj_VBF_OS[k]->Write();
 	   hmelaDPhiUnsignedjj_VBF_OS[k]->Write();
 
+
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_OS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_OS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_OS[k]->SetName(name_);
+
+
+	hmelaDCP_boosted_OS[k]->Write();
+	hmelaDCPggH_boosted_OS[k]->Write();
+	hmelaD0minus_boosted_OS[k]->Write();
+	hmelaD0minusggH_boosted_OS[k]->Write();
+	hmelaDPhijj_boosted_OS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_OS[k]->Write();
+
        }
+
 
        SScontrol->cd();
        h1D_SS[k]->SetName(name.c_str()+postfix);
@@ -3722,80 +4067,80 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
        if (sample=="W"){
          h1D_WSS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",h1D_jpt1_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_WSS[k]->GetName(),name.c_str(),namee);
-	h1D_met_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt1_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt1_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta1_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta1_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi1_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_phi1_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt2_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt2_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta2_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta2_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi2_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_phi2_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_mjj_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_mjj_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_met_VBF_WSS[k]->GetName(),name.c_str(),namee);
+	h1D_met_VBF_WSS[k]->SetName(name_);
 
-	h1D_jpt1_WSS[k]->Write();
-	h1D_jpt2_WSS[k]->Write();
-	h1D_jeta1_WSS[k]->Write();
-	h1D_jeta2_WSS[k]->Write();
-	h1D_phi1_WSS[k]->Write();
-	h1D_phi2_WSS[k]->Write();
-	h1D_mjj_WSS[k]->Write();
-	h1D_met_WSS[k]->Write();
+	h1D_jpt1_VBF_WSS[k]->Write();
+	h1D_jpt2_VBF_WSS[k]->Write();
+	h1D_jeta1_VBF_WSS[k]->Write();
+	h1D_jeta2_VBF_WSS[k]->Write();
+	h1D_phi1_VBF_WSS[k]->Write();
+	h1D_phi2_VBF_WSS[k]->Write();
+	h1D_mjj_VBF_WSS[k]->Write();
+	h1D_met_VBF_WSS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCPVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDCPVBF_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggHVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggHVBF_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusVBF_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggHVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggHVBF_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijjVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijjVBF_WSS[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjjVBF_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjjVBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCP_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDCP_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_VBF_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_VBF_WSS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_VBF_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_VBF_WSS[k]->SetName(name_);
 
-	   hmelaDCPVBF_WSS[k]->Write();
-	   hmelaDCPggHVBF_WSS[k]->Write();
-	   hmelaD0minusVBF_WSS[k]->Write();
-	   hmelaD0minusggHVBF_WSS[k]->Write();
-	   hmelaDPhijjVBF_WSS[k]->Write();
-	   hmelaDPhiUnsignedjjVBF_WSS[k]->Write();
+	   hmelaDCP_VBF_WSS[k]->Write();
+	   hmelaDCPggH_VBF_WSS[k]->Write();
+	   hmelaD0minus_VBF_WSS[k]->Write();
+	   hmelaD0minusggH_VBF_WSS[k]->Write();
+	   hmelaDPhijj_VBF_WSS[k]->Write();
+	   hmelaDPhiUnsignedjj_VBF_WSS[k]->Write();
 
        }
        else{
          h1D_SS[k]->Write();
-	sprintf(name_,"%s_%s%s",h1D_jpt1_SS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_SS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_SS[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_SS[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_SS[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_SS[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_SS[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_SS[k]->GetName(),name.c_str(),namee);
-	h1D_met_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt1_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt1_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta1_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta1_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi1_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_phi1_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt2_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_jpt2_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta2_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_jeta2_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi2_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_phi2_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_mjj_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_mjj_VBF_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_met_VBF_SS[k]->GetName(),name.c_str(),namee);
+	h1D_met_VBF_SS[k]->SetName(name_);
 
-	h1D_jpt1_SS[k]->Write();
-	h1D_jpt2_SS[k]->Write();
-	h1D_jeta1_SS[k]->Write();
-	h1D_jeta2_SS[k]->Write();
-	h1D_phi1_SS[k]->Write();
-	h1D_phi2_SS[k]->Write();
-	h1D_mjj_SS[k]->Write();
-	h1D_met_SS[k]->Write();
+	h1D_jpt1_VBF_SS[k]->Write();
+	h1D_jpt2_VBF_SS[k]->Write();
+	h1D_jeta1_VBF_SS[k]->Write();
+	h1D_jeta2_VBF_SS[k]->Write();
+	h1D_phi1_VBF_SS[k]->Write();
+	h1D_phi2_VBF_SS[k]->Write();
+	h1D_mjj_VBF_SS[k]->Write();
+	h1D_met_VBF_SS[k]->Write();
 
 
 	sprintf(name_,"%s_%s%s",hmelaDCP_VBF_SS[k]->GetName(),name.c_str(),namee);
@@ -3828,31 +4173,31 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
        h1D_QCD[k]->SetName(name.c_str()+postfix);
        h1D_QCD[k]->Write();
 
-	sprintf(name_,"%s_%s%s",h1D_jpt1_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_jpt1_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta1_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_jeta1_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi1_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_phi1_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jpt2_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_jpt2_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_jeta2_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_jeta2_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_phi2_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_phi2_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_mjj_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_mjj_QCD[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h1D_met_QCD[k]->GetName(),name.c_str(),namee);
-	h1D_met_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt1_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_jpt1_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta1_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_jeta1_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi1_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_phi1_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jpt2_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_jpt2_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_jeta2_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_jeta2_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_phi2_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_phi2_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_mjj_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_mjj_VBF_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",h1D_met_VBF_QCD[k]->GetName(),name.c_str(),namee);
+	h1D_met_VBF_QCD[k]->SetName(name_);
 
-	h1D_jpt1_QCD[k]->Write();
-	h1D_jpt2_QCD[k]->Write();
-	h1D_jeta1_QCD[k]->Write();
-	h1D_jeta2_QCD[k]->Write();
-	h1D_phi1_QCD[k]->Write();
-	h1D_phi2_QCD[k]->Write();
-	h1D_mjj_QCD[k]->Write();
-	h1D_met_QCD[k]->Write();
+	h1D_jpt1_VBF_QCD[k]->Write();
+	h1D_jpt2_VBF_QCD[k]->Write();
+	h1D_jeta1_VBF_QCD[k]->Write();
+	h1D_jeta2_VBF_QCD[k]->Write();
+	h1D_phi1_VBF_QCD[k]->Write();
+	h1D_phi2_VBF_QCD[k]->Write();
+	h1D_mjj_VBF_QCD[k]->Write();
+	h1D_met_VBF_QCD[k]->Write();
 
 	sprintf(name_,"%s_%s%s",hmelaDCP_VBF_QCD[k]->GetName(),name.c_str(),namee);
         hmelaDCP_VBF_QCD[k]->SetName(name_);
@@ -3898,55 +4243,18 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         if (sample=="W"){
            h1_WSS[k]->Write();
 
-	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_boosted_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_boosted_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_boosted_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_boosted_WSS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_boosted_WSS[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_WSS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_boosted_WSS[k]->SetName(name_);
-
-	   hmelaDCP_boosted_WSS[k]->Write();
-	   hmelaDCPggH_boosted_WSS[k]->Write();
-	   hmelaD0minus_boosted_WSS[k]->Write();
-	   hmelaD0minusggH_boosted_WSS[k]->Write();
-	   hmelaDPhijj_boosted_WSS[k]->Write();
-	   hmelaDPhiUnsignedjj_boosted_WSS[k]->Write();
-
 	}
         else{
            h1_SS[k]->Write();
-
-	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaDCP_boosted_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaDCPggH_boosted_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minus_boosted_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaD0minusggH_boosted_SS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhijj_boosted_SS[k]->SetName(name_); 
-	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_SS[k]->GetName(),name.c_str(),namee);
-        hmelaDPhiUnsignedjj_boosted_SS[k]->SetName(name_);
-
-	   hmelaDCP_boosted_SS[k]->Write();
-	   hmelaDCPggH_boosted_SS[k]->Write();
-	   hmelaD0minus_boosted_SS[k]->Write();
-	   hmelaD0minusggH_boosted_SS[k]->Write();
-	   hmelaDPhijj_boosted_SS[k]->Write();
-	   hmelaDPhiUnsignedjj_boosted_SS[k]->Write();
 
 	}
 
         QCD1jet->cd();
         h1_QCD[k]->SetName(name.c_str()+postfix);
         h1_QCD[k]->Write();
+/////////ggH
+//
+
 
         OS2jet->cd();
         h2_OS[k]->SetName(name.c_str()+postfix);
@@ -4003,50 +4311,6 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 		}
 
 
-
-	sprintf(name_,"%s_%s%s",h3a_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3a_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3b_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3b_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3c_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3c_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3d_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3d_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3e_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3e_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3f_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3f_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3g_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3g_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3h_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3h_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3i_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3i_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3j_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3j_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3k_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3k_dphi_OS[k]->SetName(name_);
-	sprintf(name_,"%s_%s%s",h3l_dphi_OS[k]->GetName(),name.c_str(),namee);
-	h3l_dphi_OS[k]->SetName(name_);
-//	sprintf(name_,"%s_%s%s",h3m_dphi_OS[k]->GetName(),name.c_str(),namee);
-//	h3m_dphi_OS[k]->SetName(name_);
-//	sprintf(name_,"%s_%s%s",h3n_dphi_OS[k]->GetName(),name.c_str(),namee);
-//	h3n_dphi_OS[k]->SetName(name_);
-
-	  h3a_dphi_OS[k]->Write();
-	  h3b_dphi_OS[k]->Write();
-	  h3c_dphi_OS[k]->Write();
-	  h3d_dphi_OS[k]->Write();
-	  h3e_dphi_OS[k]->Write();
-	  h3f_dphi_OS[k]->Write();
-	  h3g_dphi_OS[k]->Write();
-	  h3h_dphi_OS[k]->Write();
-	  h3i_dphi_OS[k]->Write();
-	  h3j_dphi_OS[k]->Write();
-	  h3k_dphi_OS[k]->Write();
-	  h3l_dphi_OS[k]->Write();
-	 // h3m_dphi_OS[k]->Write();
-	  //h3n_dphi_OS[k]->Write();
 
 	
         SS2jet->cd();
@@ -4116,25 +4380,326 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         hmelaDPhijj_boosted_QCD[k]->SetName(name_); 
 	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_QCD[k]->GetName(),name.c_str(),namee);
         hmelaDPhiUnsignedjj_boosted_QCD[k]->SetName(name_);
+	//////////////////////
+	//
+	//
+	//
+	//ggH
+	
+	OS3jetggH->cd();
+        h3_OSggH[k]->SetName(h3_OSggH[k]->GetName()+postfix);
+        h3_WOSggH[k]->SetName(h3_WOSggH[k]->GetName()+postfix);
+        if (sample=="W"){
+           h3_WOSggH[k]->Write();
+	}
+        else{
+           h3_OSggH[k]->Write();
+	}
 
 
+        SS3jetggH->cd();
+        h3_SSggH[k]->SetName(name.c_str()+postfix);
+        h3_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3_WSSggH[k]->Write();
+        else
+           h3_SSggH[k]->Write();
+        
+	QCD3jetggH->cd();
+        h3_QCDggH[k]->SetName(name.c_str()+postfix);
+        h3_QCDggH[k]->Write();
+
+
+	OS4jetggH->cd();
+        h4_OSggH[k]->SetName(h4_OSggH[k]->GetName()+postfix);
+        h4_WOSggH[k]->SetName(h4_WOSggH[k]->GetName()+postfix);
+        if (sample=="W"){
+           h4_WOSggH[k]->Write();
+	}
+        else{
+           h4_OSggH[k]->Write();
+	}
+
+
+        SS4jetggH->cd();
+        h4_SSggH[k]->SetName(name.c_str()+postfix);
+        h4_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h4_WSSggH[k]->Write();
+        else
+           h4_SSggH[k]->Write();
+        
+	QCD4jetggH->cd();
+        h4_QCDggH[k]->SetName(name.c_str()+postfix);
+        h4_QCDggH[k]->Write();
+
+
+	OS5jetggH->cd();
+        h5_OSggH[k]->SetName(h5_OSggH[k]->GetName()+postfix);
+        h5_WOSggH[k]->SetName(h5_WOSggH[k]->GetName()+postfix);
+        if (sample=="W"){
+           h5_WOSggH[k]->Write();
+	}
+        else{
+           h5_OSggH[k]->Write();
+	}
+
+
+        SS5jetggH->cd();
+        h5_SSggH[k]->SetName(name.c_str()+postfix);
+        h5_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h5_WSSggH[k]->Write();
+        else
+           h5_SSggH[k]->Write();
+        
+	QCD5jetggH->cd();
+        h5_QCDggH[k]->SetName(name.c_str()+postfix);
+        h5_QCDggH[k]->Write();
+
+
+	OS7jetggH->cd();
+        h7_OSggH[k]->SetName(h3_OSggH[k]->GetName()+postfix);
+        h7_WOSggH[k]->SetName(h3_WOSggH[k]->GetName()+postfix);
+        if (sample=="W"){
+           h7_WOSggH[k]->Write();
+	}
+        else{
+           h7_OSggH[k]->Write();
+	}
+
+
+        SS7jetggH->cd();
+        h7_SSggH[k]->SetName(name.c_str()+postfix);
+        h7_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h7_WSSggH[k]->Write();
+        else
+           h7_SSggH[k]->Write();
+        
+	QCD7jetggH->cd();
+        h7_QCDggH[k]->SetName(name.c_str()+postfix);
+        h3_QCDggH[k]->Write();
+
+////OS33,34,35,37
+
+
+
+        OS33jetggH->cd();
+        h33_OSggH[k]->SetName(h33_OSggH[k]->GetName()+postfix);
+        h33_WOSggH[k]->SetName(h33_WOSggH[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h33_WOSggH[k]->Write();
+	}
+        else{
+           h33_OSggH[k]->Write();
+	}
+
+
+        SS33jetggH->cd();
+        h33_SSggH[k]->SetName(name.c_str()+postfix);
+        h33_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h33_WSSggH[k]->Write();
+        else
+           h33_SSggH[k]->Write();
+
+        QCD33jetggH->cd();
+        h33_QCDggH[k]->SetName(name.c_str()+postfix);
+        h33_QCDggH[k]->Write();
+
+
+        OS34jetggH->cd();
+        h34_OSggH[k]->SetName(h34_OSggH[k]->GetName()+postfix);
+        h34_WOSggH[k]->SetName(h34_WOSggH[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h34_WOSggH[k]->Write();
+	}
+        else{
+           h34_OSggH[k]->Write();
+	}
+
+
+        SS34jetggH->cd();
+        h34_SSggH[k]->SetName(name.c_str()+postfix);
+        h34_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h34_WSSggH[k]->Write();
+        else
+           h34_SSggH[k]->Write();
+
+        QCD34jetggH->cd();
+        h34_QCDggH[k]->SetName(name.c_str()+postfix);
+        h34_QCDggH[k]->Write();
+
+
+        OS35jetggH->cd();
+        h35_OSggH[k]->SetName(h35_OSggH[k]->GetName()+postfix);
+        h35_WOSggH[k]->SetName(h35_WOSggH[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h35_WOSggH[k]->Write();
+	}
+        else{
+           h35_OSggH[k]->Write();
+	}
+
+
+        SS35jetggH->cd();
+        h35_SSggH[k]->SetName(name.c_str()+postfix);
+        h35_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h35_WSSggH[k]->Write();
+        else
+           h35_SSggH[k]->Write();
+
+        QCD35jetggH->cd();
+        h35_QCDggH[k]->SetName(name.c_str()+postfix);
+        h35_QCDggH[k]->Write();
+
+
+        OS37jetggH->cd();
+        h37_OSggH[k]->SetName(h37_OSggH[k]->GetName()+postfix);
+        h37_WOSggH[k]->SetName(h37_WOSggH[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h37_WOSggH[k]->Write();
+	}
+        else{
+           h37_OSggH[k]->Write();
+	}
+
+
+        SS37jetggH->cd();
+        h37_SSggH[k]->SetName(name.c_str()+postfix);
+        h37_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h37_WSSggH[k]->Write();
+        else
+           h37_SSggH[k]->Write();
+
+        QCD37jetggH->cd();
+        h37_QCDggH[k]->SetName(name.c_str()+postfix);
+        h37_QCDggH[k]->Write();
+
+///dPhijet
+        dPhiajetOSggH->cd();
+        h3a_dphi_OS[k]->SetName(h3a_dphi_OS[k]->GetName()+postfix);
+        h3a_dphi_WOS[k]->SetName(h3a_dphi_WOS[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h3a_dphi_OS[k]->Write();
+	}
+        else{
+           h3a_dphi_WOS[k]->Write();
+	}
+
+
+        dPhiajetSSggH->cd();
+        h3a_dphi_SS[k]->SetName(h3a_dphi_SS[k]->GetName()+postfix);
+        h3a_dphi_WSS[k]->SetName(h3a_dphi_WSS[k]->GetName()+postfix);
+        if (sample=="W")
+           h3a_dphi_SS[k]->Write();
+        else
+           h3a_dphi_WSS[k]->Write();
+
+        dPhiajetQCDggH->cd();
+        h3a_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3a_dphi_QCD[k]->Write();
+
+//
+        dPhibjetOSggH->cd();
+        h3b_dphi_OS[k]->SetName(h3b_dphi_OS[k]->GetName()+postfix);
+        h3b_dphi_WOS[k]->SetName(h3b_dphi_WOS[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h3b_dphi_OS[k]->Write();
+	}
+        else{
+           h3b_dphi_WOS[k]->Write();
+	}
+
+
+        dPhibjetSSggH->cd();
+        h3b_dphi_SS[k]->SetName(h3b_dphi_SS[k]->GetName()+postfix);
+        h3b_dphi_WSS[k]->SetName(h3b_dphi_WSS[k]->GetName()+postfix);
+        if (sample=="W")
+           h3b_dphi_SS[k]->Write();
+        else
+           h3b_dphi_WSS[k]->Write();
+
+        dPhibjetQCDggH->cd();
+        h3b_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3b_dphi_QCD[k]->Write();
+
+//
+
+        dPhicjetOSggH->cd();
+        h3c_dphi_OS[k]->SetName(h3c_dphi_OS[k]->GetName()+postfix);
+        h3c_dphi_WOS[k]->SetName(h3c_dphi_WOS[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h3c_dphi_OS[k]->Write();
+	}
+        else{
+           h3c_dphi_WOS[k]->Write();
+	}
+
+
+        dPhicjetSSggH->cd();
+        h3c_dphi_SS[k]->SetName(h3c_dphi_SS[k]->GetName()+postfix);
+        h3c_dphi_WSS[k]->SetName(h3c_dphi_WSS[k]->GetName()+postfix);
+        if (sample=="W")
+           h3c_dphi_SS[k]->Write();
+        else
+           h3c_dphi_WSS[k]->Write();
+
+        dPhicjetQCDggH->cd();
+        h3c_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3c_dphi_QCD[k]->Write();
+
+///
+        dPhidjetOSggH->cd();
+        h3d_dphi_OS[k]->SetName(h3d_dphi_OS[k]->GetName()+postfix);
+        h3d_dphi_WOS[k]->SetName(h3d_dphi_WOS[k]->GetName()+postfix);
+
+        if (sample=="W"){
+           h3d_dphi_OS[k]->Write();
+	}
+        else{
+           h3d_dphi_WOS[k]->Write();
+	}
+
+
+        dPhidjetSSggH->cd();
+        h3d_dphi_SS[k]->SetName(h3d_dphi_SS[k]->GetName()+postfix);
+        h3d_dphi_WSS[k]->SetName(h3d_dphi_WSS[k]->GetName()+postfix);
+        if (sample=="W")
+           h3d_dphi_SS[k]->Write();
+        else
+           h3d_dphi_WSS[k]->Write();
+
+        dPhidjetQCDggH->cd();
+        h3d_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3d_dphi_QCD[k]->Write();
+
+/////////////////////////////////
 
 
         OS3jet->cd();
         h3_OS[k]->SetName(name.c_str()+postfix);
         h3_WOS[k]->SetName(name.c_str()+postfix);
-        h3_ggHOS[k]->SetName(h3_ggHOS[k]->GetName()+postfix);
-        h3_ggHWOS[k]->SetName(h3_ggHWOS[k]->GetName()+postfix);
 
 
         if (sample=="W"){
            h3_WOS[k]->Write();
-           h3_ggHWOS[k]->Write();
 	}
         else{
            h3_OS[k]->Write();
-           h3_ggHOS[k]->Write();
 	}
+
         SS3jet->cd();
         h3_SS[k]->SetName(name.c_str()+postfix);
         h3_WSS[k]->SetName(name.c_str()+postfix);
@@ -4146,20 +4711,20 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h3_QCD[k]->SetName(name.c_str()+postfix);
         h3_QCD[k]->Write();
 
+////////////
+
+
         OS33jet->cd();
         h33_OS[k]->SetName(name.c_str()+postfix);
         h33_WOS[k]->SetName(name.c_str()+postfix);
-        h33_ggHOS[k]->SetName(h33_ggHOS[k]->GetName()+postfix);
-        h33_ggHWOS[k]->SetName(h33_ggHWOS[k]->GetName()+postfix);
 
         if (sample=="W"){
            h33_WOS[k]->Write();
-           h33_ggHWOS[k]->Write();
 	}
         else{
            h33_OS[k]->Write();
-           h33_ggHOS[k]->Write();
 	}
+
 
         SS33jet->cd();
         h33_SS[k]->SetName(name.c_str()+postfix);
@@ -4171,20 +4736,23 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD33jet->cd();
         h33_QCD[k]->SetName(name.c_str()+postfix);
         h33_QCD[k]->Write();
+//////////////
+
 
         OS43jet->cd();
         h43_OS[k]->SetName(name.c_str()+postfix);
         h43_WOS[k]->SetName(name.c_str()+postfix);
-        h43_ggHOS[k]->SetName(h43_ggHOS[k]->GetName()+postfix);
-        h43_ggHWOS[k]->SetName(h43_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h43_WOS[k]->Write();
-           h43_ggHWOS[k]->Write();
 	}
         else{
            h43_OS[k]->Write();
-           h43_ggHOS[k]->Write();
 	}
+///////////////
+//
+//
+
+
 
         SS43jet->cd();
         h43_SS[k]->SetName(name.c_str()+postfix);
@@ -4196,24 +4764,25 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD43jet->cd();
         h43_QCD[k]->SetName(name.c_str()+postfix);
         h43_QCD[k]->Write();
+////////////////
+//
+
 
         OS53jet->cd();
         h53_OS[k]->SetName(name.c_str()+postfix);
         h53_WOS[k]->SetName(name.c_str()+postfix);
-        h53_ggHOS[k]->SetName(h53_ggHOS[k]->GetName()+postfix);
-        h53_ggHWOS[k]->SetName(h53_ggHWOS[k]->GetName()+postfix);
 
         if (sample=="W"){
            h53_WOS[k]->Write();
-           h53_ggHWOS[k]->Write();
 	}
         else {
            h53_OS[k]->Write();
-           h53_ggHOS[k]->Write();
 	}
+
         SS53jet->cd();
         h53_SS[k]->SetName(name.c_str()+postfix);
         h53_WSS[k]->SetName(name.c_str()+postfix);
+
         if (sample=="W")
            h53_WSS[k]->Write();
         else
@@ -4221,20 +4790,16 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD53jet->cd();
         h53_QCD[k]->SetName(name.c_str()+postfix);
         h53_QCD[k]->Write();
-
+////////work on this as well
         OS63jet->cd();
         h63_OS[k]->SetName(name.c_str()+postfix);
         h63_WOS[k]->SetName(name.c_str()+postfix);
-        h63_ggHOS[k]->SetName(h63_ggHOS[k]->GetName()+postfix);
-        h63_ggHWOS[k]->SetName(h63_ggHWOS[k]->GetName()+postfix);
 
         if (sample=="W"){
            h63_WOS[k]->Write();
-           h63_ggHWOS[k]->Write();
 	}
         else{
            h63_OS[k]->Write();
-           h63_ggHOS[k]->Write();
 	}
 
         SS63jet->cd();
@@ -4270,15 +4835,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS4jet->cd();
         h4_OS[k]->SetName(name.c_str()+postfix);
         h4_WOS[k]->SetName(name.c_str()+postfix);
-        h4_ggHOS[k]->SetName(h4_ggHOS[k]->GetName()+postfix);
-        h4_ggHWOS[k]->SetName(h4_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h4_WOS[k]->Write();
-           h4_ggHWOS[k]->Write();
 	}
         else{
            h4_OS[k]->Write();
-           h4_ggHOS[k]->Write();
 	}
 
         SS4jet->cd();
@@ -4295,15 +4856,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS34jet->cd();
         h34_OS[k]->SetName(name.c_str()+postfix);
         h34_WOS[k]->SetName(name.c_str()+postfix);
-        h34_ggHOS[k]->SetName(h34_ggHOS[k]->GetName()+postfix);
-        h34_ggHWOS[k]->SetName(h34_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h34_WOS[k]->Write();
-           h34_ggHWOS[k]->Write();
 	}
         else{
            h34_OS[k]->Write();
-           h34_ggHOS[k]->Write();
 	}
 
         SS34jet->cd();
@@ -4320,15 +4877,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS44jet->cd();
         h44_OS[k]->SetName(name.c_str()+postfix);
         h44_WOS[k]->SetName(name.c_str()+postfix);
-        h44_ggHOS[k]->SetName(h44_ggHOS[k]->GetName()+postfix);
-        h44_ggHWOS[k]->SetName(h44_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h44_WOS[k]->Write();
-           h44_ggHWOS[k]->Write();
 	}
         else{
            h44_OS[k]->Write();
-           h44_ggHOS[k]->Write();
 	}
 
         SS44jet->cd();
@@ -4345,15 +4898,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS54jet->cd();
         h54_OS[k]->SetName(name.c_str()+postfix);
         h54_WOS[k]->SetName(name.c_str()+postfix);
-        h54_ggHOS[k]->SetName(h54_ggHOS[k]->GetName()+postfix);
-        h54_ggHWOS[k]->SetName(h54_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h54_WOS[k]->Write();
-           h54_ggHWOS[k]->Write();
 	}
         else{
            h54_OS[k]->Write();
-           h54_ggHOS[k]->Write();
 	}
 
         SS54jet->cd();
@@ -4370,15 +4919,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS64jet->cd();
         h64_OS[k]->SetName(name.c_str()+postfix);
         h64_WOS[k]->SetName(name.c_str()+postfix);
-        h64_ggHOS[k]->SetName(h64_ggHOS[k]->GetName()+postfix);
-        h64_ggHWOS[k]->SetName(h64_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h64_WOS[k]->Write();
-           h64_ggHWOS[k]->Write();
 	}
         else{
            h64_OS[k]->Write();
-           h64_ggHOS[k]->Write();
 	}
 
         SS64jet->cd();
@@ -4414,16 +4959,13 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS5jet->cd();
         h5_OS[k]->SetName(name.c_str()+postfix);
         h5_WOS[k]->SetName(name.c_str()+postfix);
-        h5_ggHOS[k]->SetName(h5_ggHOS[k]->GetName()+postfix);
-        h5_ggHWOS[k]->SetName(h5_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h5_WOS[k]->Write();
-           h5_ggHWOS[k]->Write();
 	}
         else{
            h5_OS[k]->Write();
-           h5_ggHOS[k]->Write();
 	}
+
         SS5jet->cd();
         h5_SS[k]->SetName(name.c_str()+postfix);
         h5_WSS[k]->SetName(name.c_str()+postfix);
@@ -4438,15 +4980,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS35jet->cd();
         h35_OS[k]->SetName(name.c_str()+postfix);
         h35_WOS[k]->SetName(name.c_str()+postfix);
-        h35_ggHOS[k]->SetName(h35_ggHOS[k]->GetName()+postfix);
-        h35_ggHWOS[k]->SetName(h35_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h35_WOS[k]->Write();
-           h35_ggHWOS[k]->Write();
 	}
         else{
            h35_OS[k]->Write();
-           h35_ggHOS[k]->Write();
 	}
 
         SS35jet->cd();
@@ -4463,15 +5001,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS45jet->cd();
         h45_OS[k]->SetName(name.c_str()+postfix);
         h45_WOS[k]->SetName(name.c_str()+postfix);
-        h45_ggHOS[k]->SetName(h45_ggHOS[k]->GetName()+postfix);
-        h45_ggHWOS[k]->SetName(h45_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h45_WOS[k]->Write();
-           h45_ggHWOS[k]->Write();
 	}
         else{
            h45_OS[k]->Write();
-           h45_ggHOS[k]->Write();
 	}
 
         SS45jet->cd();
@@ -4488,15 +5022,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS55jet->cd();
         h55_OS[k]->SetName(name.c_str()+postfix);
         h55_WOS[k]->SetName(name.c_str()+postfix);
-        h55_ggHOS[k]->SetName(h55_ggHOS[k]->GetName()+postfix);
-        h55_ggHWOS[k]->SetName(h55_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h55_WOS[k]->Write();
-           h55_ggHWOS[k]->Write();
 	}
         else{
            h55_OS[k]->Write();
-           h55_ggHOS[k]->Write();
 	}
 
         SS55jet->cd();
@@ -4513,15 +5043,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS65jet->cd();
         h65_OS[k]->SetName(name.c_str()+postfix);
         h65_WOS[k]->SetName(name.c_str()+postfix);
-        h65_ggHOS[k]->SetName(h65_ggHOS[k]->GetName()+postfix);
-        h65_ggHWOS[k]->SetName(h65_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h65_WOS[k]->Write();
-           h65_ggHWOS[k]->Write();
 	}
         else{
            h65_OS[k]->Write();
-           h65_ggHOS[k]->Write();
 	}
 
         SS65jet->cd();
@@ -4553,20 +5079,14 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h75_QCD[k]->SetName(name.c_str()+postfix);
         h75_QCD[k]->Write();
 
-
-
         OS7jet->cd();
         h7_OS[k]->SetName(name.c_str()+postfix);
         h7_WOS[k]->SetName(name.c_str()+postfix);
-        h7_ggHOS[k]->SetName(h7_ggHOS[k]->GetName()+postfix);
-        h7_ggHWOS[k]->SetName(h7_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h7_WOS[k]->Write();
-           h7_ggHWOS[k]->Write();
 	}
         else{
            h7_OS[k]->Write();
-           h7_ggHOS[k]->Write();
 	}
 
         SS7jet->cd();
@@ -4580,18 +5100,15 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h7_QCD[k]->SetName(name.c_str()+postfix);
         h7_QCD[k]->Write();
 
+
         OS37jet->cd();
         h37_OS[k]->SetName(name.c_str()+postfix);
         h37_WOS[k]->SetName(name.c_str()+postfix);
-        h37_ggHOS[k]->SetName(h37_ggHOS[k]->GetName()+postfix);
-        h37_ggHWOS[k]->SetName(h37_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h37_WOS[k]->Write();
-           h37_ggHWOS[k]->Write();
 	}
         else{
            h37_OS[k]->Write();
-           h37_ggHOS[k]->Write();
 	}
 
         SS37jet->cd();
@@ -4608,15 +5125,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS47jet->cd();
         h47_OS[k]->SetName(name.c_str()+postfix);
         h47_WOS[k]->SetName(name.c_str()+postfix);
-        h47_ggHOS[k]->SetName(h47_ggHOS[k]->GetName()+postfix);
-        h47_ggHWOS[k]->SetName(h47_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h47_WOS[k]->Write();
-           h47_ggHWOS[k]->Write();
 	}
         else{
            h47_OS[k]->Write();
-           h47_ggHOS[k]->Write();
 	}
 
         SS47jet->cd();
@@ -4624,11 +5137,9 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         h47_WSS[k]->SetName(name.c_str()+postfix);
         if (sample=="W"){
            h47_WSS[k]->Write();
-           h47_ggHWSS[k]->Write();
 	}
         else{
            h47_SS[k]->Write();
-           h47_ggHSS[k]->Write();
 	}
 
         QCD47jet->cd();
@@ -4638,15 +5149,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS57jet->cd();
         h57_OS[k]->SetName(name.c_str()+postfix);
         h57_WOS[k]->SetName(name.c_str()+postfix);
-        h57_ggHOS[k]->SetName(h57_ggHOS[k]->GetName()+postfix);
-        h57_ggHWOS[k]->SetName(h57_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h57_WOS[k]->Write();
-           h57_ggHWOS[k]->Write();
 	}
         else{
            h57_OS[k]->Write();
-           h57_ggHOS[k]->Write();
 	}
         SS57jet->cd();
         h57_SS[k]->SetName(name.c_str()+postfix);
@@ -4662,15 +5169,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         OS67jet->cd();
         h67_OS[k]->SetName(name.c_str()+postfix);
         h67_WOS[k]->SetName(name.c_str()+postfix);
-        h67_ggHOS[k]->SetName(h67_ggHOS[k]->GetName()+postfix);
-        h67_ggHWOS[k]->SetName(h67_ggHWOS[k]->GetName()+postfix);
         if (sample=="W"){
            h67_WOS[k]->Write();
-           h67_ggHWOS[k]->Write();
 	}
         else{
            h67_OS[k]->Write();
-           h67_ggHOS[k]->Write();
 	}
 
         SS67jet->cd();
