@@ -2473,7 +2473,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                        h67_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
 
-		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+		  if (jphi_1>=-pI && jphi_2>=-pI){
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
@@ -2623,7 +2623,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
                        h67_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
-		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+		  if (jphi_1>=-pI && jphi_2>=-pI){
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
@@ -2769,7 +2769,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
 
 
-		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+		  if (jphi_1>=-pI && jphi_2>=-pI){
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
@@ -2916,7 +2916,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
                        h67_SSggH[k]->Fill(var1_2,var2,weight2*aweight);
 
-		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+		  if (jphi_1>=-pI && jphi_2>=-pI){
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
@@ -3062,7 +3062,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
                     else if (melaDPhiUnsignedjj>=0.8 and melaDPhiUnsignedjj<1.0)
                        h67_QCDggH[k]->Fill(var1_2,var2,weight2*aweight);
 
-		  if (jphi_1>-pI-.05 && jphi_2>-pI-0.5){
+		  if (jphi_1>=-pI && jphi_2>=-pI){
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
@@ -3326,6 +3326,11 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
     TDirectory *QCD7jet =fout->mkdir("QCD7");
 
 
+/////////////////ggH block starts
+    TDirectory *OS3jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_ggH");
+    TDirectory *OS4jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_ggH");
+    TDirectory *OS5jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_ggH");
+    TDirectory *OS7jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_ggH");
     TDirectory *SS3jetggH =fout->mkdir("SS3ggH");
     TDirectory *QCD3jetggH =fout->mkdir("QCD3ggH");
     TDirectory *SS4jetggH =fout->mkdir("SS4ggH");
@@ -3335,37 +3340,74 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
     TDirectory *SS7jetggH =fout->mkdir("SS7ggH");
     TDirectory *QCD7jetggH =fout->mkdir("QCD7ggH");
 
-    TDirectory *OS3jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_ggH");
-    TDirectory *OS4jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_ggH");
-    TDirectory *OS5jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_ggH");
-    TDirectory *OS7jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_ggH");
-
     TDirectory *OS33jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_DCPm_ggH");
-    TDirectory *OS34jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH");
-    TDirectory *OS35jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH");
-    TDirectory *OS37jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH");
-
-    TDirectory *dPhiajetOSggH =fout->mkdir("et_vbf_D0_Pito1p5m_OSggH");
-    TDirectory *dPhibjetOSggH =fout->mkdir("et_vbf_D0_1p5to0_OSggH");
-    TDirectory *dPhicjetOSggH =fout->mkdir("et_vbf_D0_0to1p5p_OSggH");
-    TDirectory *dPhidjetOSggH =fout->mkdir("et_vbf_D0_1p5toPi_OSggH");
-    TDirectory *dPhiajetSSggH =fout->mkdir("et_vbf_D0_Pito1p5m_SSggH");
-    TDirectory *dPhibjetSSggH =fout->mkdir("et_vbf_D0_1p5to0_SSggH");
-    TDirectory *dPhicjetSSggH =fout->mkdir("et_vbf_D0_0to1p5p_SSggH");
-    TDirectory *dPhidjetSSggH =fout->mkdir("et_vbf_D0_1p5toPi_SSggH");
-    TDirectory *dPhiajetQCDggH =fout->mkdir("et_vbf_D0_Pito1p5m_QCDggH");
-    TDirectory *dPhibjetQCDggH =fout->mkdir("et_vbf_D0_1p5to0_QCDggH");
-    TDirectory *dPhicjetQCDggH =fout->mkdir("et_vbf_D0_0to1p5p_QCDggH");
-    TDirectory *dPhidjetQCDggH =fout->mkdir("et_vbf_D0_1p5toPi_QCDggH");
-
     TDirectory *SS33jetggH =fout->mkdir("SS33ggH");
     TDirectory *QCD33jetggH =fout->mkdir("QCD33ggH");
+    TDirectory *OS34jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH");
     TDirectory *SS34jetggH =fout->mkdir("SS34ggH");
     TDirectory *QCD34jetggH =fout->mkdir("QCD34ggH");
+    TDirectory *OS35jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH");
     TDirectory *SS35jetggH =fout->mkdir("SS35ggH");
     TDirectory *QCD35jetggH =fout->mkdir("QCD35ggH");
+    TDirectory *OS37jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH");
     TDirectory *SS37jetggH =fout->mkdir("SS37ggH");
     TDirectory *QCD37jetggH =fout->mkdir("QCD37ggH");
+
+
+    TDirectory *OS43jetggH =fout->mkdir("et_vbf_D0_Pito1p5m_OSggH");
+    TDirectory *SS43jetggH =fout->mkdir("SS43ggH");
+    TDirectory *QCD43jetggH =fout->mkdir("QCD43ggH");
+
+    TDirectory *OS44jetggH =fout->mkdir("et_vbf_D0_1p5to0_OSggH");
+    TDirectory *SS44jetggH =fout->mkdir("SS44ggH");
+    TDirectory *QCD44jetggH =fout->mkdir("QCD44ggH");
+
+    TDirectory *OS45jetggH =fout->mkdir("et_vbf_D0_0to1p5p_OSggH");
+    TDirectory *SS45jetggH =fout->mkdir("SS45ggH");
+    TDirectory *QCD45jetggH =fout->mkdir("QCD45ggH");
+
+    TDirectory *OS47jetggH =fout->mkdir("et_vbf_D0_1p5toPi_OSggH");
+    TDirectory *SS47jetggH =fout->mkdir("SS47ggH");
+    TDirectory *QCD47jetggH =fout->mkdir("QCD47ggH");
+    
+
+    TDirectory *OS53jetggH =fout->mkdir("et_vbf_D0_Pito1p6m_OSggH_Uns");
+    TDirectory *SS53jetggH =fout->mkdir("SS53ggH");
+    TDirectory *QCD53jetggH =fout->mkdir("QCD53ggH");
+
+    TDirectory *OS54jetggH =fout->mkdir("et_vbf_D0_1p6to0_OSggH_Uns");
+    TDirectory *SS54jetggH =fout->mkdir("SS54ggH");
+    TDirectory *QCD54jetggH =fout->mkdir("QCD54ggH");
+
+    TDirectory *OS55jetggH =fout->mkdir("et_vbf_D0_0to1p6p_OSggH_Uns");
+    TDirectory *SS55jetggH =fout->mkdir("SS55ggH");
+    TDirectory *QCD55jetggH =fout->mkdir("QCD55ggH");
+
+    TDirectory *OS57jetggH =fout->mkdir("et_vbf_D0_1p6toPi_OSggH_Uns");
+    TDirectory *SS57jetggH =fout->mkdir("SS57ggH");
+    TDirectory *QCD57jetggH =fout->mkdir("QCD57ggH");
+
+
+    TDirectory *OS63jetggH =fout->mkdir("et_vbf_dPhia_OSggh");
+    TDirectory *SS63jetggH =fout->mkdir("et_vbf_dPhia_SSggH");
+    TDirectory *QCD63jetggH =fout->mkdir("et_vbf_dPhia_QCDggH");
+
+    TDirectory *OS64jetggH =fout->mkdir("et_vbf_dPhib_OSggH");
+    TDirectory *SS64jetggH =fout->mkdir("et_vbf_dPhib_SSggH");
+    TDirectory *QCD64jetggH =fout->mkdir("et_vbf_dPhib_QCDggH");
+
+    TDirectory *OS65jetggH =fout->mkdir("et_vbf_dPhic_OSggH");
+    TDirectory *SS65jetggH =fout->mkdir("et_vbf_dPhic_SSggH");
+    TDirectory *QCD65jetggH =fout->mkdir("et_vbf_dPhic_QCDggH");
+
+    TDirectory *OS67jetggH =fout->mkdir("et_vbf_dPhid_OSggH");
+    TDirectory *SS67jetggH =fout->mkdir("et_vbf_dPhid_SSggH");
+    TDirectory *QCD67jetggH =fout->mkdir("et_vbf_dPhid_QCDggH");
+
+
+
+/////////////ggH block end
+
 
     TDirectory *OS33jet =fout->mkdir("et_vbf_D0_0p0to0p2_DCPm");
     TDirectory *SS33jet =fout->mkdir("SS33");
@@ -3859,8 +3901,7 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD0jet->cd();
         h0_QCD[k]->SetName(name.c_str()+postfix);
         h0_QCD[k]->Write();
-        h0_QCDggH[k]->SetName(h0_QCDggH[k]->GetName()+postfix);
-        h0_QCDggH[k]->Write();
+
 
 //Control Region / signal region
         OScontrol->cd();
@@ -4384,308 +4425,6 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 	//
 	//
 	//
-	//ggH
-	
-	OS3jetggH->cd();
-        h3_OSggH[k]->SetName(h3_OSggH[k]->GetName()+postfix);
-        h3_WOSggH[k]->SetName(h3_WOSggH[k]->GetName()+postfix);
-        if (sample=="W"){
-           h3_WOSggH[k]->Write();
-	}
-        else{
-           h3_OSggH[k]->Write();
-	}
-
-
-        SS3jetggH->cd();
-        h3_SSggH[k]->SetName(name.c_str()+postfix);
-        h3_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h3_WSSggH[k]->Write();
-        else
-           h3_SSggH[k]->Write();
-        
-	QCD3jetggH->cd();
-        h3_QCDggH[k]->SetName(name.c_str()+postfix);
-        h3_QCDggH[k]->Write();
-
-
-	OS4jetggH->cd();
-        h4_OSggH[k]->SetName(h4_OSggH[k]->GetName()+postfix);
-        h4_WOSggH[k]->SetName(h4_WOSggH[k]->GetName()+postfix);
-        if (sample=="W"){
-           h4_WOSggH[k]->Write();
-	}
-        else{
-           h4_OSggH[k]->Write();
-	}
-
-
-        SS4jetggH->cd();
-        h4_SSggH[k]->SetName(name.c_str()+postfix);
-        h4_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h4_WSSggH[k]->Write();
-        else
-           h4_SSggH[k]->Write();
-        
-	QCD4jetggH->cd();
-        h4_QCDggH[k]->SetName(name.c_str()+postfix);
-        h4_QCDggH[k]->Write();
-
-
-	OS5jetggH->cd();
-        h5_OSggH[k]->SetName(h5_OSggH[k]->GetName()+postfix);
-        h5_WOSggH[k]->SetName(h5_WOSggH[k]->GetName()+postfix);
-        if (sample=="W"){
-           h5_WOSggH[k]->Write();
-	}
-        else{
-           h5_OSggH[k]->Write();
-	}
-
-
-        SS5jetggH->cd();
-        h5_SSggH[k]->SetName(name.c_str()+postfix);
-        h5_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h5_WSSggH[k]->Write();
-        else
-           h5_SSggH[k]->Write();
-        
-	QCD5jetggH->cd();
-        h5_QCDggH[k]->SetName(name.c_str()+postfix);
-        h5_QCDggH[k]->Write();
-
-
-	OS7jetggH->cd();
-        h7_OSggH[k]->SetName(h3_OSggH[k]->GetName()+postfix);
-        h7_WOSggH[k]->SetName(h3_WOSggH[k]->GetName()+postfix);
-        if (sample=="W"){
-           h7_WOSggH[k]->Write();
-	}
-        else{
-           h7_OSggH[k]->Write();
-	}
-
-
-        SS7jetggH->cd();
-        h7_SSggH[k]->SetName(name.c_str()+postfix);
-        h7_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h7_WSSggH[k]->Write();
-        else
-           h7_SSggH[k]->Write();
-        
-	QCD7jetggH->cd();
-        h7_QCDggH[k]->SetName(name.c_str()+postfix);
-        h3_QCDggH[k]->Write();
-
-////OS33,34,35,37
-
-
-
-        OS33jetggH->cd();
-        h33_OSggH[k]->SetName(h33_OSggH[k]->GetName()+postfix);
-        h33_WOSggH[k]->SetName(h33_WOSggH[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h33_WOSggH[k]->Write();
-	}
-        else{
-           h33_OSggH[k]->Write();
-	}
-
-
-        SS33jetggH->cd();
-        h33_SSggH[k]->SetName(name.c_str()+postfix);
-        h33_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h33_WSSggH[k]->Write();
-        else
-           h33_SSggH[k]->Write();
-
-        QCD33jetggH->cd();
-        h33_QCDggH[k]->SetName(name.c_str()+postfix);
-        h33_QCDggH[k]->Write();
-
-
-        OS34jetggH->cd();
-        h34_OSggH[k]->SetName(h34_OSggH[k]->GetName()+postfix);
-        h34_WOSggH[k]->SetName(h34_WOSggH[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h34_WOSggH[k]->Write();
-	}
-        else{
-           h34_OSggH[k]->Write();
-	}
-
-
-        SS34jetggH->cd();
-        h34_SSggH[k]->SetName(name.c_str()+postfix);
-        h34_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h34_WSSggH[k]->Write();
-        else
-           h34_SSggH[k]->Write();
-
-        QCD34jetggH->cd();
-        h34_QCDggH[k]->SetName(name.c_str()+postfix);
-        h34_QCDggH[k]->Write();
-
-
-        OS35jetggH->cd();
-        h35_OSggH[k]->SetName(h35_OSggH[k]->GetName()+postfix);
-        h35_WOSggH[k]->SetName(h35_WOSggH[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h35_WOSggH[k]->Write();
-	}
-        else{
-           h35_OSggH[k]->Write();
-	}
-
-
-        SS35jetggH->cd();
-        h35_SSggH[k]->SetName(name.c_str()+postfix);
-        h35_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h35_WSSggH[k]->Write();
-        else
-           h35_SSggH[k]->Write();
-
-        QCD35jetggH->cd();
-        h35_QCDggH[k]->SetName(name.c_str()+postfix);
-        h35_QCDggH[k]->Write();
-
-
-        OS37jetggH->cd();
-        h37_OSggH[k]->SetName(h37_OSggH[k]->GetName()+postfix);
-        h37_WOSggH[k]->SetName(h37_WOSggH[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h37_WOSggH[k]->Write();
-	}
-        else{
-           h37_OSggH[k]->Write();
-	}
-
-
-        SS37jetggH->cd();
-        h37_SSggH[k]->SetName(name.c_str()+postfix);
-        h37_WSSggH[k]->SetName(name.c_str()+postfix);
-        if (sample=="W")
-           h37_WSSggH[k]->Write();
-        else
-           h37_SSggH[k]->Write();
-
-        QCD37jetggH->cd();
-        h37_QCDggH[k]->SetName(name.c_str()+postfix);
-        h37_QCDggH[k]->Write();
-
-///dPhijet
-        dPhiajetOSggH->cd();
-        h3a_dphi_OS[k]->SetName(h3a_dphi_OS[k]->GetName()+postfix);
-        h3a_dphi_WOS[k]->SetName(h3a_dphi_WOS[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h3a_dphi_OS[k]->Write();
-	}
-        else{
-           h3a_dphi_WOS[k]->Write();
-	}
-
-
-        dPhiajetSSggH->cd();
-        h3a_dphi_SS[k]->SetName(h3a_dphi_SS[k]->GetName()+postfix);
-        h3a_dphi_WSS[k]->SetName(h3a_dphi_WSS[k]->GetName()+postfix);
-        if (sample=="W")
-           h3a_dphi_SS[k]->Write();
-        else
-           h3a_dphi_WSS[k]->Write();
-
-        dPhiajetQCDggH->cd();
-        h3a_dphi_QCD[k]->SetName(name.c_str()+postfix);
-        h3a_dphi_QCD[k]->Write();
-
-//
-        dPhibjetOSggH->cd();
-        h3b_dphi_OS[k]->SetName(h3b_dphi_OS[k]->GetName()+postfix);
-        h3b_dphi_WOS[k]->SetName(h3b_dphi_WOS[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h3b_dphi_OS[k]->Write();
-	}
-        else{
-           h3b_dphi_WOS[k]->Write();
-	}
-
-
-        dPhibjetSSggH->cd();
-        h3b_dphi_SS[k]->SetName(h3b_dphi_SS[k]->GetName()+postfix);
-        h3b_dphi_WSS[k]->SetName(h3b_dphi_WSS[k]->GetName()+postfix);
-        if (sample=="W")
-           h3b_dphi_SS[k]->Write();
-        else
-           h3b_dphi_WSS[k]->Write();
-
-        dPhibjetQCDggH->cd();
-        h3b_dphi_QCD[k]->SetName(name.c_str()+postfix);
-        h3b_dphi_QCD[k]->Write();
-
-//
-
-        dPhicjetOSggH->cd();
-        h3c_dphi_OS[k]->SetName(h3c_dphi_OS[k]->GetName()+postfix);
-        h3c_dphi_WOS[k]->SetName(h3c_dphi_WOS[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h3c_dphi_OS[k]->Write();
-	}
-        else{
-           h3c_dphi_WOS[k]->Write();
-	}
-
-
-        dPhicjetSSggH->cd();
-        h3c_dphi_SS[k]->SetName(h3c_dphi_SS[k]->GetName()+postfix);
-        h3c_dphi_WSS[k]->SetName(h3c_dphi_WSS[k]->GetName()+postfix);
-        if (sample=="W")
-           h3c_dphi_SS[k]->Write();
-        else
-           h3c_dphi_WSS[k]->Write();
-
-        dPhicjetQCDggH->cd();
-        h3c_dphi_QCD[k]->SetName(name.c_str()+postfix);
-        h3c_dphi_QCD[k]->Write();
-
-///
-        dPhidjetOSggH->cd();
-        h3d_dphi_OS[k]->SetName(h3d_dphi_OS[k]->GetName()+postfix);
-        h3d_dphi_WOS[k]->SetName(h3d_dphi_WOS[k]->GetName()+postfix);
-
-        if (sample=="W"){
-           h3d_dphi_OS[k]->Write();
-	}
-        else{
-           h3d_dphi_WOS[k]->Write();
-	}
-
-
-        dPhidjetSSggH->cd();
-        h3d_dphi_SS[k]->SetName(h3d_dphi_SS[k]->GetName()+postfix);
-        h3d_dphi_WSS[k]->SetName(h3d_dphi_WSS[k]->GetName()+postfix);
-        if (sample=="W")
-           h3d_dphi_SS[k]->Write();
-        else
-           h3d_dphi_WSS[k]->Write();
-
-        dPhidjetQCDggH->cd();
-        h3d_dphi_QCD[k]->SetName(name.c_str()+postfix);
-        h3d_dphi_QCD[k]->Write();
-
-/////////////////////////////////
 
 
         OS3jet->cd();
@@ -5205,6 +4944,533 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
         QCD77jet->cd();
         h77_QCD[k]->SetName(name.c_str()+postfix);
         h77_QCD[k]->Write();
+
+
+	///////////////////////////////////ggH
+	
+	OS3jetggH->cd();
+        h3_OSggH[k]->SetName(name.c_str()+postfix);
+        h3_WOSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h3_WOSggH[k]->Write();
+	}
+        else{
+           h3_OSggH[k]->Write();
+	}
+
+
+        SS3jetggH->cd();
+        h3_SSggH[k]->SetName(name.c_str()+postfix);
+        h3_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3_WSSggH[k]->Write();
+        else
+           h3_SSggH[k]->Write();
+        
+	QCD3jetggH->cd();
+        h3_QCDggH[k]->SetName(name.c_str()+postfix);
+        h3_QCDggH[k]->Write();
+
+
+	OS4jetggH->cd();
+        h4_OSggH[k]->SetName(name.c_str()+postfix);
+        h4_WOSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h4_WOSggH[k]->Write();
+	}
+        else{
+           h4_OSggH[k]->Write();
+	}
+
+
+        SS4jetggH->cd();
+        h4_SSggH[k]->SetName(name.c_str()+postfix);
+        h4_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h4_WSSggH[k]->Write();
+        else
+           h4_SSggH[k]->Write();
+        
+	QCD4jetggH->cd();
+        h4_QCDggH[k]->SetName(name.c_str()+postfix);
+        h4_QCDggH[k]->Write();
+
+
+	OS5jetggH->cd();
+        h5_OSggH[k]->SetName(name.c_str()+postfix);
+        h5_WOSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h5_WOSggH[k]->Write();
+	}
+        else{
+           h5_OSggH[k]->Write();
+	}
+
+
+        SS5jetggH->cd();
+        h5_SSggH[k]->SetName(name.c_str()+postfix);
+        h5_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h5_WSSggH[k]->Write();
+        else
+           h5_SSggH[k]->Write();
+        
+	QCD5jetggH->cd();
+        h5_QCDggH[k]->SetName(name.c_str()+postfix);
+        h5_QCDggH[k]->Write();
+
+
+	OS7jetggH->cd();
+        h7_SSggH[k]->SetName(name.c_str()+postfix);
+        h7_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h7_WOSggH[k]->Write();
+	}
+        else{
+           h7_OSggH[k]->Write();
+	}
+
+
+        SS7jetggH->cd();
+        h7_SSggH[k]->SetName(name.c_str()+postfix);
+        h7_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h7_WSSggH[k]->Write();
+        else
+           h7_SSggH[k]->Write();
+        
+	QCD7jetggH->cd();
+        h7_QCDggH[k]->SetName(name.c_str()+postfix);
+        h3_QCDggH[k]->Write();
+
+////OS33,34,35,37
+
+
+
+        OS33jetggH->cd();
+        h33_OSggH[k]->SetName(name.c_str()+postfix);
+        h33_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h33_WOSggH[k]->Write();
+	}
+        else{
+           h33_OSggH[k]->Write();
+	}
+
+
+        SS33jetggH->cd();
+        h33_SSggH[k]->SetName(name.c_str()+postfix);
+        h33_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h33_WSSggH[k]->Write();
+        else
+           h33_SSggH[k]->Write();
+
+        QCD33jetggH->cd();
+        h33_QCDggH[k]->SetName(name.c_str()+postfix);
+        h33_QCDggH[k]->Write();
+
+
+        OS34jetggH->cd();
+        h34_OSggH[k]->SetName(name.c_str()+postfix);
+        h34_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h34_WOSggH[k]->Write();
+	}
+        else{
+           h34_OSggH[k]->Write();
+	}
+
+
+        SS34jetggH->cd();
+        h34_SSggH[k]->SetName(name.c_str()+postfix);
+        h34_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h34_WSSggH[k]->Write();
+        else
+           h34_SSggH[k]->Write();
+
+        QCD34jetggH->cd();
+        h34_QCDggH[k]->SetName(name.c_str()+postfix);
+        h34_QCDggH[k]->Write();
+
+
+        OS35jetggH->cd();
+        h35_OSggH[k]->SetName(name.c_str()+postfix);
+        h35_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h35_WOSggH[k]->Write();
+	}
+        else{
+           h35_OSggH[k]->Write();
+	}
+
+
+        SS35jetggH->cd();
+        h35_SSggH[k]->SetName(name.c_str()+postfix);
+        h35_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h35_WSSggH[k]->Write();
+        else
+           h35_SSggH[k]->Write();
+
+        QCD35jetggH->cd();
+        h35_QCDggH[k]->SetName(name.c_str()+postfix);
+        h35_QCDggH[k]->Write();
+
+
+        OS37jetggH->cd();
+        h37_OSggH[k]->SetName(name.c_str()+postfix);
+        h37_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h37_WOSggH[k]->Write();
+	}
+        else{
+           h37_OSggH[k]->Write();
+	}
+
+
+        SS37jetggH->cd();
+        h37_SSggH[k]->SetName(name.c_str()+postfix);
+        h37_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h37_WSSggH[k]->Write();
+        else
+           h37_SSggH[k]->Write();
+
+        QCD37jetggH->cd();
+        h37_QCDggH[k]->SetName(name.c_str()+postfix);
+        h37_QCDggH[k]->Write();
+
+///////////////
+
+
+        OS43jetggH->cd();
+        h43_OSggH[k]->SetName(name.c_str()+postfix);
+        h43_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h43_WOSggH[k]->Write();
+	}
+        else{
+           h43_OSggH[k]->Write();
+	}
+
+
+        SS43jetggH->cd();
+        h43_SSggH[k]->SetName(name.c_str()+postfix);
+        h43_WSSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W")
+           h43_WSSggH[k]->Write();
+        else
+           h43_SSggH[k]->Write();
+
+        QCD43jetggH->cd();
+        h43_QCDggH[k]->SetName(name.c_str()+postfix);
+        h43_QCDggH[k]->Write();
+
+
+        OS44jetggH->cd();
+        h44_OSggH[k]->SetName(name.c_str()+postfix);
+        h44_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h44_WOSggH[k]->Write();
+	}
+        else{
+           h44_OSggH[k]->Write();
+	}
+
+
+        SS44jetggH->cd();
+        h44_SSggH[k]->SetName(name.c_str()+postfix);
+        h44_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h44_WSSggH[k]->Write();
+        else
+           h44_SSggH[k]->Write();
+
+        QCD44jetggH->cd();
+        h44_QCDggH[k]->SetName(name.c_str()+postfix);
+        h44_QCDggH[k]->Write();
+
+
+        OS45jetggH->cd();
+        h45_OSggH[k]->SetName(name.c_str()+postfix);
+        h45_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h45_WOSggH[k]->Write();
+	}
+        else{
+           h45_OSggH[k]->Write();
+	}
+
+
+        SS45jetggH->cd();
+        h45_SSggH[k]->SetName(name.c_str()+postfix);
+        h45_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h45_WSSggH[k]->Write();
+        else
+           h45_SSggH[k]->Write();
+
+        QCD45jetggH->cd();
+        h45_QCDggH[k]->SetName(name.c_str()+postfix);
+        h45_QCDggH[k]->Write();
+
+
+        OS47jetggH->cd();
+        h47_OSggH[k]->SetName(name.c_str()+postfix);
+        h47_WOSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h47_WOSggH[k]->Write();
+	}
+        else{
+           h47_OSggH[k]->Write();
+	}
+
+
+        SS47jetggH->cd();
+        h47_SSggH[k]->SetName(name.c_str()+postfix);
+        h47_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h47_WSSggH[k]->Write();
+        else
+           h47_SSggH[k]->Write();
+
+        QCD47jetggH->cd();
+        h47_QCDggH[k]->SetName(name.c_str()+postfix);
+        h47_QCDggH[k]->Write();
+
+
+////////////////////////
+
+
+        OS53jetggH->cd();
+        h53_OSggH[k]->SetName(name.c_str()+postfix);
+        h53_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h53_WOSggH[k]->Write();
+	}
+        else{
+           h53_OSggH[k]->Write();
+	}
+
+
+        SS53jetggH->cd();
+        h53_SSggH[k]->SetName(name.c_str()+postfix);
+        h53_WSSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W")
+           h53_WSSggH[k]->Write();
+        else
+           h53_SSggH[k]->Write();
+
+        QCD53jetggH->cd();
+        h53_QCDggH[k]->SetName(name.c_str()+postfix);
+        h53_QCDggH[k]->Write();
+
+
+        OS54jetggH->cd();
+        h54_OSggH[k]->SetName(name.c_str()+postfix);
+        h54_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h54_WOSggH[k]->Write();
+	}
+        else{
+           h54_OSggH[k]->Write();
+	}
+
+
+        SS54jetggH->cd();
+        h54_SSggH[k]->SetName(name.c_str()+postfix);
+        h54_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h54_WSSggH[k]->Write();
+        else
+           h54_SSggH[k]->Write();
+
+        QCD54jetggH->cd();
+        h54_QCDggH[k]->SetName(name.c_str()+postfix);
+        h54_QCDggH[k]->Write();
+
+
+        OS55jetggH->cd();
+        h55_OSggH[k]->SetName(name.c_str()+postfix);
+        h55_WOSggH[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h55_WOSggH[k]->Write();
+	}
+        else{
+           h55_OSggH[k]->Write();
+	}
+
+
+        SS55jetggH->cd();
+        h55_SSggH[k]->SetName(name.c_str()+postfix);
+        h55_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h55_WSSggH[k]->Write();
+        else
+           h55_SSggH[k]->Write();
+
+        QCD55jetggH->cd();
+        h55_QCDggH[k]->SetName(name.c_str()+postfix);
+        h55_QCDggH[k]->Write();
+
+
+        OS57jetggH->cd();
+        h57_OSggH[k]->SetName(name.c_str()+postfix);
+        h57_WOSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W"){
+           h57_WOSggH[k]->Write();
+	}
+        else{
+           h57_OSggH[k]->Write();
+	}
+
+
+        SS57jetggH->cd();
+        h57_SSggH[k]->SetName(name.c_str()+postfix);
+        h57_WSSggH[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h57_WSSggH[k]->Write();
+        else
+           h57_SSggH[k]->Write();
+
+        QCD57jetggH->cd();
+        h57_QCDggH[k]->SetName(name.c_str()+postfix);
+        h57_QCDggH[k]->Write();
+
+
+///dPhijet
+        OS63jetggH->cd();
+        h3a_dphi_OS[k]->SetName(name.c_str()+postfix);
+        h3a_dphi_WOS[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h3a_dphi_OS[k]->Write();
+	}
+        else{
+           h3a_dphi_WOS[k]->Write();
+	}
+
+
+        SS63jetggH->cd();
+        h3a_dphi_SS[k]->SetName(name.c_str()+postfix);
+        h3a_dphi_WSS[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3a_dphi_SS[k]->Write();
+        else
+           h3a_dphi_WSS[k]->Write();
+
+        QCD63jetggH->cd();
+        h3a_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3a_dphi_QCD[k]->Write();
+
+//
+        OS64jetggH->cd();
+        h3b_dphi_OS[k]->SetName(name.c_str()+postfix);
+        h3b_dphi_WOS[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h3b_dphi_OS[k]->Write();
+	}
+        else{
+           h3b_dphi_WOS[k]->Write();
+	}
+
+
+        SS64jetggH->cd();
+        h3b_dphi_SS[k]->SetName(name.c_str()+postfix);
+        h3b_dphi_WSS[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3b_dphi_SS[k]->Write();
+        else
+           h3b_dphi_WSS[k]->Write();
+
+        QCD64jetggH->cd();
+        h3b_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3b_dphi_QCD[k]->Write();
+
+//
+
+        OS65jetggH->cd();
+        h3c_dphi_OS[k]->SetName(name.c_str()+postfix);
+        h3c_dphi_WOS[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h3c_dphi_OS[k]->Write();
+	}
+        else{
+           h3c_dphi_WOS[k]->Write();
+	}
+
+
+        SS65jetggH->cd();
+        h3c_dphi_SS[k]->SetName(name.c_str()+postfix);
+        h3c_dphi_WSS[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3c_dphi_SS[k]->Write();
+        else
+           h3c_dphi_WSS[k]->Write();
+
+        QCD65jetggH->cd();
+        h3c_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3c_dphi_QCD[k]->Write();
+
+///
+        OS67jetggH->cd();
+        h3d_dphi_OS[k]->SetName(name.c_str()+postfix);
+        h3d_dphi_WOS[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h3d_dphi_OS[k]->Write();
+	}
+        else{
+           h3d_dphi_WOS[k]->Write();
+	}
+
+
+        SS67jetggH->cd();
+        h3d_dphi_SS[k]->SetName(name.c_str()+postfix);
+        h3d_dphi_WSS[k]->SetName(name.c_str()+postfix);
+        if (sample=="W")
+           h3d_dphi_SS[k]->Write();
+        else
+           h3d_dphi_WSS[k]->Write();
+
+        QCD67jetggH->cd();
+        h3d_dphi_QCD[k]->SetName(name.c_str()+postfix);
+        h3d_dphi_QCD[k]->Write();
+
+/////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
