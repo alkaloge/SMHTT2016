@@ -173,30 +173,86 @@ if __name__ == "__main__":
     dir1QCD=fout.mkdir("QCD1jet")
     dir2QCD=fout.mkdir("QCDvbf")
 
-    #ggH
+    #ggH block starts
     dir3OSggH=fout.mkdir("et_vbf_D0_0p0to0p2_ggH")
+    dir3SSggH=fout.mkdir("SS3ggH")
+    dir3QCDggH=fout.mkdir("QCD3ggH")
     dir4OSggH=fout.mkdir("et_vbf_D0_0p2to0p4_ggH")
+    dir4SSggH=fout.mkdir("SS4ggH")
+    dir4QCDggH=fout.mkdir("QCD4ggH")
     dir5OSggH=fout.mkdir("et_vbf_D0_0p4to0p8_ggH")
+    dir5SSggH=fout.mkdir("SS5ggH")
+    dir5QCDggH=fout.mkdir("QCD5ggH")
     dir7OSggH=fout.mkdir("et_vbf_D0_0p8to1p0_ggH")
+    dir7SSggH=fout.mkdir("SS7ggH")
+    dir7QCDggH=fout.mkdir("QCD7ggH")
+
+
     dir33OSggH=fout.mkdir("et_vbf_D0_0p0to0p2_DCPm_ggH")
+    dir33SSggH=fout.mkdir("SS33ggH")
+    dir33QCDggH=fout.mkdir("QCD33ggH")
     dir34OSggH=fout.mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH")
+    dir34SSggH=fout.mkdir("SS34ggH")
+    dir34QCDggH=fout.mkdir("QCD34ggH")
     dir35OSggH=fout.mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH")
+    dir35SSggH=fout.mkdir("SS35ggH")
+    dir35QCDggH=fout.mkdir("QCD35ggH")
     dir37OSggH=fout.mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH")
+    dir37SSggH=fout.mkdir("SS37ggH")
+    dir37QCDggH=fout.mkdir("QCD37ggH")
 
-    dPhiajetggH =fout.mkdir("et_vbf_D0_Pito2p5m_ggH");
-    dPhibjetggH =fout.mkdir("et_vbf_D0_2p5to2pm_ggH");
-    dPhicjetggH =fout.mkdir("et_vbf_D0_2to1p5m_ggH");
-    dPhidjetggH =fout.mkdir("et_vbf_D0_1p5to1m_ggH");
-    dPhiejetggH =fout.mkdir("et_vbf_D0_1to0p5m_ggH");
-    dPhifjetggH =fout.mkdir("et_vbf_D0_0p5to0m_ggH");
 
-    dPhigjetggH =fout.mkdir("et_vbf_D0_0to0p5p_ggH");
-    dPhihjetggH =fout.mkdir("et_vbf_D0_0p5to1p_ggH");
-    dPhiijetggH =fout.mkdir("et_vbf_D0_1to1p5p_ggH");
-    dPhijjetggH =fout.mkdir("et_vbf_D0_1p5to2p_ggH");
-    dPhikjetggH =fout.mkdir("et_vbf_D0_2to2p5_ggH");
-    dPhiljetggH =fout.mkdir("et_vbf_D0_2p5toPip_ggH");
+    dir43OSggH =fout.mkdir("et_vbf_D0_Pito1p5m_ggH");
+    dir43SSggH =fout.mkdir("SS43ggH");
+    dir43QCDggH =fout.mkdir("QCD43ggH");
 
+    dir44jOSetggH =fout.mkdir("et_vbf_D0_1p5to0_ggH");
+    dir44SSggH =fout.mkdir("SS44ggH");
+    dir44QCDggH =fout.mkdir("QCD44ggH");
+
+    dir45OSggH =fout.mkdir("et_vbf_D0_0to1p5p_ggH");
+    dir45SSggH =fout.mkdir("SS45ggH");
+    dir45QCDggH =fout.mkdir("QCD45ggH");
+
+    dir47OSggH =fout.mkdir("et_vbf_D0_1p5toPi_ggH");
+    dir47SSggH =fout.mkdir("SS47ggH");
+    dir47QCDggH =fout.mkdir("QCD47ggH");
+    
+
+    dir53OSggH =fout.mkdir("et_vbf_D0_Pito1p6m_ggH_Uns");
+    dir53SSggH =fout.mkdir("SS53ggH_Uns");
+    dir53QCDggH =fout.mkdir("QCD53ggH_Uns");
+
+    dir54OSggH =fout.mkdir("et_vbf_D0_1p6to0_ggH_Uns");
+    dir54SSggH =fout.mkdir("SS54ggH_Uns");
+    dir54QCDggH =fout.mkdir("QCD54ggH_Uns");
+
+    dir55OSggH =fout.mkdir("et_vbf_D0_0to1p6p_ggH_Uns");
+    dir55SSggH =fout.mkdir("SS55ggH_Uns");
+    dir55QCDggH =fout.mkdir("QCD55ggH_Uns");
+
+    dir57OSggH =fout.mkdir("et_vbf_D0_1p6toPi_ggH_Uns");
+    dir57SSggH =fout.mkdir("SS57ggH_Uns");
+    dir57QCDggH =fout.mkdir("QCD57ggH_Uns");
+
+
+    dir63OSggH =fout.mkdir("et_vbf_dPhia_ggh");
+    dir63SSggH =fout.mkdir("SS63ggH");
+    dir63QCDggH =fout.mkdir("QCD63ggH");
+
+    dir64OSggH =fout.mkdir("et_vbf_dPhib_ggh");
+    dir64SSggH =fout.mkdir("SS64ggH");
+    dir64QCDggH =fout.mkdir("QCD64ggH");
+
+    dir65OSggH =fout.mkdir("et_vbf_dPhic_ggh");
+    dir65SSggH =fout.mkdir("SS65ggH");
+    dir65QCDggH =fout.mkdir("QCD65ggH");
+
+    dir67OSggH =fout.mkdir("et_vbf_dPhid_ggh");
+    dir67SSggH =fout.mkdir("SS67ggH");
+    dir67QCDggH =fout.mkdir("QCD67ggH");
+ 
+    #ggh block end
 
     dir3OS=fout.mkdir("et_vbf_D0_0p0to0p2")
     dir3SS=fout.mkdir("SS3")
@@ -355,15 +411,16 @@ if __name__ == "__main__":
         hW47jet=fW.Get("et_vbf_D0_0p8to1p0_DCPp/W"+post2[k])
         hW47jet.Scale(SFpassOS1*factorw2jet)
 
-	#ggH clone
+	#ggH block start
         hW3jetggH=fW.Get("et_vbf_D0_0p0to0p2_ggH/W"+post2[k])
         hW3jetggH.Scale(SFpassOS1*factorw2jet)
-        hW4jetggH=fW.Get("et_vbf_D0_0p2to0p4_ggH//W"+post2[k])
+        hW4jetggH=fW.Get("et_vbf_D0_0p2to0p4_ggH/W"+post2[k])
         hW4jetggH.Scale(SFpassOS1*factorw2jet)
-        hW5jetggH=fW.Get("et_vbf_D0_0p4to0p8_ggH//W"+post2[k])
+        hW5jetggH=fW.Get("et_vbf_D0_0p4to0p8_ggH/W"+post2[k])
         hW5jetggH.Scale(SFpassOS1*factorw2jet)
-        hW7jetggH=fW.Get("et_vbf_D0_0p8to1p0_ggH//W"+post2[k])
+        hW7jetggH=fW.Get("et_vbf_D0_0p8to1p0_ggH/W"+post2[k])
         hW7jetggH.Scale(SFpassOS1*factorw2jet)
+
         hW33jetggH=fW.Get("et_vbf_D0_0p0to0p2_DCPm_ggH/W"+post2[k])
         hW33jetggH.Scale(SFpassOS1*factorw2jet)
         hW34jetggH=fW.Get("et_vbf_D0_0p2to0p4_DCPm_ggH/W"+post2[k])
@@ -374,6 +431,40 @@ if __name__ == "__main__":
         hW37jetggH.Scale(SFpassOS1*factorw2jet)
 
 
+        hW43jetggH=fW.Get("et_vbf_D0_Pito1p5m_ggH/W"+post2[k])
+        hW43jetggH.Scale(SFpassOS1*factorw2jet)
+        hW44jetggH=fW.Get("et_vbf_D0_1p5to0_ggH/W"+post2[k])
+        hW44jetggH.Scale(SFpassOS1*factorw2jet)
+        hW45jetggH=fW.Get("et_vbf_D0_0to1p5p_ggH/W"+post2[k])
+        hW45jetggH.Scale(SFpassOS1*factorw2jet)
+        hW47jetggH=fW.Get("et_vbf_D0_1p5toPi_ggH/W"+post2[k])
+        hW47jetggH.Scale(SFpassOS1*factorw2jet)
+
+
+        hW53jetggH=fW.Get("et_vbf_D0_Pito1p6m_ggH_Uns/W"+post2[k])
+        hW53jetggH.Scale(SFpassOS1*factorw2jet)
+        hW54jetggH=fW.Get("et_vbf_D0_1p6to0_ggH_Uns/W"+post2[k])
+        hW54jetggH.Scale(SFpassOS1*factorw2jet)
+        hW55jetggH=fW.Get("et_vbf_D0_0to1p6p_ggH_Uns/W"+post2[k])
+        hW55jetggH.Scale(SFpassOS1*factorw2jet)
+        hW57jetggH=fW.Get("et_vbf_D0_1p6toPi_ggH_Uns/W"+post2[k])
+        hW57jetggH.Scale(SFpassOS1*factorw2jet)
+
+        hW63jetggH=fW.Get("et_vbf_dPhia_ggh/W"+post2[k])
+        hW63jetggH.Scale(SFpassOS1*factorw2jet)
+        hW64jetggH=fW.Get("et_vbf_dPhib_ggh/W"+post2[k])
+        hW64jetggH.Scale(SFpassOS1*factorw2jet)
+        hW65jetggH=fW.Get("et_vbf_dPhic_ggh/W"+post2[k])
+        hW65jetggH.Scale(SFpassOS1*factorw2jet)
+        hW67jetggH=fW.Get("et_vbf_dPhid_ggh/W"+post2[k])
+        hW67jetggH.Scale(SFpassOS1*factorw2jet)
+
+
+	#######ggH block end
+
+
+
+	####
         hW53jet=fW.Get("et_vbf_D0hplus_0p0to0p2/W"+post2[k])
         hW53jet.Scale(SFpassOS1*factorw2jet)
         hW54jet=fW.Get("et_vbf_D0hplus_0p2to0p4/W"+post2[k])
@@ -406,6 +497,106 @@ if __name__ == "__main__":
         print hW63jet.Integral()+hW64jet.Integral()+hW65jet.Integral()+hW67jet.Integral()
         print hW3jet.Integral()+hW4jet.Integral()+hW5jet.Integral()+hW7jet.Integral()
         print hW3jet.Integral(),hW4jet.Integral(),hW5jet.Integral(),hW7jet.Integral()
+
+
+	#ggH clone
+        hW3jetggH_SS=fW.Get("SS3ggH/W"+post2[k])
+        hW3jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW4jetggH_SS=fW.Get("SS4ggH/W"+post2[k])
+        hW4jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW5jetggH_SS=fW.Get("SS5ggH/W"+post2[k])
+        hW5jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW7jetggH_SS=fW.Get("SS7ggH/W"+post2[k])
+        hW7jetggH_SS.Scale(SFpassOS1*factorw2jet)
+
+        hW33jetggH_SS=fW.Get("SS33ggH/W"+post2[k])
+        hW33jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW34jetggH_SS=fW.Get("SS34ggH/W"+post2[k])
+        hW34jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW35jetggH_SS=fW.Get("SS35ggH/W"+post2[k])
+        hW35jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW37jetggH_SS=fW.Get("SS37ggH/W"+post2[k])
+        hW37jetggH_SS.Scale(SFpassOS1*factorw2jet)
+
+        hW43jetggH_SS=fW.Get("SS43ggH/W"+post2[k])
+        hW43jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW44jetggH_SS=fW.Get("SS44ggH/W"+post2[k])
+        hW44jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW45jetggH_SS=fW.Get("SS45ggH/W"+post2[k])
+        hW45jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW47jetggH_SS=fW.Get("SS47ggH/W"+post2[k])
+        hW47jetggH_SS.Scale(SFpassOS1*factorw2jet)
+
+        hW53jetggH_SS=fW.Get("SS53ggH/W"+post2[k])
+        hW53jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW54jetggH_SS=fW.Get("SS54ggH/W"+post2[k])
+        hW54jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW55jetggH_SS=fW.Get("SS55ggH/W"+post2[k])
+        hW55jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW57jetggH_SS=fW.Get("SS57ggH/W"+post2[k])
+        hW57jetggH_SS.Scale(SFpassOS1*factorw2jet)
+
+        hW63jetggH_SS=fW.Get("SS63ggH/W"+post2[k])
+        hW63jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW64jetggH_SS=fW.Get("SS64ggH/W"+post2[k])
+        hW64jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW65jetggH_SS=fW.Get("SS65ggH/W"+post2[k])
+        hW65jetggH_SS.Scale(SFpassOS1*factorw2jet)
+        hW67jetggH_SS=fW.Get("SS67ggH/W"+post2[k])
+        hW67jetggH_SS.Scale(SFpassOS1*factorw2jet)
+
+        hW3jetggH_QCD=fW.Get("QCD3ggH/W"+post2[k])
+        hW3jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW4jetggH_QCD=fW.Get("QCD4ggH/W"+post2[k])
+        hW4jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW5jetggH_QCD=fW.Get("QCD5ggH/W"+post2[k])
+        hW5jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW7jetggH_QCD=fW.Get("QCD7ggH/W"+post2[k])
+        hW7jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+
+        hW33jetggH_QCD=fW.Get("QCD33ggH/W"+post2[k])
+        hW33jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW34jetggH_QCD=fW.Get("QCD34ggH/W"+post2[k])
+        hW34jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW35jetggH_QCD=fW.Get("QCD35ggH/W"+post2[k])
+        hW35jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW37jetggH_QCD=fW.Get("QCD37ggH/W"+post2[k])
+        hW37jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+
+        hW43jetggH_QCD=fW.Get("QCD43ggH/W"+post2[k])
+        hW43jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW44jetggH_QCD=fW.Get("QCD44ggH/W"+post2[k])
+        hW44jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW45jetggH_QCD=fW.Get("QCD45ggH/W"+post2[k])
+        hW45jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW47jetggH_QCD=fW.Get("QCD47ggH/W"+post2[k])
+        hW47jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+
+        hW53jetggH_QCD=fW.Get("QCD53ggH/W"+post2[k])
+        hW53jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW54jetggH_QCD=fW.Get("QCD54ggH/W"+post2[k])
+        hW54jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW55jetggH_QCD=fW.Get("QCD55ggH/W"+post2[k])
+        hW55jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW57jetggH_QCD=fW.Get("QCD57ggH/W"+post2[k])
+        hW57jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+
+
+        hW63jetggH_QCD=fW.Get("QCD63ggH/W"+post2[k])
+        hW63jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW64jetggH_QCD=fW.Get("QCD64ggH/W"+post2[k])
+        hW64jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW65jetggH_QCD=fW.Get("QCD65ggH/W"+post2[k])
+        hW65jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+        hW67jetggH_QCD=fW.Get("QCD67ggH/W"+post2[k])
+        hW67jetggH_QCD.Scale(SFpassOS1*factorw2jet)
+
+
+	#ggH clone done
+
+
+
+
 
         hW0jet_SS=fW.Get("SS0jet/W"+post2[k])
         hW0jet_SS.Scale(SFpassOS1*factorw0jet)
@@ -590,35 +781,6 @@ if __name__ == "__main__":
         dir37OS.cd()
         hW37jet.SetName("W"+postfix2[k])
         hW37jet.Write()
-	#ggH clone
-        dir3OSggH.cd()
-        hW3jetggH.SetName("W"+postfix2[k])
-        hW3jetggH.Write()
-        dir4OSggH.cd()
-        hW4jetggH.SetName("W"+postfix2[k])
-        hW4jetggH.Write()
-        dir5OSggH.cd()
-        hW5jetggH.SetName("W"+postfix2[k])
-        hW5jetggH.Write()
-        dir7OSggH.cd()
-        hW7jetggH.SetName("W"+postfix2[k])
-        hW7jetggH.Write()
-        dir33OSggH.cd()
-        hW33jetggH.SetName("W"+postfix2[k])
-        hW33jetggH.Write()
-        dir34OSggH.cd()
-        hW34jetggH.SetName("W"+postfix2[k])
-        hW34jetggH.Write()
-        dir35OSggH.cd()
-        hW35jetggH.SetName("W"+postfix2[k])
-        hW35jetggH.Write()
-        dir37OSggH.cd()
-        hW37jetggH.SetName("W"+postfix2[k])
-        hW37jetggH.Write()
-
-
-
-
 
 
 
@@ -675,6 +837,77 @@ if __name__ == "__main__":
         hW77jet.SetName("W"+postfix2[k])
         hW77jet.Write()
 
+	#ggH clone
+        dir3OSggH.cd()
+        hW3jetggH.SetName("W"+postfix2[k])
+        hW3jetggH.Write()
+        dir4OSggH.cd()
+        hW4jetggH.SetName("W"+postfix2[k])
+        hW4jetggH.Write()
+        dir5OSggH.cd()
+        hW5jetggH.SetName("W"+postfix2[k])
+        hW5jetggH.Write()
+        dir7OSggH.cd()
+        hW7jetggH.SetName("W"+postfix2[k])
+        hW7jetggH.Write()
+
+        dir33OSggH.cd()
+        hW33jetggH.SetName("W"+postfix2[k])
+        hW33jetggH.Write()
+        dir34OSggH.cd()
+        hW34jetggH.SetName("W"+postfix2[k])
+        hW34jetggH.Write()
+        dir35OSggH.cd()
+        hW35jetggH.SetName("W"+postfix2[k])
+        hW35jetggH.Write()
+        dir37OSggH.cd()
+        hW37jetggH.SetName("W"+postfix2[k])
+        hW37jetggH.Write()
+
+        dir43OSggH.cd()
+        hW43jetggH.SetName("W"+postfix2[k])
+        hW43jetggH.Write()
+        dir44OSggH.cd()
+        hW44jetggH.SetName("W"+postfix2[k])
+        hW44jetggH.Write()
+        dir45OSggH.cd()
+        hW45jetggH.SetName("W"+postfix2[k])
+        hW45jetggH.Write()
+        dir47OSggH.cd()
+        hW47jetggH.SetName("W"+postfix2[k])
+        hW47jetggH.Write()
+
+        dir53OSggH.cd()
+        hW53jetggH.SetName("W"+postfix2[k])
+        hW53jetggH.Write()
+        dir54OSggH.cd()
+        hW54jetggH.SetName("W"+postfix2[k])
+        hW54jetggH.Write()
+        dir55OSggH.cd()
+        hW55jetggH.SetName("W"+postfix2[k])
+        hW55jetggH.Write()
+        dir57OSggH.cd()
+        hW57jetggH.SetName("W"+postfix2[k])
+        hW57jetggH.Write()
+
+        dir63OSggH.cd()
+        hW63jetggH.SetName("W"+postfix2[k])
+        hW63jetggH.Write()
+        dir64OSggH.cd()
+        hW64jetggH.SetName("W"+postfix2[k])
+        hW64jetggH.Write()
+        dir65OSggH.cd()
+        hW65jetggH.SetName("W"+postfix2[k])
+        hW65jetggH.Write()
+        dir67OSggH.cd()
+        hW67jetggH.SetName("W"+postfix2[k])
+        hW67jetggH.Write()
+
+
+	###ggH
+
+
+
         dir0QCDCROS.cd()
         hQCDCR0jet.SetName("W"+postfix0[k])
         hQCDCR0jet.Write()
@@ -724,6 +957,7 @@ if __name__ == "__main__":
         dir2SS.cd()
         hW2jet_SS.SetName("W"+postfix2[k])
         hW2jet_SS.Write()
+
         dir3SS.cd()
         hW3jet_SS.SetName("W"+postfix2[k])
         hW3jet_SS.Write()
@@ -799,6 +1033,83 @@ if __name__ == "__main__":
         dir77SS.cd()
         hW77jet_SS.SetName("W"+postfix2[k])
         hW77jet_SS.Write()
+	
+
+	###ggH
+
+
+
+
+	dir3SSggH.cd()
+        hW3jetggH_SS.SetName("W"+postfix2[k])
+        hW3jetggH_SS.Write()
+        dir4SSggH.cd()
+        hW4jetggH_SS.SetName("W"+postfix2[k])
+        hW4jetggH_SS.Write()
+        dir5SSggH.cd()
+        hW5jetggH_SS.SetName("W"+postfix2[k])
+        hW5jetggH_SS.Write()
+        dir7SSggH.cd()
+        hW7jetggH_SS.SetName("W"+postfix2[k])
+        hW7jetggH_SS.Write()
+        dir33SSggH.cd()
+        hW33jetggH_SS.SetName("W"+postfix2[k])
+        hW33jetggH_SS.Write()
+        dir34SSggH.cd()
+        hW34jetggH_SS.SetName("W"+postfix2[k])
+        hW34jetggH_SS.Write()
+        dir35SSggH.cd()
+        hW35jetggH_SS.SetName("W"+postfix2[k])
+        hW35jetggH_SS.Write()
+        dir37SSggH.cd()
+        hW37jetggH_SS.SetName("W"+postfix2[k])
+        hW37jetggH_SS.Write()
+        dir43SSggH.cd()
+        hW43jetggH_SS.SetName("W"+postfix2[k])
+        hW43jetggH_SS.Write()
+        dir44SSggH.cd()
+        hW44jetggH_SS.SetName("W"+postfix2[k])
+        hW44jetggH_SS.Write()
+        dir45SSggH.cd()
+        hW45jetggH_SS.SetName("W"+postfix2[k])
+        hW45jetggH_SS.Write()
+        dir47SSggH.cd()
+        hW47jetggH_SS.SetName("W"+postfix2[k])
+        hW47jetggH_SS.Write()
+
+        dir53SSggH.cd()
+        hW53jetggH_SS.SetName("W"+postfix2[k])
+        hW53jetggH_SS.Write()
+        dir54SSggH.cd()
+        hW54jetggH_SS.SetName("W"+postfix2[k])
+        hW54jetggH_SS.Write()
+        dir55SSggH.cd()
+        hW55jetggH_SS.SetName("W"+postfix2[k])
+        hW55jetggH_SS.Write()
+        dir57SSggH.cd()
+        hW57jetggH_SS.SetName("W"+postfix2[k])
+        hW57jetggH_SS.Write()
+
+        dir63SSggH.cd()
+        hW63jetggH_SS.SetName("W"+postfix2[k])
+        hW63jetggH_SS.Write()
+        dir64SSggH.cd()
+        hW64jetggH_SS.SetName("W"+postfix2[k])
+        hW64jetggH_SS.Write()
+        dir65SSggH.cd()
+        hW65jetggH_SS.SetName("W"+postfix2[k])
+        hW65jetggH_SS.Write()
+        dir67SSggH.cd()
+        hW67jetggH_SS.SetName("W"+postfix2[k])
+        hW67jetggH_SS.Write()
+
+
+	##ggH
+
+
+
+
+
 
 
         dir0QCD.cd()
@@ -810,6 +1121,7 @@ if __name__ == "__main__":
         dir2QCD.cd()
         hW2jet_QCD.SetName("W"+postfix2[k])
         hW2jet_QCD.Write()
+
         dir3QCD.cd()
         hW3jet_QCD.SetName("W"+postfix2[k])
         hW3jet_QCD.Write()
@@ -886,6 +1198,69 @@ if __name__ == "__main__":
         hW77jet_QCD.SetName("W"+postfix2[k])
         hW77jet_QCD.Write()
 
+
+        dir3QCDggH.cd()
+        hW3jetggH_QCD.SetName("W"+postfix2[k])
+        hW3jetggH_QCD.Write()
+        dir4QCDggH.cd()
+        hW4jetggH_QCD.SetName("W"+postfix2[k])
+        hW4jetggH_QCD.Write()
+        dir5QCDggH.cd()
+        hW5jetggH_QCD.SetName("W"+postfix2[k])
+        hW5jetggH_QCD.Write()
+        dir7QCDggH.cd()
+        hW7jetggH_QCD.SetName("W"+postfix2[k])
+        hW7jetggH_QCD.Write()
+        dir33QCDggH.cd()
+        hW33jetggH_QCD.SetName("W"+postfix2[k])
+        hW33jetggH_QCD.Write()
+        dir34QCDggH.cd()
+        hW34jetggH_QCD.SetName("W"+postfix2[k])
+        hW34jetggH_QCD.Write()
+        dir35QCDggH.cd()
+        hW35jetggH_QCD.SetName("W"+postfix2[k])
+        hW35jetggH_QCD.Write()
+        dir37QCDggH.cd()
+        hW37jetggH_QCD.SetName("W"+postfix2[k])
+        hW37jetggH_QCD.Write()
+        dir43QCDggH.cd()
+        hW43jetggH_QCD.SetName("W"+postfix2[k])
+        hW43jetggH_QCD.Write()
+        dir44QCDggH.cd()
+        hW44jetggH_QCD.SetName("W"+postfix2[k])
+        hW44jetggH_QCD.Write()
+        dir45QCDggH.cd()
+        hW45jetggH_QCD.SetName("W"+postfix2[k])
+        hW45jetggH_QCD.Write()
+        dir47QCDggH.cd()
+        hW47jetggH_QCD.SetName("W"+postfix2[k])
+        hW47jetggH_QCD.Write()
+
+        dir53QCDggH.cd()
+        hW53jetggH_QCD.SetName("W"+postfix2[k])
+        hW53jetggH_QCD.Write()
+        dir54QCDggH.cd()
+        hW54jetggH_QCD.SetName("W"+postfix2[k])
+        hW54jetggH_QCD.Write()
+        dir55QCDggH.cd()
+        hW55jetggH_QCD.SetName("W"+postfix2[k])
+        hW55jetggH_QCD.Write()
+        dir57QCDggH.cd()
+        hW57jetggH_QCD.SetName("W"+postfix2[k])
+        hW57jetggH_QCD.Write()
+
+        dir63QCDggH.cd()
+        hW63jetggH_QCD.SetName("W"+postfix2[k])
+        hW63jetggH_QCD.Write()
+        dir64QCDggH.cd()
+        hW64jetggH_QCD.SetName("W"+postfix2[k])
+        hW64jetggH_QCD.Write()
+        dir65QCDggH.cd()
+        hW65jetggH_QCD.SetName("W"+postfix2[k])
+        hW65jetggH_QCD.Write()
+        dir67QCDggH.cd()
+        hW67jetggH_QCD.SetName("W"+postfix2[k])
+        hW67jetggH_QCD.Write()
 
         print postfix0[k],postfix1[k],postfix2[k]
 

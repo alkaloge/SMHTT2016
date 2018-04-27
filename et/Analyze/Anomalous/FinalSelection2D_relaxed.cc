@@ -3354,55 +3354,56 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
     TDirectory *QCD37jetggH =fout->mkdir("QCD37ggH");
 
 
-    TDirectory *OS43jetggH =fout->mkdir("et_vbf_D0_Pito1p5m_OSggH");
+    TDirectory *OS43jetggH =fout->mkdir("et_vbf_D0_Pito1p5m_ggH");
     TDirectory *SS43jetggH =fout->mkdir("SS43ggH");
     TDirectory *QCD43jetggH =fout->mkdir("QCD43ggH");
 
-    TDirectory *OS44jetggH =fout->mkdir("et_vbf_D0_1p5to0_OSggH");
+    TDirectory *OS44jetggH =fout->mkdir("et_vbf_D0_1p5to0_ggH");
     TDirectory *SS44jetggH =fout->mkdir("SS44ggH");
     TDirectory *QCD44jetggH =fout->mkdir("QCD44ggH");
 
-    TDirectory *OS45jetggH =fout->mkdir("et_vbf_D0_0to1p5p_OSggH");
+    TDirectory *OS45jetggH =fout->mkdir("et_vbf_D0_0to1p5p_ggH");
     TDirectory *SS45jetggH =fout->mkdir("SS45ggH");
     TDirectory *QCD45jetggH =fout->mkdir("QCD45ggH");
 
-    TDirectory *OS47jetggH =fout->mkdir("et_vbf_D0_1p5toPi_OSggH");
+    TDirectory *OS47jetggH =fout->mkdir("et_vbf_D0_1p5toPi_ggH");
     TDirectory *SS47jetggH =fout->mkdir("SS47ggH");
     TDirectory *QCD47jetggH =fout->mkdir("QCD47ggH");
     
 
-    TDirectory *OS53jetggH =fout->mkdir("et_vbf_D0_Pito1p6m_OSggH_Uns");
+    TDirectory *OS53jetggH =fout->mkdir("et_vbf_D0_Pito1p6m_ggH_Uns");
     TDirectory *SS53jetggH =fout->mkdir("SS53ggH");
     TDirectory *QCD53jetggH =fout->mkdir("QCD53ggH");
 
-    TDirectory *OS54jetggH =fout->mkdir("et_vbf_D0_1p6to0_OSggH_Uns");
+    TDirectory *OS54jetggH =fout->mkdir("et_vbf_D0_1p6to0_ggH_Uns");
     TDirectory *SS54jetggH =fout->mkdir("SS54ggH");
     TDirectory *QCD54jetggH =fout->mkdir("QCD54ggH");
 
-    TDirectory *OS55jetggH =fout->mkdir("et_vbf_D0_0to1p6p_OSggH_Uns");
+    TDirectory *OS55jetggH =fout->mkdir("et_vbf_D0_0to1p6p_ggH_Uns");
     TDirectory *SS55jetggH =fout->mkdir("SS55ggH");
     TDirectory *QCD55jetggH =fout->mkdir("QCD55ggH");
 
-    TDirectory *OS57jetggH =fout->mkdir("et_vbf_D0_1p6toPi_OSggH_Uns");
+    TDirectory *OS57jetggH =fout->mkdir("et_vbf_D0_1p6toPi_ggH_Uns");
     TDirectory *SS57jetggH =fout->mkdir("SS57ggH");
     TDirectory *QCD57jetggH =fout->mkdir("QCD57ggH");
 
 
     TDirectory *OS63jetggH =fout->mkdir("et_vbf_dPhia_OSggh");
-    TDirectory *SS63jetggH =fout->mkdir("et_vbf_dPhia_SSggH");
-    TDirectory *QCD63jetggH =fout->mkdir("et_vbf_dPhia_QCDggH");
+    TDirectory *SS63jetggH =fout->mkdir("SS63ggH");
+    TDirectory *QCD63jetggH =fout->mkdir("QCD63ggH");
 
-    TDirectory *OS64jetggH =fout->mkdir("et_vbf_dPhib_OSggH");
-    TDirectory *SS64jetggH =fout->mkdir("et_vbf_dPhib_SSggH");
-    TDirectory *QCD64jetggH =fout->mkdir("et_vbf_dPhib_QCDggH");
+    TDirectory *OS64jetggH =fout->mkdir("et_vbf_dPhib_ggH");
+    TDirectory *SS64jetggH =fout->mkdir("SS64ggH");
+    TDirectory *QCD64jetggH =fout->mkdir("QCD64ggH");
 
-    TDirectory *OS65jetggH =fout->mkdir("et_vbf_dPhic_OSggH");
-    TDirectory *SS65jetggH =fout->mkdir("et_vbf_dPhic_SSggH");
-    TDirectory *QCD65jetggH =fout->mkdir("et_vbf_dPhic_QCDggH");
 
-    TDirectory *OS67jetggH =fout->mkdir("et_vbf_dPhid_OSggH");
-    TDirectory *SS67jetggH =fout->mkdir("et_vbf_dPhid_SSggH");
-    TDirectory *QCD67jetggH =fout->mkdir("et_vbf_dPhid_QCDggH");
+    TDirectory *OS65jetggH =fout->mkdir("et_vbf_dPhic_ggH");
+    TDirectory *SS65jetggH =fout->mkdir("SS66ggH");
+    TDirectory *QCD65jetggH =fout->mkdir("QCD66ggH");
+
+    TDirectory *OS67jetggH =fout->mkdir("et_vbf_dPhid_ggH");
+    TDirectory *SS67jetggH =fout->mkdir("SS66ggH");
+    TDirectory *QCD67jetggH =fout->mkdir("QCD66ggH");
 
 
 
@@ -5021,8 +5022,8 @@ for (int j=0;j<binnum_dphijj+1;j++)cout<<" bins "<<bins_dphijj[j]<<endl;
 
 
 	OS7jetggH->cd();
-        h7_SSggH[k]->SetName(name.c_str()+postfix);
-        h7_WSSggH[k]->SetName(name.c_str()+postfix);
+        h7_OSggH[k]->SetName(name.c_str()+postfix);
+        h7_WOSggH[k]->SetName(name.c_str()+postfix);
         if (sample=="W"){
            h7_WOSggH[k]->Write();
 	}
