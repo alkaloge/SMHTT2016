@@ -186,6 +186,34 @@ if __name__ == "__main__":
     dir5jetggH=fout.mkdir("et_vbf_D0_0p4to0p8_ggH")
     dir7jetggH=fout.mkdir("et_vbf_D0_0p8to1p0_ggH")
 
+
+    dir33jetggH=fout.mkdir("et_vbf_D0_0p0to0p2_DCPm_ggH")
+    dir34jetggH=fout.mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH")
+    dir35jetggH=fout.mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH")
+    dir37jetggH=fout.mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH")
+
+    dir43jetggH =fout.mkdir("et_vbf_D0_Pito1p5m_ggH");
+    dir44jetggH =fout.mkdir("et_vbf_D0_1p5to0_ggH");
+    dir45jetggH =fout.mkdir("et_vbf_D0_0to1p5p_ggH");
+    dir47jetggH =fout.mkdir("et_vbf_D0_1p5toPi_ggH");
+
+    dir53jetggH =fout.mkdir("et_vbf_Pito1p6m_ggH");
+    dir54jetggH =fout.mkdir("et_vbf_1p6to0_ggH");
+    dir55jetggH =fout.mkdir("et_vbf_0to1p6p_ggH");
+    dir57jetggH =fout.mkdir("et_vbf_1p6toPi_ggH");
+
+    dir63jetggH =fout.mkdir("et_vbf_Pito1p6m_ggH_Uns");
+    dir64jetggH =fout.mkdir("et_vbf_1p6to0_ggH_Uns");
+    dir65jetggH =fout.mkdir("et_vbf_0to1p6p_ggH_Uns");
+    dir67jetggH =fout.mkdir("et_vbf_1p6toPi_ggH_Uns");
+
+    dir73jetggH =fout.mkdir("et_vbf_dPhia_ggH");
+    dir74jetggH =fout.mkdir("et_vbf_dPhib_ggH");
+    dir75jetggH =fout.mkdir("et_vbf_dPhic_ggH");
+    dir77jetggH =fout.mkdir("et_vbf_dPhid_ggH");
+
+
+
     dir53jet=fout.mkdir("et_vbf_D0hplus_0p0to0p2")
     dir54jet=fout.mkdir("et_vbf_D0hplus_0p2to0p4")
     dir55jet=fout.mkdir("et_vbf_D0hplus_0p4to0p8")
@@ -335,6 +363,7 @@ if __name__ == "__main__":
             if hQCD_3jet.GetBinContent(i)<0:
                 hQCD_3jet.SetBinError(i,max(0,hQCD_3jet.GetBinError(i)+hQCD_3jet.GetBinError(i)))
                 hQCD_3jet.SetBinContent(i,0)
+
 
         hSS_53jet=fData.Get("SS53/data_obs")
         hSS_53jet.Add(fDYJ.Get("SS53/ZJ"+post2[k]),-1)
@@ -786,6 +815,868 @@ if __name__ == "__main__":
                 hQCD_77jet.SetBinError(i,max(0,hQCD_77jet.GetBinError(i)+hQCD_77jet.GetBinError(i)))
                 hQCD_77jet.SetBinContent(i,0)
 
+########################3
+
+        hSS_3jetggH=fData.Get("SS3ggH/data_obs")
+        hSS_3jetggH.Add(fDYJ.Get("SS3ggH/ZJ"+post2[k]),-1)
+        hSS_3jetggH.Add(fDYL.Get("SS3ggH/ZL"+post2[k]),-1)
+        hSS_3jetggH.Add(fTTJ.Get("SS3ggH/TTJ"+post2[k]),-1)
+        hSS_3jetggH.Add(fTTT.Get("SS3ggH/TTT"+post2[k]),-1)
+        hSS_3jetggH.Add(fW.Get("SS3ggH/W"+postfix2[k]),-1)
+        hSS_3jetggH.Add(fVV.Get("SS3ggH/VV"+post2[k]),-1)
+        hSS_3jetggH.Add(fDYS.Get("SS3ggH/ZTT"+post2[k]),-1)
+        hSS_3jetggH.SetName("QCD"+postfix2[k])
+        hSS_3jetggH.Scale(factor2jet)
+        for i in range(0,hSS_3jetggH.GetSize()-2):
+            if hSS_3jetggH.GetBinContent(i)<0:
+                hSS_3jetggH.SetBinError(i,max(0,hSS_3jetggH.GetBinError(i)+hSS_3jetggH.GetBinError(i)))
+                hSS_3jetggH.SetBinContent(i,0)
+
+        hQCD_3jetggH=fData.Get("QCD3ggH/data_obs")
+        hQCD_3jetggH.Add(fDYJ.Get("QCD3ggH/ZJ"+post2[k]),-1)
+        hQCD_3jetggH.Add(fDYL.Get("QCD3ggH/ZL"+post2[k]),-1)
+        hQCD_3jetggH.Add(fTTJ.Get("QCD3ggH/TTJ"+post2[k]),-1)
+        hQCD_3jetggH.Add(fTTT.Get("QCD3ggH/TTT"+post2[k]),-1)
+        hQCD_3jetggH.Add(fW.Get("QCD3ggH/W"+postfix2[k]),-1)
+        hQCD_3jetggH.Add(fVV.Get("QCD3ggH/VV"+post2[k]),-1)
+        hQCD_3jetggH.Add(fDYS.Get("QCD3ggH/ZTT"+post2[k]),-1)
+        hQCD_3jetggH.SetName("QCD"+postfix2[k])
+        hQCD_3jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_3jetggH.GetSize()-2):
+            if hQCD_3jetggH.GetBinContent(i)<0:
+                hQCD_3jetggH.SetBinError(i,max(0,hQCD_3jetggH.GetBinError(i)+hQCD_3jetggH.GetBinError(i)))
+                hQCD_3jetggH.SetBinContent(i,0)
+
+        hSS_33jetggH=fData.Get("SS33ggH/data_obs")
+        hSS_33jetggH.Add(fDYJ.Get("SS33ggH/ZJ"+post2[k]),-1)
+        hSS_33jetggH.Add(fDYL.Get("SS33ggH/ZL"+post2[k]),-1)
+        hSS_33jetggH.Add(fTTJ.Get("SS33ggH/TTJ"+post2[k]),-1)
+        hSS_33jetggH.Add(fTTT.Get("SS33ggH/TTT"+post2[k]),-1)
+        hSS_33jetggH.Add(fW.Get("SS33ggH/W"+postfix2[k]),-1)
+        hSS_33jetggH.Add(fVV.Get("SS33ggH/VV"+post2[k]),-1)
+        hSS_33jetggH.Add(fDYS.Get("SS33ggH/ZTT"+post2[k]),-1)
+        hSS_33jetggH.SetName("QCD"+postfix2[k])
+        hSS_33jetggH.Scale(factor2jet)
+        for i in range(0,hSS_33jetggH.GetSize()-2):
+            if hSS_33jetggH.GetBinContent(i)<0:
+                hSS_33jetggH.SetBinError(i,max(0,hSS_33jetggH.GetBinError(i)+hSS_33jetggH.GetBinError(i)))
+                hSS_33jetggH.SetBinContent(i,0)
+
+        hQCD_33jetggH=fData.Get("QCD33ggH/data_obs")
+        hQCD_33jetggH.Add(fDYJ.Get("QCD33ggH/ZJ"+post2[k]),-1)
+        hQCD_33jetggH.Add(fDYL.Get("QCD33ggH/ZL"+post2[k]),-1)
+        hQCD_33jetggH.Add(fTTJ.Get("QCD33ggH/TTJ"+post2[k]),-1)
+        hQCD_33jetggH.Add(fTTT.Get("QCD33ggH/TTT"+post2[k]),-1)
+        hQCD_33jetggH.Add(fW.Get("QCD33ggH/W"+postfix2[k]),-1)
+        hQCD_33jetggH.Add(fVV.Get("QCD33ggH/VV"+post2[k]),-1)
+        hQCD_33jetggH.Add(fDYS.Get("QCD33ggH/ZTT"+post2[k]),-1)
+        hQCD_33jetggH.SetName("QCD"+postfix2[k])
+        hQCD_33jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_33jetggH.GetSize()-2):
+            if hQCD_33jetggH.GetBinContent(i)<0:
+                hQCD_33jetggH.SetBinError(i,max(0,hQCD_33jetggH.GetBinError(i)+hQCD_33jetggH.GetBinError(i)))
+                hQCD_33jetggH.SetBinContent(i,0)
+
+
+        hSS_43jetggH=fData.Get("SS43ggH/data_obs")
+        hSS_43jetggH.Add(fDYJ.Get("SS43ggH/ZJ"+post2[k]),-1)
+        hSS_43jetggH.Add(fDYL.Get("SS43ggH/ZL"+post2[k]),-1)
+        hSS_43jetggH.Add(fTTJ.Get("SS43ggH/TTJ"+post2[k]),-1)
+        hSS_43jetggH.Add(fTTT.Get("SS43ggH/TTT"+post2[k]),-1)
+        hSS_43jetggH.Add(fW.Get("SS43ggH/W"+postfix2[k]),-1)
+        hSS_43jetggH.Add(fVV.Get("SS43ggH/VV"+post2[k]),-1)
+        hSS_43jetggH.Add(fDYS.Get("SS43ggH/ZTT"+post2[k]),-1)
+        hSS_43jetggH.SetName("QCD"+postfix2[k])
+        hSS_43jetggH.Scale(factor2jet)
+        for i in range(0,hSS_43jetggH.GetSize()-2):
+            if hSS_43jetggH.GetBinContent(i)<0:
+                hSS_43jetggH.SetBinError(i,max(0,hSS_43jetggH.GetBinError(i)+hSS_43jetggH.GetBinError(i)))
+                hSS_43jetggH.SetBinContent(i,0)
+
+        hQCD_43jetggH=fData.Get("QCD43ggH/data_obs")
+        hQCD_43jetggH.Add(fDYJ.Get("QCD43ggH/ZJ"+post2[k]),-1)
+        hQCD_43jetggH.Add(fDYL.Get("QCD43ggH/ZL"+post2[k]),-1)
+        hQCD_43jetggH.Add(fTTJ.Get("QCD43ggH/TTJ"+post2[k]),-1)
+        hQCD_43jetggH.Add(fTTT.Get("QCD43ggH/TTT"+post2[k]),-1)
+        hQCD_43jetggH.Add(fW.Get("QCD43ggH/W"+postfix2[k]),-1)
+        hQCD_43jetggH.Add(fVV.Get("QCD43ggH/VV"+post2[k]),-1)
+        hQCD_43jetggH.Add(fDYS.Get("QCD43ggH/ZTT"+post2[k]),-1)
+        hQCD_43jetggH.SetName("QCD"+postfix2[k])
+        hQCD_43jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_43jetggH.GetSize()-2):
+            if hQCD_43jetggH.GetBinContent(i)<0:
+                hQCD_43jetggH.SetBinError(i,max(0,hQCD_43jetggH.GetBinError(i)+hQCD_43jetggH.GetBinError(i)))
+                hQCD_43jetggH.SetBinContent(i,0)
+
+
+
+        hSS_53jetggH=fData.Get("SS53ggH/data_obs")
+        hSS_53jetggH.Add(fDYJ.Get("SS53ggH/ZJ"+post2[k]),-1)
+        hSS_53jetggH.Add(fDYL.Get("SS53ggH/ZL"+post2[k]),-1)
+        hSS_53jetggH.Add(fTTJ.Get("SS53ggH/TTJ"+post2[k]),-1)
+        hSS_53jetggH.Add(fTTT.Get("SS53ggH/TTT"+post2[k]),-1)
+        hSS_53jetggH.Add(fW.Get("SS53ggH/W"+postfix2[k]),-1)
+        hSS_53jetggH.Add(fVV.Get("SS53ggH/VV"+post2[k]),-1)
+        hSS_53jetggH.Add(fDYS.Get("SS53ggH/ZTT"+post2[k]),-1)
+        hSS_53jetggH.SetName("QCD"+postfix2[k])
+        hSS_53jetggH.Scale(factor2jet)
+        for i in range(0,hSS_53jetggH.GetSize()-2):
+            if hSS_53jetggH.GetBinContent(i)<0:
+                hSS_53jetggH.SetBinError(i,max(0,hSS_53jetggH.GetBinError(i)+hSS_53jetggH.GetBinError(i)))
+                hSS_53jetggH.SetBinContent(i,0)
+
+        hQCD_53jetggH=fData.Get("QCD53ggH/data_obs")
+        hQCD_53jetggH.Add(fDYJ.Get("QCD53ggH/ZJ"+post2[k]),-1)
+        hQCD_53jetggH.Add(fDYL.Get("QCD53ggH/ZL"+post2[k]),-1)
+        hQCD_53jetggH.Add(fTTJ.Get("QCD53ggH/TTJ"+post2[k]),-1)
+        hQCD_53jetggH.Add(fTTT.Get("QCD53ggH/TTT"+post2[k]),-1)
+        hQCD_53jetggH.Add(fW.Get("QCD53ggH/W"+postfix2[k]),-1)
+        hQCD_53jetggH.Add(fVV.Get("QCD53ggH/VV"+post2[k]),-1)
+        hQCD_53jetggH.Add(fDYS.Get("QCD53ggH/ZTT"+post2[k]),-1)
+        hQCD_53jetggH.SetName("QCD"+postfix2[k])
+        hQCD_53jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_53jetggH.GetSize()-2):
+            if hQCD_53jetggH.GetBinContent(i)<0:
+                hQCD_53jetggH.SetBinError(i,max(0,hQCD_53jetggH.GetBinError(i)+hQCD_53jetggH.GetBinError(i)))
+                hQCD_53jetggH.SetBinContent(i,0)
+
+        hSS_63jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_63jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_63jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_63jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_63jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_63jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_63jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_63jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_63jetggH.SetName("QCD"+postfix2[k])
+        hSS_63jetggH.Scale(factor2jet)
+        for i in range(0,hSS_63jetggH.GetSize()-2):
+            if hSS_63jetggH.GetBinContent(i)<0:
+                hSS_63jetggH.SetBinError(i,max(0,hSS_63jetggH.GetBinError(i)+hSS_63jetggH.GetBinError(i)))
+                hSS_63jetggH.SetBinContent(i,0)
+
+        hQCD_63jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_63jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_63jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_63jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_63jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_63jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_63jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_63jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_63jetggH.SetName("QCD"+postfix2[k])
+        hQCD_63jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_63jetggH.GetSize()-2):
+            if hQCD_63jetggH.GetBinContent(i)<0:
+                hQCD_63jetggH.SetBinError(i,max(0,hQCD_63jetggH.GetBinError(i)+hQCD_63jetggH.GetBinError(i)))
+                hQCD_63jetggH.SetBinContent(i,0)
+
+        print "check this "
+
+        hSS_73jetggH=fData.Get("SS73ggH/data_obs")
+        hSS_73jetggH.Add(fDYJ.Get("SS73ggH/ZJ"+post2[k]),-1)
+        hSS_73jetggH.Add(fDYL.Get("SS73ggH/ZL"+post2[k]),-1)
+        hSS_73jetggH.Add(fTTJ.Get("SS73ggH/TTJ"+post2[k]),-1)
+        hSS_73jetggH.Add(fTTT.Get("SS73ggH/TTT"+post2[k]),-1)
+        hSS_73jetggH.Add(fW.Get("SS73ggH/W"+postfix2[k]),-1)
+        hSS_73jetggH.Add(fVV.Get("SS73ggH/VV"+post2[k]),-1)
+        hSS_73jetggH.Add(fDYS.Get("SS73ggH/ZTT"+post2[k]),-1)
+        hSS_73jetggH.SetName("SS"+postfix2[k])
+        hSS_73jetggH.Scale(factor2jet)
+        for i in range(0,hSS_73jetggH.GetSize()-2):
+            if hSS_73jetggH.GetBinContent(i)<0:
+                hSS_73jetggH.SetBinError(i,max(0,hSS_73jetggH.GetBinError(i)+hSS_73jetggH.GetBinError(i)))
+                hSS_73jetggH.SetBinContent(i,0)
+
+        print "check this again "
+
+        hQCD_73jetggH=fData.Get("QCD73ggH/data_obs")
+        hQCD_73jetggH.Add(fDYJ.Get("QCD73ggH/ZJ"+post2[k]),-1)
+        hQCD_73jetggH.Add(fDYL.Get("QCD73ggH/ZL"+post2[k]),-1)
+        hQCD_73jetggH.Add(fTTJ.Get("QCD73ggH/TTJ"+post2[k]),-1)
+        hQCD_73jetggH.Add(fTTT.Get("QCD73ggH/TTT"+post2[k]),-1)
+        hQCD_73jetggH.Add(fW.Get("QCD73ggH/W"+postfix2[k]),-1)
+        hQCD_73jetggH.Add(fVV.Get("QCD73ggH/VV"+post2[k]),-1)
+        hQCD_73jetggH.Add(fDYS.Get("QCD73ggH/ZTT"+post2[k]),-1)
+        hQCD_73jetggH.SetName("QCD"+postfix2[k])
+        hQCD_73jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_73jetggH.GetSize()-2):
+            if hQCD_73jetggH.GetBinContent(i)<0:
+                hQCD_73jetggH.SetBinError(i,max(0,hQCD_73jetggH.GetBinError(i)+hQCD_73jetggH.GetBinError(i)))
+                hQCD_73jetggH.SetBinContent(i,0)
+
+
+##############
+        hSS_4jetggH=fData.Get("SS3ggH/data_obs")
+        hSS_4jetggH.Add(fDYJ.Get("SS3ggH/ZJ"+post2[k]),-1)
+        hSS_4jetggH.Add(fDYL.Get("SS3ggH/ZL"+post2[k]),-1)
+        hSS_4jetggH.Add(fTTJ.Get("SS3ggH/TTJ"+post2[k]),-1)
+        hSS_4jetggH.Add(fTTT.Get("SS3ggH/TTT"+post2[k]),-1)
+        hSS_4jetggH.Add(fW.Get("SS3ggH/W"+postfix2[k]),-1)
+        hSS_4jetggH.Add(fVV.Get("SS3ggH/VV"+post2[k]),-1)
+        hSS_4jetggH.Add(fDYS.Get("SS3ggH/ZTT"+post2[k]),-1)
+        hSS_4jetggH.SetName("QCD"+postfix2[k])
+        hSS_4jetggH.Scale(factor2jet)
+        for i in range(0,hSS_4jetggH.GetSize()-2):
+            if hSS_4jetggH.GetBinContent(i)<0:
+                hSS_4jetggH.SetBinError(i,max(0,hSS_4jetggH.GetBinError(i)+hSS_4jetggH.GetBinError(i)))
+                hSS_4jetggH.SetBinContent(i,0)
+
+        hQCD_4jetggH=fData.Get("QCD3ggH/data_obs")
+        hQCD_4jetggH.Add(fDYJ.Get("QCD3ggH/ZJ"+post2[k]),-1)
+        hQCD_4jetggH.Add(fDYL.Get("QCD3ggH/ZL"+post2[k]),-1)
+        hQCD_4jetggH.Add(fTTJ.Get("QCD3ggH/TTJ"+post2[k]),-1)
+        hQCD_4jetggH.Add(fTTT.Get("QCD3ggH/TTT"+post2[k]),-1)
+        hQCD_4jetggH.Add(fW.Get("QCD3ggH/W"+postfix2[k]),-1)
+        hQCD_4jetggH.Add(fVV.Get("QCD3ggH/VV"+post2[k]),-1)
+        hQCD_4jetggH.Add(fDYS.Get("QCD3ggH/ZTT"+post2[k]),-1)
+        hQCD_4jetggH.SetName("QCD"+postfix2[k])
+        hQCD_4jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_4jetggH.GetSize()-2):
+            if hQCD_4jetggH.GetBinContent(i)<0:
+                hQCD_4jetggH.SetBinError(i,max(0,hQCD_4jetggH.GetBinError(i)+hQCD_4jetggH.GetBinError(i)))
+                hQCD_4jetggH.SetBinContent(i,0)
+
+
+        hSS_34jetggH=fData.Get("SS33ggH/data_obs")
+        hSS_34jetggH.Add(fDYJ.Get("SS33ggH/ZJ"+post2[k]),-1)
+        hSS_34jetggH.Add(fDYL.Get("SS33ggH/ZL"+post2[k]),-1)
+        hSS_34jetggH.Add(fTTJ.Get("SS33ggH/TTJ"+post2[k]),-1)
+        hSS_34jetggH.Add(fTTT.Get("SS33ggH/TTT"+post2[k]),-1)
+        hSS_34jetggH.Add(fW.Get("SS33ggH/W"+postfix2[k]),-1)
+        hSS_34jetggH.Add(fVV.Get("SS33ggH/VV"+post2[k]),-1)
+        hSS_34jetggH.Add(fDYS.Get("SS33ggH/ZTT"+post2[k]),-1)
+        hSS_34jetggH.SetName("QCD"+postfix2[k])
+        hSS_34jetggH.Scale(factor2jet)
+        for i in range(0,hSS_34jetggH.GetSize()-2):
+            if hSS_34jetggH.GetBinContent(i)<0:
+                hSS_34jetggH.SetBinError(i,max(0,hSS_34jetggH.GetBinError(i)+hSS_34jetggH.GetBinError(i)))
+                hSS_34jetggH.SetBinContent(i,0)
+
+        hQCD_34jetggH=fData.Get("QCD33ggH/data_obs")
+        hQCD_34jetggH.Add(fDYJ.Get("QCD33ggH/ZJ"+post2[k]),-1)
+        hQCD_34jetggH.Add(fDYL.Get("QCD33ggH/ZL"+post2[k]),-1)
+        hQCD_34jetggH.Add(fTTJ.Get("QCD33ggH/TTJ"+post2[k]),-1)
+        hQCD_34jetggH.Add(fTTT.Get("QCD33ggH/TTT"+post2[k]),-1)
+        hQCD_34jetggH.Add(fW.Get("QCD33ggH/W"+postfix2[k]),-1)
+        hQCD_34jetggH.Add(fVV.Get("QCD33ggH/VV"+post2[k]),-1)
+        hQCD_34jetggH.Add(fDYS.Get("QCD33ggH/ZTT"+post2[k]),-1)
+        hQCD_34jetggH.SetName("QCD"+postfix2[k])
+        hQCD_34jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_34jetggH.GetSize()-2):
+            if hQCD_34jetggH.GetBinContent(i)<0:
+                hQCD_34jetggH.SetBinError(i,max(0,hQCD_34jetggH.GetBinError(i)+hQCD_34jetggH.GetBinError(i)))
+                hQCD_34jetggH.SetBinContent(i,0)
+
+
+        hSS_44jetggH=fData.Get("SS43ggH/data_obs")
+        hSS_44jetggH.Add(fDYJ.Get("SS43ggH/ZJ"+post2[k]),-1)
+        hSS_44jetggH.Add(fDYL.Get("SS43ggH/ZL"+post2[k]),-1)
+        hSS_44jetggH.Add(fTTJ.Get("SS43ggH/TTJ"+post2[k]),-1)
+        hSS_44jetggH.Add(fTTT.Get("SS43ggH/TTT"+post2[k]),-1)
+        hSS_44jetggH.Add(fW.Get("SS43ggH/W"+postfix2[k]),-1)
+        hSS_44jetggH.Add(fVV.Get("SS43ggH/VV"+post2[k]),-1)
+        hSS_44jetggH.Add(fDYS.Get("SS43ggH/ZTT"+post2[k]),-1)
+        hSS_44jetggH.SetName("QCD"+postfix2[k])
+        hSS_44jetggH.Scale(factor2jet)
+        for i in range(0,hSS_44jetggH.GetSize()-2):
+            if hSS_44jetggH.GetBinContent(i)<0:
+                hSS_44jetggH.SetBinError(i,max(0,hSS_44jetggH.GetBinError(i)+hSS_44jetggH.GetBinError(i)))
+                hSS_44jetggH.SetBinContent(i,0)
+
+        hQCD_44jetggH=fData.Get("QCD43ggH/data_obs")
+        hQCD_44jetggH.Add(fDYJ.Get("QCD43ggH/ZJ"+post2[k]),-1)
+        hQCD_44jetggH.Add(fDYL.Get("QCD43ggH/ZL"+post2[k]),-1)
+        hQCD_44jetggH.Add(fTTJ.Get("QCD43ggH/TTJ"+post2[k]),-1)
+        hQCD_44jetggH.Add(fTTT.Get("QCD43ggH/TTT"+post2[k]),-1)
+        hQCD_44jetggH.Add(fW.Get("QCD43ggH/W"+postfix2[k]),-1)
+        hQCD_44jetggH.Add(fVV.Get("QCD43ggH/VV"+post2[k]),-1)
+        hQCD_44jetggH.Add(fDYS.Get("QCD43ggH/ZTT"+post2[k]),-1)
+        hQCD_44jetggH.SetName("QCD"+postfix2[k])
+        hQCD_44jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_44jetggH.GetSize()-2):
+            if hQCD_44jetggH.GetBinContent(i)<0:
+                hQCD_44jetggH.SetBinError(i,max(0,hQCD_44jetggH.GetBinError(i)+hQCD_44jetggH.GetBinError(i)))
+                hQCD_44jetggH.SetBinContent(i,0)
+
+
+
+        hSS_54jetggH=fData.Get("SS53ggH/data_obs")
+        hSS_54jetggH.Add(fDYJ.Get("SS53ggH/ZJ"+post2[k]),-1)
+        hSS_54jetggH.Add(fDYL.Get("SS53ggH/ZL"+post2[k]),-1)
+        hSS_54jetggH.Add(fTTJ.Get("SS53ggH/TTJ"+post2[k]),-1)
+        hSS_54jetggH.Add(fTTT.Get("SS53ggH/TTT"+post2[k]),-1)
+        hSS_54jetggH.Add(fW.Get("SS53ggH/W"+postfix2[k]),-1)
+        hSS_54jetggH.Add(fVV.Get("SS53ggH/VV"+post2[k]),-1)
+        hSS_54jetggH.Add(fDYS.Get("SS53ggH/ZTT"+post2[k]),-1)
+        hSS_54jetggH.SetName("QCD"+postfix2[k])
+        hSS_54jetggH.Scale(factor2jet)
+        for i in range(0,hSS_54jetggH.GetSize()-2):
+            if hSS_54jetggH.GetBinContent(i)<0:
+                hSS_54jetggH.SetBinError(i,max(0,hSS_54jetggH.GetBinError(i)+hSS_54jetggH.GetBinError(i)))
+                hSS_54jetggH.SetBinContent(i,0)
+
+        hQCD_54jetggH=fData.Get("QCD53ggH/data_obs")
+        hQCD_54jetggH.Add(fDYJ.Get("QCD53ggH/ZJ"+post2[k]),-1)
+        hQCD_54jetggH.Add(fDYL.Get("QCD53ggH/ZL"+post2[k]),-1)
+        hQCD_54jetggH.Add(fTTJ.Get("QCD53ggH/TTJ"+post2[k]),-1)
+        hQCD_54jetggH.Add(fTTT.Get("QCD53ggH/TTT"+post2[k]),-1)
+        hQCD_54jetggH.Add(fW.Get("QCD53ggH/W"+postfix2[k]),-1)
+        hQCD_54jetggH.Add(fVV.Get("QCD53ggH/VV"+post2[k]),-1)
+        hQCD_54jetggH.Add(fDYS.Get("QCD53ggH/ZTT"+post2[k]),-1)
+        hQCD_54jetggH.SetName("QCD"+postfix2[k])
+        hQCD_54jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_54jetggH.GetSize()-2):
+            if hQCD_54jetggH.GetBinContent(i)<0:
+                hQCD_54jetggH.SetBinError(i,max(0,hQCD_54jetggH.GetBinError(i)+hQCD_54jetggH.GetBinError(i)))
+                hQCD_54jetggH.SetBinContent(i,0)
+
+        hSS_64jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_64jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_64jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_64jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_64jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_64jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_64jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_64jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_64jetggH.SetName("QCD"+postfix2[k])
+        hSS_64jetggH.Scale(factor2jet)
+        for i in range(0,hSS_64jetggH.GetSize()-2):
+            if hSS_64jetggH.GetBinContent(i)<0:
+                hSS_64jetggH.SetBinError(i,max(0,hSS_64jetggH.GetBinError(i)+hSS_64jetggH.GetBinError(i)))
+                hSS_64jetggH.SetBinContent(i,0)
+
+        hQCD_64jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_64jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_64jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_64jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_64jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_64jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_64jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_64jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_64jetggH.SetName("QCD"+postfix2[k])
+        hQCD_64jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_64jetggH.GetSize()-2):
+            if hQCD_64jetggH.GetBinContent(i)<0:
+                hQCD_64jetggH.SetBinError(i,max(0,hQCD_64jetggH.GetBinError(i)+hQCD_64jetggH.GetBinError(i)))
+                hQCD_64jetggH.SetBinContent(i,0)
+
+        hSS_74jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_74jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_74jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_74jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_74jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_74jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_74jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_74jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_74jetggH.SetName("SS"+postfix2[k])
+        hSS_74jetggH.Scale(factor2jet)
+        for i in range(0,hSS_74jetggH.GetSize()-2):
+            if hSS_74jetggH.GetBinContent(i)<0:
+                hSS_74jetggH.SetBinError(i,max(0,hSS_74jetggH.GetBinError(i)+hSS_74jetggH.GetBinError(i)))
+                hSS_74jetggH.SetBinContent(i,0)
+
+
+        hQCD_74jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_74jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_74jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_74jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_74jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_74jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_74jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_74jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_74jetggH.SetName("QCD"+postfix2[k])
+        hQCD_74jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_74jetggH.GetSize()-2):
+            if hQCD_74jetggH.GetBinContent(i)<0:
+                hQCD_74jetggH.SetBinError(i,max(0,hQCD_74jetggH.GetBinError(i)+hQCD_74jetggH.GetBinError(i)))
+                hQCD_74jetggH.SetBinContent(i,0)
+
+#############
+        hQCD_5jetggH=fData.Get("QCD5ggH/data_obs")
+        hQCD_5jetggH.Add(fDYJ.Get("QCD5ggH/ZJ"+post2[k]),-1)
+        hQCD_5jetggH.Add(fDYL.Get("QCD5ggH/ZL"+post2[k]),-1)
+        hQCD_5jetggH.Add(fTTJ.Get("QCD5ggH/TTJ"+post2[k]),-1)
+        hQCD_5jetggH.Add(fTTT.Get("QCD5ggH/TTT"+post2[k]),-1)
+        hQCD_5jetggH.Add(fW.Get("QCD5ggH/W"+postfix2[k]),-1)
+        hQCD_5jetggH.Add(fVV.Get("QCD5ggH/VV"+post2[k]),-1)
+        hQCD_5jetggH.Add(fDYS.Get("QCD5ggH/ZTT"+post2[k]),-1)
+        hQCD_5jetggH.SetName("QCD"+postfix2[k])
+        hQCD_5jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_5jetggH.GetSize()-2):
+            if hQCD_5jetggH.GetBinContent(i)<0:
+                hQCD_5jetggH.SetBinError(i,max(0,hQCD_5jetggH.GetBinError(i)+hQCD_5jetggH.GetBinError(i)))
+                hQCD_5jetggH.SetBinContent(i,0)
+
+
+
+        hSS_55jetggH=fData.Get("SS55ggH/data_obs")
+        hSS_55jetggH.Add(fDYJ.Get("SS55ggH/ZJ"+post2[k]),-1)
+        hSS_55jetggH.Add(fDYL.Get("SS55ggH/ZL"+post2[k]),-1)
+        hSS_55jetggH.Add(fTTJ.Get("SS55ggH/TTJ"+post2[k]),-1)
+        hSS_55jetggH.Add(fTTT.Get("SS55ggH/TTT"+post2[k]),-1)
+        hSS_55jetggH.Add(fW.Get("SS55ggH/W"+postfix2[k]),-1)
+        hSS_55jetggH.Add(fVV.Get("SS55ggH/VV"+post2[k]),-1)
+        hSS_55jetggH.Add(fDYS.Get("SS55ggH/ZTT"+post2[k]),-1)
+        hSS_55jetggH.SetName("QCD"+postfix2[k])
+        hSS_55jetggH.Scale(factor2jet)
+        for i in range(0,hSS_55jetggH.GetSize()-2):
+            if hSS_55jetggH.GetBinContent(i)<0:
+                hSS_55jetggH.SetBinError(i,max(0,hSS_55jetggH.GetBinError(i)+hSS_55jetggH.GetBinError(i)))
+                hSS_55jetggH.SetBinContent(i,0)
+
+        hQCD_55jetggH=fData.Get("QCD55ggH/data_obs")
+        hQCD_55jetggH.Add(fDYJ.Get("QCD55ggH/ZJ"+post2[k]),-1)
+        hQCD_55jetggH.Add(fDYL.Get("QCD55ggH/ZL"+post2[k]),-1)
+        hQCD_55jetggH.Add(fTTJ.Get("QCD55ggH/TTJ"+post2[k]),-1)
+        hQCD_55jetggH.Add(fTTT.Get("QCD55ggH/TTT"+post2[k]),-1)
+        hQCD_55jetggH.Add(fW.Get("QCD55ggH/W"+postfix2[k]),-1)
+        hQCD_55jetggH.Add(fVV.Get("QCD55ggH/VV"+post2[k]),-1)
+        hQCD_55jetggH.Add(fDYS.Get("QCD55ggH/ZTT"+post2[k]),-1)
+        hQCD_55jetggH.SetName("QCD"+postfix2[k])
+        hQCD_55jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_55jetggH.GetSize()-2):
+            if hQCD_55jetggH.GetBinContent(i)<0:
+                hQCD_55jetggH.SetBinError(i,max(0,hQCD_55jetggH.GetBinError(i)+hQCD_55jetggH.GetBinError(i)))
+                hQCD_55jetggH.SetBinContent(i,0)
+
+        hSS_65jetggH=fData.Get("SS65ggH/data_obs")
+        hSS_65jetggH.Add(fDYJ.Get("SS65ggH/ZJ"+post2[k]),-1)
+        hSS_65jetggH.Add(fDYL.Get("SS65ggH/ZL"+post2[k]),-1)
+        hSS_65jetggH.Add(fTTJ.Get("SS65ggH/TTJ"+post2[k]),-1)
+        hSS_65jetggH.Add(fTTT.Get("SS65ggH/TTT"+post2[k]),-1)
+        hSS_65jetggH.Add(fW.Get("SS65ggH/W"+postfix2[k]),-1)
+        hSS_65jetggH.Add(fVV.Get("SS65ggH/VV"+post2[k]),-1)
+        hSS_65jetggH.Add(fDYS.Get("SS65ggH/ZTT"+post2[k]),-1)
+        hSS_65jetggH.SetName("QCD"+postfix2[k])
+        hSS_65jetggH.Scale(factor2jet)
+        for i in range(0,hSS_65jetggH.GetSize()-2):
+            if hSS_65jetggH.GetBinContent(i)<0:
+                hSS_65jetggH.SetBinError(i,max(0,hSS_65jetggH.GetBinError(i)+hSS_65jetggH.GetBinError(i)))
+                hSS_65jetggH.SetBinContent(i,0)
+
+        hQCD_65jetggH=fData.Get("QCD65ggH/data_obs")
+        hQCD_65jetggH.Add(fDYJ.Get("QCD65ggH/ZJ"+post2[k]),-1)
+        hQCD_65jetggH.Add(fDYL.Get("QCD65ggH/ZL"+post2[k]),-1)
+        hQCD_65jetggH.Add(fTTJ.Get("QCD65ggH/TTJ"+post2[k]),-1)
+        hQCD_65jetggH.Add(fTTT.Get("QCD65ggH/TTT"+post2[k]),-1)
+        hQCD_65jetggH.Add(fW.Get("QCD65ggH/W"+postfix2[k]),-1)
+        hQCD_65jetggH.Add(fVV.Get("QCD65ggH/VV"+post2[k]),-1)
+        hQCD_65jetggH.Add(fDYS.Get("QCD65ggH/ZTT"+post2[k]),-1)
+        hQCD_65jetggH.SetName("QCD"+postfix2[k])
+        hQCD_65jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_65jetggH.GetSize()-2):
+            if hQCD_65jetggH.GetBinContent(i)<0:
+                hQCD_65jetggH.SetBinError(i,max(0,hQCD_65jetggH.GetBinError(i)+hQCD_65jetggH.GetBinError(i)))
+                hQCD_65jetggH.SetBinContent(i,0)
+
+        hSS_75jetggH=fData.Get("SS75ggH/data_obs")
+        hSS_75jetggH.Add(fDYJ.Get("SS75ggH/ZJ"+post2[k]),-1)
+        hSS_75jetggH.Add(fDYL.Get("SS75ggH/ZL"+post2[k]),-1)
+        hSS_75jetggH.Add(fTTJ.Get("SS75ggH/TTJ"+post2[k]),-1)
+        hSS_75jetggH.Add(fTTT.Get("SS75ggH/TTT"+post2[k]),-1)
+        hSS_75jetggH.Add(fW.Get("SS75ggH/W"+postfix2[k]),-1)
+        hSS_75jetggH.Add(fVV.Get("SS75ggH/VV"+post2[k]),-1)
+        hSS_75jetggH.Add(fDYS.Get("SS75ggH/ZTT"+post2[k]),-1)
+        hSS_75jetggH.SetName("SS"+postfix2[k])
+        hSS_75jetggH.Scale(factor2jet)
+        for i in range(0,hSS_75jetggH.GetSize()-2):
+            if hSS_75jetggH.GetBinContent(i)<0:
+                hSS_75jetggH.SetBinError(i,max(0,hSS_75jetggH.GetBinError(i)+hSS_75jetggH.GetBinError(i)))
+                hSS_75jetggH.SetBinContent(i,0)
+
+        hQCD_75jetggH=fData.Get("QCD75ggH/data_obs")
+        hQCD_75jetggH.Add(fDYJ.Get("QCD75ggH/ZJ"+post2[k]),-1)
+        hQCD_75jetggH.Add(fDYL.Get("QCD75ggH/ZL"+post2[k]),-1)
+        hQCD_75jetggH.Add(fTTJ.Get("QCD75ggH/TTJ"+post2[k]),-1)
+        hQCD_75jetggH.Add(fTTT.Get("QCD75ggH/TTT"+post2[k]),-1)
+        hQCD_75jetggH.Add(fW.Get("QCD75ggH/W"+postfix2[k]),-1)
+        hQCD_75jetggH.Add(fVV.Get("QCD75ggH/VV"+post2[k]),-1)
+        hQCD_75jetggH.Add(fDYS.Get("QCD75ggH/ZTT"+post2[k]),-1)
+        hQCD_75jetggH.SetName("QCD"+postfix2[k])
+        hQCD_75jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_75jetggH.GetSize()-2):
+            if hQCD_75jetggH.GetBinContent(i)<0:
+                hQCD_75jetggH.SetBinError(i,max(0,hQCD_75jetggH.GetBinError(i)+hQCD_75jetggH.GetBinError(i)))
+                hQCD_75jetggH.SetBinContent(i,0)
+
+
+
+
+
+
+################
+
+
+        hSS_5jetggH=fData.Get("SS3ggH/data_obs")
+        hSS_5jetggH.Add(fDYJ.Get("SS3ggH/ZJ"+post2[k]),-1)
+        hSS_5jetggH.Add(fDYL.Get("SS3ggH/ZL"+post2[k]),-1)
+        hSS_5jetggH.Add(fTTJ.Get("SS3ggH/TTJ"+post2[k]),-1)
+        hSS_5jetggH.Add(fTTT.Get("SS3ggH/TTT"+post2[k]),-1)
+        hSS_5jetggH.Add(fW.Get("SS3ggH/W"+postfix2[k]),-1)
+        hSS_5jetggH.Add(fVV.Get("SS3ggH/VV"+post2[k]),-1)
+        hSS_5jetggH.Add(fDYS.Get("SS3ggH/ZTT"+post2[k]),-1)
+        hSS_5jetggH.SetName("QCD"+postfix2[k])
+        hSS_5jetggH.Scale(factor2jet)
+        for i in range(0,hSS_5jetggH.GetSize()-2):
+            if hSS_5jetggH.GetBinContent(i)<0:
+                hSS_5jetggH.SetBinError(i,max(0,hSS_5jetggH.GetBinError(i)+hSS_5jetggH.GetBinError(i)))
+                hSS_5jetggH.SetBinContent(i,0)
+
+        hQCD_5jetggH=fData.Get("QCD3ggH/data_obs")
+        hQCD_5jetggH.Add(fDYJ.Get("QCD3ggH/ZJ"+post2[k]),-1)
+        hQCD_5jetggH.Add(fDYL.Get("QCD3ggH/ZL"+post2[k]),-1)
+        hQCD_5jetggH.Add(fTTJ.Get("QCD3ggH/TTJ"+post2[k]),-1)
+        hQCD_5jetggH.Add(fTTT.Get("QCD3ggH/TTT"+post2[k]),-1)
+        hQCD_5jetggH.Add(fW.Get("QCD3ggH/W"+postfix2[k]),-1)
+        hQCD_5jetggH.Add(fVV.Get("QCD3ggH/VV"+post2[k]),-1)
+        hQCD_5jetggH.Add(fDYS.Get("QCD3ggH/ZTT"+post2[k]),-1)
+        hQCD_5jetggH.SetName("QCD"+postfix2[k])
+        hQCD_5jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_5jetggH.GetSize()-2):
+            if hQCD_5jetggH.GetBinContent(i)<0:
+                hQCD_5jetggH.SetBinError(i,max(0,hQCD_5jetggH.GetBinError(i)+hQCD_5jetggH.GetBinError(i)))
+                hQCD_5jetggH.SetBinContent(i,0)
+
+
+        hSS_35jetggH=fData.Get("SS33ggH/data_obs")
+        hSS_35jetggH.Add(fDYJ.Get("SS33ggH/ZJ"+post2[k]),-1)
+        hSS_35jetggH.Add(fDYL.Get("SS33ggH/ZL"+post2[k]),-1)
+        hSS_35jetggH.Add(fTTJ.Get("SS33ggH/TTJ"+post2[k]),-1)
+        hSS_35jetggH.Add(fTTT.Get("SS33ggH/TTT"+post2[k]),-1)
+        hSS_35jetggH.Add(fW.Get("SS33ggH/W"+postfix2[k]),-1)
+        hSS_35jetggH.Add(fVV.Get("SS33ggH/VV"+post2[k]),-1)
+        hSS_35jetggH.Add(fDYS.Get("SS33ggH/ZTT"+post2[k]),-1)
+        hSS_35jetggH.SetName("QCD"+postfix2[k])
+        hSS_35jetggH.Scale(factor2jet)
+        for i in range(0,hSS_35jetggH.GetSize()-2):
+            if hSS_35jetggH.GetBinContent(i)<0:
+                hSS_35jetggH.SetBinError(i,max(0,hSS_35jetggH.GetBinError(i)+hSS_35jetggH.GetBinError(i)))
+                hSS_35jetggH.SetBinContent(i,0)
+
+        hQCD_35jetggH=fData.Get("QCD33ggH/data_obs")
+        hQCD_35jetggH.Add(fDYJ.Get("QCD33ggH/ZJ"+post2[k]),-1)
+        hQCD_35jetggH.Add(fDYL.Get("QCD33ggH/ZL"+post2[k]),-1)
+        hQCD_35jetggH.Add(fTTJ.Get("QCD33ggH/TTJ"+post2[k]),-1)
+        hQCD_35jetggH.Add(fTTT.Get("QCD33ggH/TTT"+post2[k]),-1)
+        hQCD_35jetggH.Add(fW.Get("QCD33ggH/W"+postfix2[k]),-1)
+        hQCD_35jetggH.Add(fVV.Get("QCD33ggH/VV"+post2[k]),-1)
+        hQCD_35jetggH.Add(fDYS.Get("QCD33ggH/ZTT"+post2[k]),-1)
+        hQCD_35jetggH.SetName("QCD"+postfix2[k])
+        hQCD_35jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_35jetggH.GetSize()-2):
+            if hQCD_35jetggH.GetBinContent(i)<0:
+                hQCD_35jetggH.SetBinError(i,max(0,hQCD_35jetggH.GetBinError(i)+hQCD_35jetggH.GetBinError(i)))
+                hQCD_35jetggH.SetBinContent(i,0)
+
+
+        hSS_45jetggH=fData.Get("SS43ggH/data_obs")
+        hSS_45jetggH.Add(fDYJ.Get("SS43ggH/ZJ"+post2[k]),-1)
+        hSS_45jetggH.Add(fDYL.Get("SS43ggH/ZL"+post2[k]),-1)
+        hSS_45jetggH.Add(fTTJ.Get("SS43ggH/TTJ"+post2[k]),-1)
+        hSS_45jetggH.Add(fTTT.Get("SS43ggH/TTT"+post2[k]),-1)
+        hSS_45jetggH.Add(fW.Get("SS43ggH/W"+postfix2[k]),-1)
+        hSS_45jetggH.Add(fVV.Get("SS43ggH/VV"+post2[k]),-1)
+        hSS_45jetggH.Add(fDYS.Get("SS43ggH/ZTT"+post2[k]),-1)
+        hSS_45jetggH.SetName("QCD"+postfix2[k])
+        hSS_45jetggH.Scale(factor2jet)
+        for i in range(0,hSS_45jetggH.GetSize()-2):
+            if hSS_45jetggH.GetBinContent(i)<0:
+                hSS_45jetggH.SetBinError(i,max(0,hSS_45jetggH.GetBinError(i)+hSS_45jetggH.GetBinError(i)))
+                hSS_45jetggH.SetBinContent(i,0)
+
+        hQCD_45jetggH=fData.Get("QCD43ggH/data_obs")
+        hQCD_45jetggH.Add(fDYJ.Get("QCD43ggH/ZJ"+post2[k]),-1)
+        hQCD_45jetggH.Add(fDYL.Get("QCD43ggH/ZL"+post2[k]),-1)
+        hQCD_45jetggH.Add(fTTJ.Get("QCD43ggH/TTJ"+post2[k]),-1)
+        hQCD_45jetggH.Add(fTTT.Get("QCD43ggH/TTT"+post2[k]),-1)
+        hQCD_45jetggH.Add(fW.Get("QCD43ggH/W"+postfix2[k]),-1)
+        hQCD_45jetggH.Add(fVV.Get("QCD43ggH/VV"+post2[k]),-1)
+        hQCD_45jetggH.Add(fDYS.Get("QCD43ggH/ZTT"+post2[k]),-1)
+        hQCD_45jetggH.SetName("QCD"+postfix2[k])
+        hQCD_45jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_45jetggH.GetSize()-2):
+            if hQCD_45jetggH.GetBinContent(i)<0:
+                hQCD_45jetggH.SetBinError(i,max(0,hQCD_45jetggH.GetBinError(i)+hQCD_45jetggH.GetBinError(i)))
+                hQCD_45jetggH.SetBinContent(i,0)
+
+
+
+        hSS_55jetggH=fData.Get("SS53ggH/data_obs")
+        hSS_55jetggH.Add(fDYJ.Get("SS53ggH/ZJ"+post2[k]),-1)
+        hSS_55jetggH.Add(fDYL.Get("SS53ggH/ZL"+post2[k]),-1)
+        hSS_55jetggH.Add(fTTJ.Get("SS53ggH/TTJ"+post2[k]),-1)
+        hSS_55jetggH.Add(fTTT.Get("SS53ggH/TTT"+post2[k]),-1)
+        hSS_55jetggH.Add(fW.Get("SS53ggH/W"+postfix2[k]),-1)
+        hSS_55jetggH.Add(fVV.Get("SS53ggH/VV"+post2[k]),-1)
+        hSS_55jetggH.Add(fDYS.Get("SS53ggH/ZTT"+post2[k]),-1)
+        hSS_55jetggH.SetName("QCD"+postfix2[k])
+        hSS_55jetggH.Scale(factor2jet)
+        for i in range(0,hSS_55jetggH.GetSize()-2):
+            if hSS_55jetggH.GetBinContent(i)<0:
+                hSS_55jetggH.SetBinError(i,max(0,hSS_55jetggH.GetBinError(i)+hSS_55jetggH.GetBinError(i)))
+                hSS_55jetggH.SetBinContent(i,0)
+
+        hQCD_55jetggH=fData.Get("QCD53ggH/data_obs")
+        hQCD_55jetggH.Add(fDYJ.Get("QCD53ggH/ZJ"+post2[k]),-1)
+        hQCD_55jetggH.Add(fDYL.Get("QCD53ggH/ZL"+post2[k]),-1)
+        hQCD_55jetggH.Add(fTTJ.Get("QCD53ggH/TTJ"+post2[k]),-1)
+        hQCD_55jetggH.Add(fTTT.Get("QCD53ggH/TTT"+post2[k]),-1)
+        hQCD_55jetggH.Add(fW.Get("QCD53ggH/W"+postfix2[k]),-1)
+        hQCD_55jetggH.Add(fVV.Get("QCD53ggH/VV"+post2[k]),-1)
+        hQCD_55jetggH.Add(fDYS.Get("QCD53ggH/ZTT"+post2[k]),-1)
+        hQCD_55jetggH.SetName("QCD"+postfix2[k])
+        hQCD_55jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_55jetggH.GetSize()-2):
+            if hQCD_55jetggH.GetBinContent(i)<0:
+                hQCD_55jetggH.SetBinError(i,max(0,hQCD_55jetggH.GetBinError(i)+hQCD_55jetggH.GetBinError(i)))
+                hQCD_55jetggH.SetBinContent(i,0)
+
+        hSS_65jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_65jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_65jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_65jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_65jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_65jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_65jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_65jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_65jetggH.SetName("QCD"+postfix2[k])
+        hSS_65jetggH.Scale(factor2jet)
+        for i in range(0,hSS_65jetggH.GetSize()-2):
+            if hSS_65jetggH.GetBinContent(i)<0:
+                hSS_65jetggH.SetBinError(i,max(0,hSS_65jetggH.GetBinError(i)+hSS_65jetggH.GetBinError(i)))
+                hSS_65jetggH.SetBinContent(i,0)
+
+        hSS_75jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_75jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_75jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_75jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_75jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_75jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_75jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_75jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_75jetggH.SetName("SS"+postfix2[k])
+        hSS_75jetggH.Scale(factor2jet)
+        for i in range(0,hSS_75jetggH.GetSize()-2):
+            if hSS_75jetggH.GetBinContent(i)<0:
+                hSS_75jetggH.SetBinError(i,max(0,hSS_65jetggH.GetBinError(i)+hSS_65jetggH.GetBinError(i)))
+                hSS_75jetggH.SetBinContent(i,0)
+
+        hQCD_75jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_75jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_75jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_75jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_75jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_75jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_75jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_75jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_75jetggH.SetName("QCD"+postfix2[k])
+        hQCD_75jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_75jetggH.GetSize()-2):
+            if hQCD_75jetggH.GetBinContent(i)<0:
+                hQCD_75jetggH.SetBinError(i,max(0,hQCD_65jetggH.GetBinError(i)+hQCD_65jetggH.GetBinError(i)))
+                hQCD_75jetggH.SetBinContent(i,0)
+
+
+
+
+####################
+
+        hSS_7jetggH=fData.Get("SS3ggH/data_obs")
+        hSS_7jetggH.Add(fDYJ.Get("SS3ggH/ZJ"+post2[k]),-1)
+        hSS_7jetggH.Add(fDYL.Get("SS3ggH/ZL"+post2[k]),-1)
+        hSS_7jetggH.Add(fTTJ.Get("SS3ggH/TTJ"+post2[k]),-1)
+        hSS_7jetggH.Add(fTTT.Get("SS3ggH/TTT"+post2[k]),-1)
+        hSS_7jetggH.Add(fW.Get("SS3ggH/W"+postfix2[k]),-1)
+        hSS_7jetggH.Add(fVV.Get("SS3ggH/VV"+post2[k]),-1)
+        hSS_7jetggH.Add(fDYS.Get("SS3ggH/ZTT"+post2[k]),-1)
+        hSS_7jetggH.SetName("QCD"+postfix2[k])
+        hSS_7jetggH.Scale(factor2jet)
+        for i in range(0,hSS_7jetggH.GetSize()-2):
+            if hSS_7jetggH.GetBinContent(i)<0:
+                hSS_7jetggH.SetBinError(i,max(0,hSS_7jetggH.GetBinError(i)+hSS_7jetggH.GetBinError(i)))
+                hSS_7jetggH.SetBinContent(i,0)
+
+        hQCD_7jetggH=fData.Get("QCD3ggH/data_obs")
+        hQCD_7jetggH.Add(fDYJ.Get("QCD3ggH/ZJ"+post2[k]),-1)
+        hQCD_7jetggH.Add(fDYL.Get("QCD3ggH/ZL"+post2[k]),-1)
+        hQCD_7jetggH.Add(fTTJ.Get("QCD3ggH/TTJ"+post2[k]),-1)
+        hQCD_7jetggH.Add(fTTT.Get("QCD3ggH/TTT"+post2[k]),-1)
+        hQCD_7jetggH.Add(fW.Get("QCD3ggH/W"+postfix2[k]),-1)
+        hQCD_7jetggH.Add(fVV.Get("QCD3ggH/VV"+post2[k]),-1)
+        hQCD_7jetggH.Add(fDYS.Get("QCD3ggH/ZTT"+post2[k]),-1)
+        hQCD_7jetggH.SetName("QCD"+postfix2[k])
+        hQCD_7jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_7jetggH.GetSize()-2):
+            if hQCD_7jetggH.GetBinContent(i)<0:
+                hQCD_7jetggH.SetBinError(i,max(0,hQCD_7jetggH.GetBinError(i)+hQCD_7jetggH.GetBinError(i)))
+                hQCD_7jetggH.SetBinContent(i,0)
+
+
+        hSS_37jetggH=fData.Get("SS33ggH/data_obs")
+        hSS_37jetggH.Add(fDYJ.Get("SS33ggH/ZJ"+post2[k]),-1)
+        hSS_37jetggH.Add(fDYL.Get("SS33ggH/ZL"+post2[k]),-1)
+        hSS_37jetggH.Add(fTTJ.Get("SS33ggH/TTJ"+post2[k]),-1)
+        hSS_37jetggH.Add(fTTT.Get("SS33ggH/TTT"+post2[k]),-1)
+        hSS_37jetggH.Add(fW.Get("SS33ggH/W"+postfix2[k]),-1)
+        hSS_37jetggH.Add(fVV.Get("SS33ggH/VV"+post2[k]),-1)
+        hSS_37jetggH.Add(fDYS.Get("SS33ggH/ZTT"+post2[k]),-1)
+        hSS_37jetggH.SetName("QCD"+postfix2[k])
+        hSS_37jetggH.Scale(factor2jet)
+        for i in range(0,hSS_37jetggH.GetSize()-2):
+            if hSS_37jetggH.GetBinContent(i)<0:
+                hSS_37jetggH.SetBinError(i,max(0,hSS_37jetggH.GetBinError(i)+hSS_37jetggH.GetBinError(i)))
+                hSS_37jetggH.SetBinContent(i,0)
+
+        hQCD_37jetggH=fData.Get("QCD33ggH/data_obs")
+        hQCD_37jetggH.Add(fDYJ.Get("QCD33ggH/ZJ"+post2[k]),-1)
+        hQCD_37jetggH.Add(fDYL.Get("QCD33ggH/ZL"+post2[k]),-1)
+        hQCD_37jetggH.Add(fTTJ.Get("QCD33ggH/TTJ"+post2[k]),-1)
+        hQCD_37jetggH.Add(fTTT.Get("QCD33ggH/TTT"+post2[k]),-1)
+        hQCD_37jetggH.Add(fW.Get("QCD33ggH/W"+postfix2[k]),-1)
+        hQCD_37jetggH.Add(fVV.Get("QCD33ggH/VV"+post2[k]),-1)
+        hQCD_37jetggH.Add(fDYS.Get("QCD33ggH/ZTT"+post2[k]),-1)
+        hQCD_37jetggH.SetName("QCD"+postfix2[k])
+        hQCD_37jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_37jetggH.GetSize()-2):
+            if hQCD_37jetggH.GetBinContent(i)<0:
+                hQCD_37jetggH.SetBinError(i,max(0,hQCD_37jetggH.GetBinError(i)+hQCD_37jetggH.GetBinError(i)))
+                hQCD_37jetggH.SetBinContent(i,0)
+
+
+        hSS_47jetggH=fData.Get("SS43ggH/data_obs")
+        hSS_47jetggH.Add(fDYJ.Get("SS43ggH/ZJ"+post2[k]),-1)
+        hSS_47jetggH.Add(fDYL.Get("SS43ggH/ZL"+post2[k]),-1)
+        hSS_47jetggH.Add(fTTJ.Get("SS43ggH/TTJ"+post2[k]),-1)
+        hSS_47jetggH.Add(fTTT.Get("SS43ggH/TTT"+post2[k]),-1)
+        hSS_47jetggH.Add(fW.Get("SS43ggH/W"+postfix2[k]),-1)
+        hSS_47jetggH.Add(fVV.Get("SS43ggH/VV"+post2[k]),-1)
+        hSS_47jetggH.Add(fDYS.Get("SS43ggH/ZTT"+post2[k]),-1)
+        hSS_47jetggH.SetName("QCD"+postfix2[k])
+        hSS_47jetggH.Scale(factor2jet)
+        for i in range(0,hSS_47jetggH.GetSize()-2):
+            if hSS_47jetggH.GetBinContent(i)<0:
+                hSS_47jetggH.SetBinError(i,max(0,hSS_47jetggH.GetBinError(i)+hSS_47jetggH.GetBinError(i)))
+                hSS_47jetggH.SetBinContent(i,0)
+
+        hQCD_47jetggH=fData.Get("QCD43ggH/data_obs")
+        hQCD_47jetggH.Add(fDYJ.Get("QCD43ggH/ZJ"+post2[k]),-1)
+        hQCD_47jetggH.Add(fDYL.Get("QCD43ggH/ZL"+post2[k]),-1)
+        hQCD_47jetggH.Add(fTTJ.Get("QCD43ggH/TTJ"+post2[k]),-1)
+        hQCD_47jetggH.Add(fTTT.Get("QCD43ggH/TTT"+post2[k]),-1)
+        hQCD_47jetggH.Add(fW.Get("QCD43ggH/W"+postfix2[k]),-1)
+        hQCD_47jetggH.Add(fVV.Get("QCD43ggH/VV"+post2[k]),-1)
+        hQCD_47jetggH.Add(fDYS.Get("QCD43ggH/ZTT"+post2[k]),-1)
+        hQCD_47jetggH.SetName("QCD"+postfix2[k])
+        hQCD_47jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_47jetggH.GetSize()-2):
+            if hQCD_47jetggH.GetBinContent(i)<0:
+                hQCD_47jetggH.SetBinError(i,max(0,hQCD_47jetggH.GetBinError(i)+hQCD_47jetggH.GetBinError(i)))
+                hQCD_47jetggH.SetBinContent(i,0)
+
+
+
+        hSS_57jetggH=fData.Get("SS53ggH/data_obs")
+        hSS_57jetggH.Add(fDYJ.Get("SS53ggH/ZJ"+post2[k]),-1)
+        hSS_57jetggH.Add(fDYL.Get("SS53ggH/ZL"+post2[k]),-1)
+        hSS_57jetggH.Add(fTTJ.Get("SS53ggH/TTJ"+post2[k]),-1)
+        hSS_57jetggH.Add(fTTT.Get("SS53ggH/TTT"+post2[k]),-1)
+        hSS_57jetggH.Add(fW.Get("SS53ggH/W"+postfix2[k]),-1)
+        hSS_57jetggH.Add(fVV.Get("SS53ggH/VV"+post2[k]),-1)
+        hSS_57jetggH.Add(fDYS.Get("SS53ggH/ZTT"+post2[k]),-1)
+        hSS_57jetggH.SetName("QCD"+postfix2[k])
+        hSS_57jetggH.Scale(factor2jet)
+        for i in range(0,hSS_57jetggH.GetSize()-2):
+            if hSS_57jetggH.GetBinContent(i)<0:
+                hSS_57jetggH.SetBinError(i,max(0,hSS_57jetggH.GetBinError(i)+hSS_57jetggH.GetBinError(i)))
+                hSS_57jetggH.SetBinContent(i,0)
+
+        hQCD_57jetggH=fData.Get("QCD53ggH/data_obs")
+        hQCD_57jetggH.Add(fDYJ.Get("QCD53ggH/ZJ"+post2[k]),-1)
+        hQCD_57jetggH.Add(fDYL.Get("QCD53ggH/ZL"+post2[k]),-1)
+        hQCD_57jetggH.Add(fTTJ.Get("QCD53ggH/TTJ"+post2[k]),-1)
+        hQCD_57jetggH.Add(fTTT.Get("QCD53ggH/TTT"+post2[k]),-1)
+        hQCD_57jetggH.Add(fW.Get("QCD53ggH/W"+postfix2[k]),-1)
+        hQCD_57jetggH.Add(fVV.Get("QCD53ggH/VV"+post2[k]),-1)
+        hQCD_57jetggH.Add(fDYS.Get("QCD53ggH/ZTT"+post2[k]),-1)
+        hQCD_57jetggH.SetName("QCD"+postfix2[k])
+        hQCD_57jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_57jetggH.GetSize()-2):
+            if hQCD_57jetggH.GetBinContent(i)<0:
+                hQCD_57jetggH.SetBinError(i,max(0,hQCD_57jetggH.GetBinError(i)+hQCD_57jetggH.GetBinError(i)))
+                hQCD_57jetggH.SetBinContent(i,0)
+
+        hSS_67jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_67jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_67jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_67jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_67jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_67jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_67jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_67jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_67jetggH.SetName("QCD"+postfix2[k])
+        hSS_67jetggH.Scale(factor2jet)
+        for i in range(0,hSS_67jetggH.GetSize()-2):
+            if hSS_67jetggH.GetBinContent(i)<0:
+                hSS_67jetggH.SetBinError(i,max(0,hSS_67jetggH.GetBinError(i)+hSS_67jetggH.GetBinError(i)))
+                hSS_67jetggH.SetBinContent(i,0)
+
+        hQCD_67jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_67jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_67jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_67jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_67jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_67jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_67jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_67jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_67jetggH.SetName("QCD"+postfix2[k])
+        hQCD_67jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_67jetggH.GetSize()-2):
+            if hQCD_67jetggH.GetBinContent(i)<0:
+                hQCD_67jetggH.SetBinError(i,max(0,hQCD_67jetggH.GetBinError(i)+hQCD_67jetggH.GetBinError(i)))
+                hQCD_67jetggH.SetBinContent(i,0)
+
+
+
+        hSS_77jetggH=fData.Get("SS63ggH/data_obs")
+        hSS_77jetggH.Add(fDYJ.Get("SS63ggH/ZJ"+post2[k]),-1)
+        hSS_77jetggH.Add(fDYL.Get("SS63ggH/ZL"+post2[k]),-1)
+        hSS_77jetggH.Add(fTTJ.Get("SS63ggH/TTJ"+post2[k]),-1)
+        hSS_77jetggH.Add(fTTT.Get("SS63ggH/TTT"+post2[k]),-1)
+        hSS_77jetggH.Add(fW.Get("SS63ggH/W"+postfix2[k]),-1)
+        hSS_77jetggH.Add(fVV.Get("SS63ggH/VV"+post2[k]),-1)
+        hSS_77jetggH.Add(fDYS.Get("SS63ggH/ZTT"+post2[k]),-1)
+        hSS_77jetggH.SetName("SS"+postfix2[k])
+        hSS_77jetggH.Scale(factor2jet)
+        for i in range(0,hSS_77jetggH.GetSize()-2):
+            if hSS_77jetggH.GetBinContent(i)<0:
+                hSS_77jetggH.SetBinError(i,max(0,hSS_77jetggH.GetBinError(i)+hSS_77jetggH.GetBinError(i)))
+                hSS_77jetggH.SetBinContent(i,0)
+
+        hQCD_77jetggH=fData.Get("QCD63ggH/data_obs")
+        hQCD_77jetggH.Add(fDYJ.Get("QCD63ggH/ZJ"+post2[k]),-1)
+        hQCD_77jetggH.Add(fDYL.Get("QCD63ggH/ZL"+post2[k]),-1)
+        hQCD_77jetggH.Add(fTTJ.Get("QCD63ggH/TTJ"+post2[k]),-1)
+        hQCD_77jetggH.Add(fTTT.Get("QCD63ggH/TTT"+post2[k]),-1)
+        hQCD_77jetggH.Add(fW.Get("QCD63ggH/W"+postfix2[k]),-1)
+        hQCD_77jetggH.Add(fVV.Get("QCD63ggH/VV"+post2[k]),-1)
+        hQCD_77jetggH.Add(fDYS.Get("QCD63ggH/ZTT"+post2[k]),-1)
+        hQCD_77jetggH.SetName("QCD"+postfix2[k])
+        hQCD_77jetggH.Scale(factor2jet)
+        for i in range(0,hQCD_77jetggH.GetSize()-2):
+            if hQCD_77jetggH.GetBinContent(i)<0:
+                hQCD_77jetggH.SetBinError(i,max(0,hQCD_77jetggH.GetBinError(i)+hQCD_77jetggH.GetBinError(i)))
+                hQCD_77jetggH.SetBinContent(i,0)
+
+
+
+
+
+###################### end of ggH block
+######################################
+
+
+
+
 
         hantiCR_0jet=fData.Get("et_antiiso_0jet_crSS/data_obs")
         hantiCR_0jet.Add(fDYJ.Get("et_antiiso_0jet_crSS/ZJ"+post2[k]),-1)
@@ -899,6 +1790,110 @@ if __name__ == "__main__":
         dir2jet.cd()
         hQCD_2jet.Scale(hSS_2jet.Integral()/(hQCD_2jet.Integral()+0.00001))
         hQCD_2jet.Write()
+
+
+######################
+        dir3jetggH.cd()
+        hQCD_3jetggH.Scale(hSS_3jetggH.Integral()/(hQCD_3jetggH.Integral()+0.00001))
+        hQCD_3jetggH.Write()
+
+        dir4jetggH.cd()
+        hQCD_4jetggH.Scale(hSS_4jetggH.Integral()/(hQCD_4jetggH.Integral()+0.00001))
+        hQCD_4jetggH.Write()
+
+        dir5jetggH.cd()
+        hQCD_5jetggH.Scale(hSS_5jetggH.Integral()/(hQCD_5jetggH.Integral()+0.00001))
+        hQCD_5jetggH.Write()
+
+        dir7jetggH.cd()
+        hQCD_7jetggH.Scale(hSS_7jetggH.Integral()/(hQCD_7jetggH.Integral()+0.00001))
+        hQCD_7jetggH.Write()
+
+        dir33jetggH.cd()
+        hQCD_33jetggH.Scale(hSS_33jetggH.Integral()/(hQCD_33jetggH.Integral()+0.00001))
+        hQCD_33jetggH.Write()
+
+        dir34jetggH.cd()
+        hQCD_34jetggH.Scale(hSS_34jetggH.Integral()/(hQCD_34jetggH.Integral()+0.00001))
+        hQCD_34jetggH.Write()
+
+        dir35jetggH.cd()
+        hQCD_35jetggH.Scale(hSS_35jetggH.Integral()/(hQCD_35jetggH.Integral()+0.00001))
+        hQCD_35jetggH.Write()
+
+        dir37jetggH.cd()
+        hQCD_37jetggH.Scale(hSS_37jetggH.Integral()/(hQCD_37jetggH.Integral()+0.00001))
+        hQCD_37jetggH.Write()
+
+        dir43jetggH.cd()
+        hQCD_33jetggH.Scale(hSS_33jetggH.Integral()/(hQCD_33jetggH.Integral()+0.00001))
+        hQCD_33jetggH.Write()
+
+        dir44jetggH.cd()
+        hQCD_34jetggH.Scale(hSS_34jetggH.Integral()/(hQCD_34jetggH.Integral()+0.00001))
+        hQCD_34jetggH.Write()
+
+        dir45jetggH.cd()
+        hQCD_35jetggH.Scale(hSS_35jetggH.Integral()/(hQCD_35jetggH.Integral()+0.00001))
+        hQCD_35jetggH.Write()
+
+        dir47jetggH.cd()
+        hQCD_37jetggH.Scale(hSS_37jetggH.Integral()/(hQCD_37jetggH.Integral()+0.00001))
+        hQCD_37jetggH.Write()
+
+
+        dir53jetggH.cd()
+        hQCD_53jetggH.Scale(hSS_53jetggH.Integral()/(hQCD_53jetggH.Integral()+0.00001))
+        hQCD_53jetggH.Write()
+
+        dir54jetggH.cd()
+        hQCD_54jetggH.Scale(hSS_54jetggH.Integral()/(hQCD_54jetggH.Integral()+0.00001))
+        hQCD_54jetggH.Write()
+
+        dir55jetggH.cd()
+        hQCD_55jetggH.Scale(hSS_55jetggH.Integral()/(hQCD_55jetggH.Integral()+0.00001))
+        hQCD_55jetggH.Write()
+
+        dir57jetggH.cd()
+        hQCD_57jetggH.Scale(hSS_57jetggH.Integral()/(hQCD_57jetggH.Integral()+0.00001))
+        hQCD_57jetggH.Write()
+
+        dir63jetggH.cd()
+        hQCD_63jetggH.Scale(hSS_63jetggH.Integral()/(hQCD_63jetggH.Integral()+0.00001))
+        hQCD_63jetggH.Write()
+
+        dir64jetggH.cd()
+        hQCD_64jetggH.Scale(hSS_64jetggH.Integral()/(hQCD_64jetggH.Integral()+0.00001))
+        hQCD_64jetggH.Write()
+
+        dir65jetggH.cd()
+        hQCD_65jetggH.Scale(hSS_65jetggH.Integral()/(hQCD_65jetggH.Integral()+0.00001))
+        hQCD_65jetggH.Write()
+
+        dir67jetggH.cd()
+        hQCD_67jetggH.Scale(hSS_67jetggH.Integral()/(hQCD_67jetggH.Integral()+0.00001))
+        hQCD_67jetggH.Write()
+
+        dir73jetggH.cd()
+        hQCD_73jetggH.Scale(hSS_73jetggH.Integral()/(hQCD_73jetggH.Integral()+0.00001))
+        hQCD_73jetggH.Write()
+
+        dir74jetggH.cd()
+        hQCD_74jetggH.Scale(hSS_74jetggH.Integral()/(hQCD_74jetggH.Integral()+0.00001))
+        hQCD_74jetggH.Write()
+
+        dir75jetggH.cd()
+        hQCD_75jetggH.Scale(hSS_75jetggH.Integral()/(hQCD_75jetggH.Integral()+0.00001))
+        hQCD_75jetggH.Write()
+
+        dir77jetggH.cd()
+        hQCD_77jetggH.Scale(hSS_77jetggH.Integral()/(hQCD_77jetggH.Integral()+0.00001))
+        hQCD_77jetggH.Write()
+
+
+######################## ggh block
+
+
 
         dir3jet.cd()
         hQCD_3jet.Scale(hSS_3jet.Integral()/(hQCD_3jet.Integral()+0.00001))
