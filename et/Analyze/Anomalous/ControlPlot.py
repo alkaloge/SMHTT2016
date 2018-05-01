@@ -65,7 +65,7 @@ ROOT.gStyle.SetOptStat(0)
 c=ROOT.TCanvas("canvas","",0,0,600,600)
 c.cd()
 
-file=ROOT.TFile("control.root","r")
+file=ROOT.TFile("final_nominal.root","r")
 
 adapt=ROOT.gROOT.GetColor(12)
 new_idx=ROOT.gROOT.GetListOfColors().GetSize() + 1
@@ -75,31 +75,28 @@ categories=["OS_control"]
 #categories=["et_vbf"] 
 ncat=1
 
-plots=["hmelaDCP_VBF", "hmelaDCPggH_VBF", "hmelaD0minus_VBF", "hmelaD0minusggH_VBF", "hmelaDPhijj_VBF", "hmelaDPhiUnsignedjj_VBF", "h1D_jpt1", "h1D_jpt2", "h1D_mjj", "h1D_met"]
+name_="h1D_jpt1_vbf_"
 
-plots=["h1D_met"]
-
-#hmelaDCP_OS_boosted_
-for i in range(0,len(plots)):
-   print "variable is ", plots[i], i
-   plots[i] = plots[i]+"_OS_" 	
-   Data=file.Get(categories[i]).Get(str(plots[i])+"data_obs")
-   QCD=file.Get(categories[i]).Get(str(plots[i])+"QCD")
-   W=file.Get(categories[i]).Get(str(plots[i])+"W") 
-   #QCD.Scale(0.000001)
-   TT=file.Get(categories[i]).Get(str(plots[i])+"TTT")
-   TT.Add(file.Get(categories[i]).Get(str(plots[i])+"TTJ"))
-   VV=file.Get(categories[i]).Get(str(plots[i])+"VV")
-   DYB=file.Get(categories[i]).Get(str(plots[i])+"ZL")
-   DYB.Add(file.Get(categories[i]).Get(str(plots[i])+"ZJ"))
-   DYS=file.Get(categories[i]).Get(str(plots[i])+"ZTT")#_CMS_htt_zmumuShape_VBF_13TeVDown")
+for i in range (0,ncat):
+   Data=file.Get(categories[i]).Get(name_+"data_obs")
+   QCD=file.Get(categories[i]).Get(name_+"W")
+   QCD.Scale(0.00001)
+   W=file.Get(categories[i]).Get(name_+"W") 
+   #W.Scale(1.30)
+   TT=file.Get(categories[i]).Get(name_+"TTT")
+   TT.Add(file.Get(categories[i]).Get(name_+"TTJ"))
+   VV=file.Get(categories[i]).Get(name_+"VV")
+   DYB=file.Get(categories[i]).Get(name_+"ZL")
+   DYB.Add(file.Get(categories[i]).Get(name_+"ZJ"))
+   DYS=file.Get(categories[i]).Get(name_+"ZTT")#_CMS_htt_zmumuShape_VBF_13TeVDown")
    #DYS.Scale(0.93)
-   DYS.Add(file.Get(categories[i]).Get(str(plots[i])+"EWKZ"))
-   qqH=file.Get(categories[i]).Get(str(plots[i])+"qqH_htt125")
-   ggh=file.Get(categories[i]).Get(str(plots[i])+"ggH_htt125")
-   vh=file.Get(categories[i]).Get(str(plots[i])+"WH_htt125")
-   vh.Add(file.Get(categories[i]).Get(str(plots[i])+"ZH_htt125"))
-   ps=file.Get(categories[i]).Get(str(plots[i])+"qqH_htt_0M125")
+   DYS.Add(file.Get(categories[i]).Get(name_+"EWKZ"))
+   qqH=file.Get(categories[i]).Get(name_+"qqH_htt125")
+   ggh=file.Get(categories[i]).Get(name_+"ggH_htt125")
+   vh=file.Get(categories[i]).Get(name_+"WH_htt125")
+   vh.Add(file.Get(categories[i]).Get(name_+"ZH_htt125"))
+   #ps=file.Get(categories[i]).Get("qqH_htt_0M125")
+   ps=file.Get(categories[i]).Get(name_+"qqH_htt125")
 
    Data.GetXaxis().SetTitle("")
    Data.GetXaxis().SetTitleSize(0)
@@ -138,15 +135,15 @@ for i in range(0,len(plots)):
    Data.SetLineColor(1)
    Data.SetLineWidth(2)
 
-   errorBand=file.Get(categories[i]).Get(str(plots[i])+"W").Clone()
+   errorBand=file.Get(categories[i]).Get(name_+"W").Clone()
    errorBand.Add(VV)
-   errorBand.Add(QCD)
+#   errorBand.Add(QCD)
    errorBand.Add(DYB)
    errorBand.Add(DYS)
    errorBand.Add(TT)
 
    stack=ROOT.THStack("stack","stack")
-   stack.Add(QCD)
+ #  stack.Add(QCD)
    stack.Add(W)
    stack.Add(VV)
    stack.Add(TT)
@@ -180,15 +177,14 @@ for i in range(0,len(plots)):
    Data.SetMaximum(Data.GetMaximum()*1.8)
    for k in range(1,Data.GetSize()-1):
         s=max(qqH.GetBinContent(k),ps.GetBinContent(k)*qqH.Integral()/ps.Integral())
-        b=VV.GetBinContent(k)+DYS.GetBinContent(k)+DYB.GetBinContent(k)+W.GetBinContent(k)++QCD.GetBinContent(k)+TT.GetBinContent(k)+0.0000001
+        #b=VV.GetBinContent(k)+DYS.GetBinContent(k)+DYB.GetBinContent(k)+W.GetBinContent(k)+QCD.GetBinContent(k)+TT.GetBinContent(k)+0.0000001
+        b=VV.GetBinContent(k)+DYS.GetBinContent(k)+DYB.GetBinContent(k)+W.GetBinContent(k)+TT.GetBinContent(k)+0.0000001
         if (b<0):
             b=0.000001
         #if (s/((b+0.09*b*0.09*b)**0.5) > 0.15):
         #    Data.SetBinContent(k,-1)
         #    Data.SetBinError(k,-1)
-   Data.SetMinimum(0.9)
-   Data.SetMaximum(Data.GetMaximum()*1000)
-
+   Data.SetMinimum(0)
    Data.Draw("e")
    stack.Draw("histsame")
    errorBand.Draw("e2same")
@@ -204,12 +200,12 @@ for i in range(0,len(plots)):
 
    legende=make_legend()
    legende.AddEntry(Data,"Observed","elp")
-   legende.AddEntry(DYS,"Z#rightarrow#tau_{e}#tau_{h}","f")
+   legende.AddEntry(DYS,"Z#rightarrow#tau_{#mu}#tau_{h}","f")
    legende.AddEntry(DYB,"DY others","f")
    legende.AddEntry(TT,"t#bar{t}+jets","f")
    legende.AddEntry(VV,"Diboson","f")
    legende.AddEntry(W,"Electroweak","f")
-   legende.AddEntry(QCD,"QCD multijet","f")
+#   legende.AddEntry(QCD,"QCD multijet","f")
    legende.AddEntry(qqH,"qqH, SM(125) x 10","l")
    legende.AddEntry(ggh,"ggH, SM(125) x 10","l")
    legende.AddEntry(vh,"VH, SM(125) x 10","l")
@@ -277,25 +273,7 @@ for i in range(0,len(plots)):
    #h1.GetXaxis().SetTitle("DL1Zg")
    #h1.GetXaxis().SetTitle("p_{T}(j_{1}) (GeV)")
    #h1.GetXaxis().SetTitle("p_{T}(j_{2}) (GeV)")
-   title="TITLEHERE"
-   if "jpt1" in plots[i] : title="P_{T}(J_{0}) (GeV)"
-   if "jpt2" in plots[i] : title="P_{T}(J_{1}) (GeV)"
-   if "eta1" in plots[i] : title="#eta(J_{0})"
-   if "eta2" in plots[i] : title="#eta(J_{1})"
-   if "phi1" in plots[i] : title="#Phi(J_{0}) (rad)"
-   if "phi2" in plots[i] : title="#Phi(J_{1}) (rad)"
-   if "mjj_" in plots[i] : title="M(jj) (GeV)"
-
-   if "met_" in plots[i] : title="#it{p}_{T}^{miss} (GeV)"
-   if "DCP_VBF" in plots[i] : title="CP(vbf)"
-   if "DCPgg" in plots[i] : title="CP(ggh)"
-   if "D0minus_" in plots[i] : title="D0^{-}"
-   if "D0minusggH_" in plots[i] : title="D0^{-}(ggh)"
-   if "DPhijj_" in plots[i] : title="mela #Delta#Phi(jj)"
-   if "DPhiUns" in plots[i] : title="mela #Delta#Phi(jj)_{uns}"
-
-
-   h1.GetXaxis().SetTitle(title)
+   h1.GetXaxis().SetTitle("p_{T}(Z) (GeV)")
    #h1.GetXaxis().SetTitle("m_{vis} (GeV)")
    #h1.GetXaxis().SetTitle("m_{#tau#tau} (GeV)")
    h1.GetXaxis().SetLabelSize(0.08)
@@ -318,11 +296,11 @@ for i in range(0,len(plots)):
 
    c.cd()
    pad1.Draw()
-   pad1.SetLogy()
+
    ROOT.gPad.RedrawAxis()
 
    c.Modified()
-   c.SaveAs("new_control_et/"+str(plots[i])+".pdf")
-   #c.SaveAs("new_control_et/hmelaDPhiUnsignedjj_OS_VBF.png")
+   c.SaveAs("new_control_et/ZTT_Zpt.pdf")
+   c.SaveAs("new_control_et/ZTT_Zpt.png")
 
 
