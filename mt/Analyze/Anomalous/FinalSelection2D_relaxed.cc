@@ -1670,6 +1670,8 @@ int main(int argc, char** argv) {
             aweight=aweight*jtotau;
         }
 
+	cout<<" lets check aweight  "<<aweight<<endl;
+
 	if (name=="reweighted_qqH_htt_0M125" or name=="reweighted_WH_htt_0M125" or name=="reweighted_ZH_htt_0M125" or name=="reweighted_GGH2Jets_0M125") aweight=aweight*jhuw_a3;
         if (name=="reweighted_qqH_htt_0PH125" or name=="reweighted_WH_htt_0PH125" or name=="reweighted_ZH_htt_0PH125" or name=="reweighted_GGH2Jets_0PH125") aweight=aweight*jhuw_a2;
         if (name=="reweighted_qqH_htt_0PM125" or name=="reweighted_WH_htt_0PM125" or name=="reweighted_ZH_htt_0PM125" or name=="reweighted_GGH2Jets_0PM125") aweight=aweight*jhuw_a1;
@@ -1679,6 +1681,8 @@ int main(int argc, char** argv) {
         if (name=="reweighted_qqH_htt_0PHf05ph0125" or name=="reweighted_WH_htt_0PHf05ph0125" or name=="reweighted_ZH_htt_0PHf05ph0125" or name=="reweighted_GGH2Jets_0PHf05ph0125") aweight=aweight*jhuw_a2int;
         if (name=="reweighted_qqH_htt_0L1f05ph0125" or name=="reweighted_WH_htt_0L1f05ph0125" or name=="reweighted_ZH_htt_0L1f05ph0125" or name=="reweighted_GGH2Jets_0L1f05ph0125") aweight=aweight*jhuw_l1int;
         if (name=="reweighted_qqH_htt_0L1Zgf05ph0125" or name=="reweighted_WH_htt_0L1Zgf05ph0125" or name=="reweighted_ZH_htt_0L1Zgf05ph0125" or name=="reweighted_GGH2Jets_0L1Zgf05ph0125") aweight=aweight*jhuw_l1Zgint;
+
+	cout<<" lets check aweight  again "<<aweight<<"  "<<jhuw_a1<<endl;
 
 	//*********************** Definition of fit variables *******************
         int numberJets=njets;
@@ -2211,7 +2215,9 @@ int main(int argc, char** argv) {
                    double dPhi=  jphi_1 - jphi_2; //dPhiFrom2P( LeptV1.Px(), LeptV1.Py(), METV.Px(),  METV.Py() );
 		if (dPhi > TMath::Pi()) dPhi -= 2*TMath::Pi();
   		if (dPhi <= -TMath::Pi()) dPhi += 2*TMath::Pi();
-		//	cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<endl;
+		
+		cout<<" dPhi plain  "<<jphi_1-jphi_2<<"  "<<dPhi<<"  "<<fabs(dPhi)<<" var1 "<<var1_2<<" var2 "<<var2<<" total"<<weight2*aweight<<" weight2 "<<weight2<<" aweight  "<<aweight<<endl;
+
 		if (dPhi>-TMath::Pi() && dPhi<-1.5)
 			h70_OSggH[k]->Fill(var1_2,var2,weight2*aweight);
 		if (dPhi>-1.5 && dPhi<-0)
@@ -3011,6 +3017,9 @@ int main(int argc, char** argv) {
     TDirectory *OS1jet =fout->mkdir("mt_boosted");
     TDirectory *SS1jet =fout->mkdir("SS1jet");
     TDirectory *QCD1jet =fout->mkdir("QCD1jet");
+    TDirectory *OS2jet =fout->mkdir("mt_vbf");
+    TDirectory *SS2jet =fout->mkdir("SSvbf");
+    TDirectory *QCD2jet =fout->mkdir("QCDvbf");
 
     TDirectory *OS20jet =fout->mkdir("mt_vbf_D0_0p0to0p2");
     TDirectory *SS20jet =fout->mkdir("SS20");
@@ -3111,102 +3120,102 @@ int main(int argc, char** argv) {
 
 /////////////////ggH block starts
 
-    TDirectory *OS20jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_ggH");
+    TDirectory *OS20jetggH =fout->mkdir("mt_vbf_D0_0p0to0p2_ggH");
     TDirectory *SS20jetggH =fout->mkdir("SS20ggH");
     TDirectory *QCD20jetggH =fout->mkdir("QCD20ggH");
 
-    TDirectory *OS21jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_ggH");
+    TDirectory *OS21jetggH =fout->mkdir("mt_vbf_D0_0p2to0p4_ggH");
     TDirectory *SS21jetggH =fout->mkdir("SS21ggH");
     TDirectory *QCD21jetggH =fout->mkdir("QCD21ggH");
     
-    TDirectory *OS22jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_ggH");
+    TDirectory *OS22jetggH =fout->mkdir("mt_vbf_D0_0p4to0p8_ggH");
     TDirectory *SS22jetggH =fout->mkdir("SS22ggH");
     TDirectory *QCD22jetggH =fout->mkdir("QCD22ggH");
     
-    TDirectory *OS23jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_ggH");
+    TDirectory *OS23jetggH =fout->mkdir("mt_vbf_D0_0p8to1p0_ggH");
     TDirectory *SS23jetggH =fout->mkdir("SS23ggH");
     TDirectory *QCD23jetggH =fout->mkdir("QCD23ggH");
 
-    TDirectory *OS30jetggH =fout->mkdir("et_vbf_D0_0p0to0p2_DCPm_ggH");
+    TDirectory *OS30jetggH =fout->mkdir("mt_vbf_D0_0p0to0p2_DCPm_ggH");
     TDirectory *SS30jetggH =fout->mkdir("SS30ggH");
     TDirectory *QCD30jetggH =fout->mkdir("QCD30ggH");
 
-    TDirectory *OS31jetggH =fout->mkdir("et_vbf_D0_0p2to0p4_DCPm_ggH");
+    TDirectory *OS31jetggH =fout->mkdir("mt_vbf_D0_0p2to0p4_DCPm_ggH");
     TDirectory *SS31jetggH =fout->mkdir("SS31ggH");
     TDirectory *QCD31jetggH =fout->mkdir("QCD31ggH");
 
-    TDirectory *OS32jetggH =fout->mkdir("et_vbf_D0_0p4to0p8_DCPm_ggH");
+    TDirectory *OS32jetggH =fout->mkdir("mt_vbf_D0_0p4to0p8_DCPm_ggH");
     TDirectory *SS32jetggH =fout->mkdir("SS32ggH");
     TDirectory *QCD32jetggH =fout->mkdir("QCD32ggH");
 
-    TDirectory *OS33jetggH =fout->mkdir("et_vbf_D0_0p8to1p0_DCPm_ggH");
+    TDirectory *OS33jetggH =fout->mkdir("mt_vbf_D0_0p8to1p0_DCPm_ggH");
     TDirectory *SS33jetggH =fout->mkdir("SS33ggH");
     TDirectory *QCD33jetggH =fout->mkdir("QCD33ggH");
 
 
-    TDirectory *OS40jetggH =fout->mkdir("et_vbf_D0_Pito1p5m_ggH");
+    TDirectory *OS40jetggH =fout->mkdir("mt_vbf_D0_Pito1p5m_ggH");
     TDirectory *SS40jetggH =fout->mkdir("SS40ggH");
     TDirectory *QCD40jetggH =fout->mkdir("QCD40ggH");
 
-    TDirectory *OS41jetggH =fout->mkdir("et_vbf_D0_1p5to0_ggH");
+    TDirectory *OS41jetggH =fout->mkdir("mt_vbf_D0_1p5to0_ggH");
     TDirectory *SS41jetggH =fout->mkdir("SS41ggH");
     TDirectory *QCD41jetggH =fout->mkdir("QCD41ggH");
 
-    TDirectory *OS42jetggH =fout->mkdir("et_vbf_D0_0to1p5p_ggH");
+    TDirectory *OS42jetggH =fout->mkdir("mt_vbf_D0_0to1p5p_ggH");
     TDirectory *SS42jetggH =fout->mkdir("SS42ggH");
     TDirectory *QCD42jetggH =fout->mkdir("QCD42ggH");
 
-    TDirectory *OS43jetggH =fout->mkdir("et_vbf_D0_1p5toPi_ggH");
+    TDirectory *OS43jetggH =fout->mkdir("mt_vbf_D0_1p5toPi_ggH");
     TDirectory *SS43jetggH =fout->mkdir("SS43ggH");
     TDirectory *QCD43jetggH =fout->mkdir("QCD43ggH");
     
 
-    TDirectory *OS50jetggH =fout->mkdir("et_vbf_Pito1p6m_ggH");
+    TDirectory *OS50jetggH =fout->mkdir("mt_vbf_Pito1p6m_ggH");
     TDirectory *SS50jetggH =fout->mkdir("SS50ggH");
     TDirectory *QCD50jetggH =fout->mkdir("QCD50ggH");
 
-    TDirectory *OS51jetggH =fout->mkdir("et_vbf_1p6to0_ggH");
+    TDirectory *OS51jetggH =fout->mkdir("mt_vbf_1p6to0_ggH");
     TDirectory *SS51jetggH =fout->mkdir("SS51ggH");
     TDirectory *QCD51jetggH =fout->mkdir("QCD51ggH");
 
-    TDirectory *OS52jetggH =fout->mkdir("et_vbf_0to1p6p_ggH");
+    TDirectory *OS52jetggH =fout->mkdir("mt_vbf_0to1p6p_ggH");
     TDirectory *SS52jetggH =fout->mkdir("SS52ggH");
     TDirectory *QCD52jetggH =fout->mkdir("QCD52ggH");
 
-    TDirectory *OS53jetggH =fout->mkdir("et_vbf_1p6toPi_ggH");
+    TDirectory *OS53jetggH =fout->mkdir("mt_vbf_1p6toPi_ggH");
     TDirectory *SS53jetggH =fout->mkdir("SS53ggH");
     TDirectory *QCD53jetggH =fout->mkdir("QCD53ggH");
 
 
-    TDirectory *OS60jetggH =fout->mkdir("et_vbf_Pito1p6m_ggH_Uns");
+    TDirectory *OS60jetggH =fout->mkdir("mt_vbf_Pito1p6m_ggH_Uns");
     TDirectory *SS60jetggH =fout->mkdir("SS60ggH");
     TDirectory *QCD60jetggH =fout->mkdir("QCD60ggH");
 
-    TDirectory *OS61jetggH =fout->mkdir("et_vbf_1p6to0_ggH_Uns");
+    TDirectory *OS61jetggH =fout->mkdir("mt_vbf_1p6to0_ggH_Uns");
     TDirectory *SS61jetggH =fout->mkdir("SS61ggH");
     TDirectory *QCD61jetggH =fout->mkdir("QCD61ggH");
 
-    TDirectory *OS62jetggH =fout->mkdir("et_vbf_0to1p6p_ggH_Uns");
+    TDirectory *OS62jetggH =fout->mkdir("mt_vbf_0to1p6p_ggH_Uns");
     TDirectory *SS62jetggH =fout->mkdir("SS62ggH");
     TDirectory *QCD62jetggH =fout->mkdir("QCD62ggH");
 
-    TDirectory *OS63jetggH =fout->mkdir("et_vbf_1p6toPi_ggH_Uns");
+    TDirectory *OS63jetggH =fout->mkdir("mt_vbf_1p6toPi_ggH_Uns");
     TDirectory *SS63jetggH =fout->mkdir("SS63ggH");
     TDirectory *QCD63jetggH =fout->mkdir("QCD63ggH");
 
-    TDirectory *OS70jetggH =fout->mkdir("et_vbf_dPhia_ggH");
+    TDirectory *OS70jetggH =fout->mkdir("mt_vbf_dPhia_ggH");
     TDirectory *SS70jetggH =fout->mkdir("SS70ggH");
     TDirectory *QCD70jetggH =fout->mkdir("QCD70ggH");
 
-    TDirectory *OS71jetggH =fout->mkdir("et_vbf_dPhib_ggH");
+    TDirectory *OS71jetggH =fout->mkdir("mt_vbf_dPhib_ggH");
     TDirectory *SS71jetggH =fout->mkdir("SS71ggH");
     TDirectory *QCD71jetggH =fout->mkdir("QCD71ggH");
 
-    TDirectory *OS72jetggH =fout->mkdir("et_vbf_dPhic_ggH");
+    TDirectory *OS72jetggH =fout->mkdir("mt_vbf_dPhic_ggH");
     TDirectory *SS72jetggH =fout->mkdir("SS72ggH");
     TDirectory *QCD72jetggH =fout->mkdir("QCD72ggH");
 
-    TDirectory *OS73jetggH =fout->mkdir("et_vbf_dPhid_ggH");
+    TDirectory *OS73jetggH =fout->mkdir("mt_vbf_dPhid_ggH");
     TDirectory *SS73jetggH =fout->mkdir("SS73ggH");
     TDirectory *QCD73jetggH =fout->mkdir("QCD73ggH");
 
@@ -4017,6 +4026,137 @@ int main(int argc, char** argv) {
 
 
 
+        OS2jet->cd();
+        h2_OS[k]->SetName(name.c_str()+postfix);
+        h2_WOS[k]->SetName(name.c_str()+postfix);
+	
+
+        if (sample=="W"){
+           h2_WOS[k]->Write();
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_WOS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_WOS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_WOS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_WOS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_WOS[k]->SetName(name_);
+
+	hmelaDCP_boosted_WOS[k]->Write();
+	hmelaDCPggH_boosted_WOS[k]->Write();
+	hmelaD0minus_boosted_WOS[k]->Write();
+	hmelaD0minusggH_boosted_WOS[k]->Write();
+	hmelaDPhijj_boosted_WOS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_WOS[k]->Write();
+
+
+	}
+        else 
+		{
+           h2_OS[k]->Write();
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_OS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_OS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_OS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_OS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_OS[k]->SetName(name_);
+
+
+	hmelaDCP_boosted_OS[k]->Write();
+	hmelaDCPggH_boosted_OS[k]->Write();
+	hmelaD0minus_boosted_OS[k]->Write();
+	hmelaD0minusggH_boosted_OS[k]->Write();
+	hmelaDPhijj_boosted_OS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_OS[k]->Write();
+		}
+
+
+
+	
+        SS2jet->cd();
+        h2_SS[k]->SetName(name.c_str()+postfix);
+        h2_WSS[k]->SetName(name.c_str()+postfix);
+
+        if (sample=="W"){
+           h2_WSS[k]->Write();
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_WSS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_WSS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_WSS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_WSS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_WSS[k]->SetName(name_);
+
+	hmelaDCP_boosted_WSS[k]->Write();
+	hmelaDCPggH_boosted_WSS[k]->Write();
+	hmelaD0minus_boosted_WSS[k]->Write();
+	hmelaD0minusggH_boosted_WSS[k]->Write();
+	hmelaDPhijj_boosted_WSS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_WSS[k]->Write();
+
+	}
+        else{
+           h2_SS[k]->Write();
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_SS[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_SS[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_SS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_SS[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_SS[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_SS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_SS[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_SS[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_SS[k]->SetName(name_);
+
+	hmelaDCP_boosted_SS[k]->Write();
+	hmelaDCPggH_boosted_SS[k]->Write();
+	hmelaD0minus_boosted_SS[k]->Write();
+	hmelaD0minusggH_boosted_SS[k]->Write();
+	hmelaDPhijj_boosted_SS[k]->Write();
+	hmelaDPhiUnsignedjj_boosted_SS[k]->Write();
+
+	}
+
+        QCD2jet->cd();
+        h2_QCD[k]->SetName(name.c_str()+postfix);
+        h2_QCD[k]->Write();
+
+	sprintf(name_,"%s_%s%s",hmelaDCP_boosted_QCD[k]->GetName(),name.c_str(),namee);
+	hmelaDCP_boosted_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDCPggH_boosted_QCD[k]->GetName(),name.c_str(),namee);
+        hmelaDCPggH_boosted_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minus_boosted_QCD[k]->GetName(),name.c_str(),namee);
+        hmelaD0minus_boosted_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaD0minusggH_boosted_QCD[k]->GetName(),name.c_str(),namee);
+        hmelaD0minusggH_boosted_QCD[k]->SetName(name_);
+	sprintf(name_,"%s_%s%s",hmelaDPhijj_boosted_QCD[k]->GetName(),name.c_str(),namee);
+        hmelaDPhijj_boosted_QCD[k]->SetName(name_); 
+	sprintf(name_,"%s_%s%s",hmelaDPhiUnsignedjj_boosted_QCD[k]->GetName(),name.c_str(),namee);
+        hmelaDPhiUnsignedjj_boosted_QCD[k]->SetName(name_);
+	//////////////////////
+
+
+
+
+
+
 ////ggH
        OS20jet->cd();
        h20_OS[k]->SetName(name.c_str()+postfix);
@@ -4641,7 +4781,7 @@ int main(int argc, char** argv) {
         
 	QCD23jetggH->cd();
         h23_QCDggH[k]->SetName(name.c_str()+postfix);
-        h20_QCDggH[k]->Write();
+        h23_QCDggH[k]->Write();
 
 ////OS33,34,35,32
 
